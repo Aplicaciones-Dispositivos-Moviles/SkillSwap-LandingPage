@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description" content="Conoce a Innovify, el equipo detrás de SkillSwap, nuestra misión, visión y las personas que hacen posible la red interuniversitaria más grande del Perú." />
+
+    <link rel="alternate" hreflang="es" href="aboutUs.html" />
+    <link rel="alternate" hreflang="en" href="aboutUs.html" />
+    <link rel="alternate" hreflang="x-default" href="aboutUs.html" />
+
+    <link rel="stylesheet" href="../assets/styles/aboutus_stylesheet.css" />
+    <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+    <title>SkillSwap | Sobre Nosotros</title>
+  </head>
+
+  <body>
+
+    <!-- ═══ NAV ═══ -->
+    <nav class="barra-navegacion">
+
+      <div class="menu-hamburguesa" id="btn-menu" aria-label="Abrir menú" role="button" tabindex="0">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <div class="logo animar-zoom">
+        <a href="../index.html">
+          <img src="../assets/images/SkillSwap_logo.png" alt="Logo SkillSwap" />
+        </a>
+      </div>
+
+      <div class="menu-horizontal">
+        <ul class="menu-horizontal-opciones escalonado">
+          <li><a href="../index.html#seccion-screenshots" data-i18n="nav-plataforma">Plataforma</a></li>
+          <li><a href="partnerships.html"   data-i18n="nav-alianzas">Alianzas</a></li>
+          <li><a href="aboutUs.html" data-i18n="nav-sobre-nosotros">Sobre nosotros</a></li>
+
+          <li>
+            <a href="https://skillswap-app-web.web.app/login">
+              <button class="btn-iniciarsesion" data-i18n="nav-login">Iniciar Sesión</button>
+            </a>
+          </li>
+          <li>
+            <a href="https://skillswap-app-web.web.app/register">
+              <button class="btn-registrase" data-i18n="nav-register">Registrarse</button>
+            </a>
+          </li>
+
+          <li class="lang-switcher-item">
+            <div class="lang-switcher" role="group" aria-label="Seleccionar idioma">
+              <button class="lang-btn active" data-lang="es" onclick="applyLanguage('es')" aria-label="Español">ES</button>
+              <span class="lang-divider">|</span>
+              <button class="lang-btn"        data-lang="en" onclick="applyLanguage('en')" aria-label="English">EN</button>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+    </nav>
+
+    <!-- ═══ SECCIÓN: SOBRE NOSOTROS ═══ -->
+    <section class="seccion-about">
+      <div class="container">
+
+        <div class="titulo-seccion animar-entrada-abajo">
+          <h2 data-i18n="about-title">Sobre Nosotros</h2>
+          <div class="titulo-decorador animar-zoom retardo-2"></div>
+        </div>
+
+        <div class="about-texto-contenido animar-entrada-izq retardo-1">
+          <p data-i18n="about-desc">
+            Innovify es una startup que busca brindar una plataforma en línea cuyo propósito es verificar las habilidades de estudiantes universitarios mediante Inteligencia Artificial. El estudiante sube certificados externos, la IA detecta qué habilidades le faltan para su meta profesional y genera una ruta de certificación con evaluaciones diseñadas para demostrar cada habilidad paso a paso. Esta iniciativa busca dar una certificación confiable y accesible, respaldada primero por IA y, cuando es necesario, por un Verificador humano.
+          </p>
+        </div>
+
+        <div class="innovacion-calidad animar-entrada-der retardo-2">
+          <h3 data-i18n="innovation-title">Innovación y Calidad</h3>
+          <p data-i18n="innovation-desc">
+            Como factor diferencial, la IA no solo genera tu ruta de certificación: también hace la primera revisión de cada intento contra el objetivo de la habilidad. Solo si ese intento no logra demostrarla, el caso se escala a un Verificador humano que ya certificó esa misma habilidad y lo evalúa con una rúbrica estructurada — nunca a criterio libre.
+          </p>
+        </div>
+
+        <!-- Misión y Visión -->
+        <div class="mv-grid escalonado retardo-3">
+
+          <div class="mv-card">
+            <div class="mv-icono">🎯</div>
+            <h3 data-i18n="vision-title">Visión</h3>
+            <p data-i18n="vision-desc">
+              Ser la plataforma líder en verificación de habilidades para estudiantes universitarios, reconocida por certificar de forma confiable lo que cada estudiante realmente sabe hacer, potenciando su empleabilidad a nivel nacional e internacional.
+            </p>
+          </div>
+
+          <div class="mv-card mv-card--accent">
+            <div class="mv-icono">🚀</div>
+            <h3 data-i18n="mision-title">Misión</h3>
+            <p data-i18n="mision-desc">
+              Facilitar la certificación de habilidades entre estudiantes de distintas universidades mediante rutas generadas por IA y revisión con rúbrica estructurada, de manera ágil, confiable y accesible.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ SECCIÓN: NUESTRO EQUIPO ═══ -->
+    <section class="seccion-equipo">
+      <div class="container">
+
+        <div class="titulo-seccion animar-entrada-abajo retardo-4">
+          <h2 data-i18n="team-title">Nuestro Equipo</h2>
+          <div class="titulo-decorador animar-zoom retardo-5"></div>
+        </div>
+
+        <div class="equipo-grid escalonado retardo-5">
+
+          <div class="equipo-item">
+            <div class="equipo-foto-container">
+              <img src="../assets/images/image-perfil-victor.png" alt="Victor Manuel Alberca Saavedra" class="equipo-foto" />
+            </div>
+            <h3 class="equipo-nombre">Victor Manuel Alberca Saavedra</h3>
+            <p class="equipo-rol" data-i18n="role-victor">Desarrollador</p>
+          </div>
+
+          <div class="equipo-item">
+            <div class="equipo-foto-container">
+              <img src="../assets/images/ima-foto-luis.jpeg" alt="Luis Ángel Becerra Ninahuanca" class="equipo-foto" />
+            </div>
+            <h3 class="equipo-nombre">Luis Ángel Becerra Ninahuanca</h3>
+            <p class="equipo-rol" data-i18n="role-luis">Desarrollador </p>
+          </div>
+
+          <div class="equipo-item">
+            <div class="equipo-foto-container">
+              <img src="../assets/images/image-david.png" alt="David Shigueru Komatsu Dueñas" class="equipo-foto" />
+            </div>
+            <h3 class="equipo-nombre">David Shigueru Komatsu Dueñas</h3>
+            <p class="equipo-rol" data-i18n="role-david">Desarrollador</p>
+          </div>
+
+          <div class="equipo-item">
+            <div class="equipo-foto-container">
+              <img src="../assets/images/image-perfil-kevin.png" alt="Lopez Montalvo, Kevin Edu" class="equipo-foto" />
+            </div>
+            <h3 class="equipo-nombre">Lopez Montalvo, Kevin Edu</h3>
+            <p class="equipo-rol" data-i18n="role-alexandra">Desarrollador</p>
+          </div>
+
+          <div class="equipo-item">
+            <div class="equipo-foto-container">
+              <img src="../assets/images/image-perfil-piero.png" alt="Piero Sulca Sánchez" class="equipo-foto" />
+            </div>
+            <h3 class="equipo-nombre">Piero Sulca Sánchez </h3>
+            <p class="equipo-rol" data-i18n="role-sebas">Desarrollador</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+       <!-- ═══ SECCIÓN: VIDEO ABOUT THE TEAM ═══ -->
+    <section class="seccion-video-equipo">
+      <div class="container">
+
+        <div class="titulo-seccion animar-entrada-abajo retardo-6">
+          <h2 data-i18n="video-title">Video About the Team</h2>
+          <div class="titulo-decorador animar-zoom retardo-7"></div>
+        </div>
+
+        <p class="section-subtitle animar-entrada-abajo retardo-6" data-i18n="video-subtitle">
+          Conócenos de cerca: quiénes somos, qué nos motiva y cómo construimos SkillSwap.
+        </p>
+
+        <div class="video-wrapper animar-zoom-rotar retardo-7" id="video-container">
+
+          <div class="video-placeholder" id="video-placeholder">
+            <div class="video-placeholder-inner">
+              <div class="video-play-icon">▶</div>
+              <p data-i18n="video-coming-soon">Video próximamente disponible</p>
+              <span data-i18n="video-coming-desc">Estamos produciendo el video del equipo. ¡Vuelve pronto!</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══ SECCIÓN: CTA FINAL ═══ -->
+    <section class="seccion-cta-final">
+      <div class="container">
+        <h2 data-i18n="cta-title">¿Listo para ser parte de la comunidad?</h2>
+        <p data-i18n="cta-desc">Únete a miles de estudiantes de las mejores universidades del Perú y empieza a intercambiar conocimiento hoy mismo.</p>
+        <div class="cta-botones">
+          <a href="https://skillswap-app-web.web.app/register" class="btn-cta-primario" data-i18n="cta-btn-register">Crear mi cuenta gratis</a>
+          <a href="partnerships.html" class="btn-cta-secundario" data-i18n="cta-btn-alliance">Soy representante universitario</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ FOOTER ═══ -->
+    <footer>
+      <div class="seccion-footer">
+        <p>
+          <span data-i18n="footer-text">2026 SkillSwap. Todos los derechos reservados.</span>
+          <a href="../archivos/TerminosCondiciones.pdf" class="terminos-condiciones" data-i18n="footer-terms">
+            Términos y Condiciones
+          </a>
+          <a href="../archivos/PoliticaPrivacidad.pdf" class="terminos-condiciones" data-i18n="footer-privacy">
+            Política de Privacidad
+          </a>
+        </p>
+      </div>
+    </footer>
+
+    <!-- ═══ SCRIPTS ═══ -->
+    <script>
+      const btnMenu = document.getElementById('btn-menu');
+      const menu = document.querySelector('.barra-navegacion .menu-horizontal');
+      if (btnMenu) {
+        btnMenu.addEventListener('click', () => {
+          menu.classList.toggle('activo');
+        });
+      }
+    </script>
+
+    <script>
+      const translations = {
+        es: {
+          "page-title":        "SkillSwap | Sobre Nosotros",
+          "meta-description":  "Conoce a Innovify, el equipo detrás de SkillSwap, nuestra misión, visión y las personas que hacen posible la red interuniversitaria más grande del Perú.",
+
+          "nav-alianzas":       "Alianzas",
+          "nav-sobre-nosotros": "Sobre nosotros",
+          "nav-login":          "Iniciar Sesión",
+          "nav-register":       "Registrarse",
+
+          "about-title": "Sobre Nosotros",
+          "about-desc":  "Innovify es una startup que busca brindar una plataforma en línea cuyo propósito es verificar las habilidades de estudiantes universitarios mediante Inteligencia Artificial. El estudiante sube certificados externos, la IA detecta qué habilidades le faltan para su meta profesional y genera una ruta de certificación con evaluaciones diseñadas para demostrar cada habilidad paso a paso. Esta iniciativa busca dar una certificación confiable y accesible, respaldada primero por IA y, cuando es necesario, por un Verificador humano.",
+
+          "innovation-title": "Innovación y Calidad",
+          "innovation-desc":  "Como factor diferencial, la IA no solo genera tu ruta de certificación: también hace la primera revisión de cada intento contra el objetivo de la habilidad. Solo si ese intento no logra demostrarla, el caso se escala a un Verificador humano que ya certificó esa misma habilidad y lo evalúa con una rúbrica estructurada — nunca a criterio libre.",
+
+          "vision-title": "Visión",
+          "vision-desc":  "Ser la plataforma líder en verificación de habilidades para estudiantes universitarios, reconocida por certificar de forma confiable lo que cada estudiante realmente sabe hacer, potenciando su empleabilidad a nivel nacional e internacional.",
+          "mision-title": "Misión",
+          "mision-desc":  "Facilitar la certificación de habilidades entre estudiantes de distintas universidades mediante rutas generadas por IA y revisión con rúbrica estructurada, de manera ágil, confiable y accesible.",
+
+          "team-title":    "Nuestro Equipo",
+          "role-victor":   "Desarrollador",
+          "role-luis":     "Desarrollador ",
+          "role-david":    "Desarrollador",
+          "role-rafael":   "Desarrollador",
+          "role-santiago": "Desarrollador",
+
+          "video-title":        "Video About the Team",
+          "video-subtitle":     "Conócenos de cerca: quiénes somos, qué nos motiva y cómo construimos SkillSwap.",
+          "video-coming-soon":  "Video próximamente disponible",
+          "video-coming-desc":  "Estamos produciendo el video del equipo. ¡Vuelve pronto!",
+
+          "cta-title":           "¿Listo para ser parte de la comunidad?",
+          "cta-desc":            "Únete a miles de estudiantes de las mejores universidades del Perú y empieza a intercambiar conocimiento hoy mismo.",
+          "cta-btn-register":    "Crear mi cuenta gratis",
+          "cta-btn-alliance":    "Soy representante universitario",
+
+          "footer-text":  "2026 SkillSwap. Todos los derechos reservados.",
+          "footer-terms": "Términos y Condiciones",
+          "footer-privacy": "Política de Privacidad",
+        },
+
+        en: {
+          "page-title":        "SkillSwap | About Us",
+          "meta-description":  "Meet Innovify, the team behind SkillSwap, our mission, vision, and the people who make Peru's largest inter-university network possible.",
+
+          "nav-alianzas":       "Alliances",
+          "nav-sobre-nosotros": "About us",
+          "nav-login":          "Log In",
+          "nav-register":       "Sign Up",
+
+          "about-title": "About Us",
+          "about-desc":  "Innovify is a startup that seeks to provide an online platform whose purpose is to verify university students' skills through Artificial Intelligence. The student uploads external certificates, the AI detects the skills missing for their career goal, and generates a certification path with assessments designed to prove each skill step by step. This initiative aims to provide reliable, accessible certification — backed first by AI and, when needed, by a human Verifier.",
+
+          "innovation-title": "Innovation & Quality",
+          "innovation-desc":  "As a differentiating factor, AI doesn't just generate your certification path: it also does the first review of every attempt against the skill's goal. Only if that attempt fails to prove it does the case escalate to a human Verifier who already certified that same skill, evaluating it with a structured rubric — never with free judgment.",
+
+          "vision-title": "Vision",
+          "vision-desc":  "To be the leading platform in skill verification for university students, recognized for reliably certifying what each student actually knows how to do, boosting their employability nationally and internationally.",
+          "mision-title": "Mission",
+          "mision-desc":  "To facilitate skill certification among students from different universities through AI-generated paths and structured rubric review, in an agile, reliable, and accessible way.",
+
+          "team-title":    "Our Team",
+          "role-victor":   " Developer",
+          "role-luis":     " Developer",
+          "role-david":    " Developer",
+          "role-rafael":   " Developer",
+          "role-santiago": " Developer",
+
+          "video-title":        "Video About the Team",
+          "video-subtitle":     "Get to know us: who we are, what drives us, and how we build SkillSwap.",
+          "video-coming-soon":  "Video coming soon",
+          "video-coming-desc":  "We are producing the team video. Check back soon!",
+
+          "cta-title":           "Ready to join the community?",
+          "cta-desc":            "Join thousands of students from Peru's top universities and start exchanging knowledge today.",
+          "cta-btn-register":    "Create my free account",
+          "cta-btn-alliance":    "I'm a university representative",
+
+          "footer-text":  "2026 SkillSwap. All rights reserved.",
+          "footer-terms": "Terms and Conditions",
+          "footer-privacy": "Privacy Policy",
+        }
+      };
+
+      function applyLanguage(lang) {
+        if (!translations[lang]) return;
+        const t = translations[lang];
+        document.documentElement.lang = lang;
+        document.title = t["page-title"];
+        const metaDesc = document.querySelector('meta[name="description"]');
+        if (metaDesc) metaDesc.setAttribute('content', t["meta-description"]);
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+          const key = el.getAttribute('data-i18n');
+          if (t[key] !== undefined) el.textContent = t[key];
+        });
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+          btn.classList.toggle('active', btn.dataset.lang === lang);
+        });
+        localStorage.setItem('skillswap-lang', lang);
+      }
+
+      (function init() {
+        const savedLang = localStorage.getItem('skillswap-lang') || 'es';
+        applyLanguage(savedLang);
+      })();
+    </script>
+
+  </body>
+</html>
