@@ -1,0 +1,268 @@
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+      <!-- ── SEO Meta Tags ── -->
+      <meta name="description" content="Inicia sesión en SkillSwap y sigue tu ruta de certificación de habilidades generada por IA." />
+
+      <!-- ── SEO Bilingüe: hreflang (US35) ── -->
+      <!--
+        Estas etiquetas le dicen a Google qué versión de idioma mostrar según la región.
+        Cuando el usuario esté en español, el <head> se estructura así:
+        lang="es" + hreflang="es/en/x-default" apuntando a la misma URL
+        (una SPA no tiene rutas distintas, así que href apunta al mismo index.html)
+      -->
+      <link rel="alternate" hreflang="es" href="login.html" />
+      <link rel="alternate" hreflang="en" href="login.html" />
+      <link rel="alternate" hreflang="x-default" href="login.html" />
+
+      <link rel="stylesheet" href="../assets/styles/login_stylesheet.css"/>
+      <link rel="icon" href="favicon.ico" type="image/x-icon" />
+      <title>SkillSwap | Verificación de Habilidades con IA</title>
+
+    </head>
+
+    <body>
+
+      <!-- ═══════════════════════════════════════ NAV ═══════════════════════════════════════ -->
+      <nav class="barra-navegacion">
+
+        <!-- Botón menú hamburguesa -->
+        <div class="menu-hamburguesa" id="btn-menu" aria-label="Abrir menú" role="button" tabindex="0">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <!-- Logo -->
+        <div class="logo">
+          <a href="../index.html">
+            <img src="../assets/images/SkillSwap_logo.png" alt="Logo SkillSwap" />
+          </a>
+        </div>
+
+        <!-- Menú principal -->
+        <div class="menu-horizontal">
+          <ul class="menu-horizontal-opciones">
+
+          <li><a href="../index.html#seccion-screenshots" data-i18n="nav-plataforma">Plataforma</a></li>
+            <li><a href="partnerships.html"   data-i18n="nav-alianzas">Alianzas</a></li>
+            <li><a href="aboutUs.html" data-i18n="nav-sobre-nosotros">Sobre nosotros</a></li>
+
+            <li>
+              <a href="login.html">
+                <button class="btn-iniciarsesion" data-i18n="nav-login">Iniciar Sesión</button>
+              </a>
+            </li>
+            <li>
+              <a href="signup.html">
+                <button class="btn-registrase" data-i18n="nav-register">Registrarse</button>
+              </a>
+            </li>
+
+            <!-- ── Selector de Idioma (US35) ── -->
+            <li class="lang-switcher-item">
+              <div class="lang-switcher" role="group" aria-label="Seleccionar idioma">
+                <button class="lang-btn active" data-lang="es" onclick="applyLanguage('es')" aria-label="Español">ES</button>
+                <span class="lang-divider">|</span>
+                <button class="lang-btn"        data-lang="en" onclick="applyLanguage('en')" aria-label="English">EN</button>
+              </div>
+            </li>
+
+          </ul>
+        </div>
+      </nav>
+
+  <!-- ═══════════════════════════════════════ SECCIÓN LOGIN ═══════════════════════════════════════ -->
+    
+  <section id="inicio-sesion">
+        <div class="seccion-inicio-sesion">
+          <div class="login-titulo">
+            <h1  data-i18n="login-title">Inicio de Sesión</h1>
+            <div class="titulo-decorador"></div>
+          </div>
+
+          <form class="formulario-inicio-sesion" onsubmit="validarLogin(event)">
+            
+            <div class="formulario-inicio-sesion-elemento">
+              <label for="email" data-i18n="email-label">Correo Institucional*</label>
+              <input type="email" id="email" name="correo" data-i18n="email-placeholder" placeholder="Introduce tu email (Ej: terminar en .edu.pe)" required>
+            </div>
+
+            <div class="formulario-inicio-sesion-elemento">
+              <label for="password" data-i18n="password-label">Contraseña*</label>
+              <input type="password" id="password" name="contrasenia" data-i18n="password-placeholder" placeholder="Introduce tu contraseña" required>
+            </div>
+
+            <div class="formulario-inicio-sesion-elemento">
+              <input type="submit" data-i18n="login-btn" value="Iniciar Sesión">
+            </div>
+
+            <div class="formulario-inicio-sesion-elemento">
+              <label>
+              <span data-i18n="signup-label">¿No tienes cuenta?</span>
+              <a href="signup.html" data-i18n="signup-text"> Regístrate</a>
+              </label>
+            </div>
+
+          </form>
+        </div>
+      </section>
+
+      <script src="../assets/scripts/login.js"></script>
+
+    <!-- ═══════════════════════════════════════ FOOTER ═══════════════════════════════════════ -->
+      <footer>
+        <div class="seccion-footer">
+          <p>
+            <span data-i18n="footer-text">2026 SkillSwap. Todos los derechos reservados.</span>
+            <a href="archivos/TerminosCondiciones.pdf" class="terminos-condiciones" data-i18n="footer-terms">
+              Términos y Condiciones
+            </a>
+            <a href="../archivos/PoliticaPrivacidad.pdf" class="terminos-condiciones" data-i18n="footer-privacy">
+            Política de Privacidad
+          </a>
+          </p>
+        </div>
+      </footer>
+
+  <!-- ═══════════════════════════════════════ SCRIPTS ═══════════════════════════════════════ -->
+
+      <!-- Script menú hamburguesa -->
+      <script>
+        const btnMenu = document.getElementById('btn-menu');
+        const menu = document.querySelector('.barra-navegacion .menu-horizontal');
+
+        btnMenu.addEventListener('click', () => {
+          menu.classList.toggle('activo');
+        });
+      </script>
+
+      <!-- ── Script i18n — US35 ── -->
+      <script>
+        /* ────────────────────────────────────────────────
+          Diccionario de traducciones
+          Añade aquí cualquier nueva clave data-i18n
+        ──────────────────────────────────────────────── */
+        const translations = {
+          es: {
+            /* Página */
+            "page-title":       "SkillSwap | La Red Interuniversitaria Más Grande del Perú",
+            "meta-description": "Inicia sesión en SkillSwap y sigue tu ruta de certificación de habilidades generada por IA.",
+
+            /* Navbar */
+            "nav-alianzas":       "Alianzas",
+            "nav-sobre-nosotros": "Sobre nosotros",
+            "nav-login":          "Iniciar Sesión",
+            "nav-register":       "Registrarse",
+
+            /* Login */
+            "login-title": "Inicio de Sesión",
+            "email-label": "Correo institucional*",
+            "email-placeholder": "Introduce tu email (Ej: terminar en .edu.pe)",
+            "password-label": "Contraseña*",
+            "password-placeholder": "Introduce tu contraseña",
+            "login-btn": "Iniciar Sesión",
+            "signup-label": "¿No tienes cuenta?",
+            "signup-text": "Regístrate",
+    
+          
+            /* Footer */
+            "footer-text":  "2026 SkillSwap. Todos los derechos reservados.",
+            "footer-terms": "Términos y Condiciones",
+            "footer-privacy": "Política de Privacidad",
+          },
+
+          en: {
+            /* Page */
+            "page-title":       "SkillSwap | Peru's Largest Inter-University Network",
+            "meta-description": "Log in to SkillSwap and follow your AI-generated skill certification path.",
+
+            /* Navbar */
+            "nav-alianzas":       "Alliances",
+            "nav-sobre-nosotros": "About us",
+            "nav-login":          "Log In",
+            "nav-register":       "Sign Up",
+
+            /* Login */
+            "login-title": "Log In",
+            "email-label": "University Email*",
+            "email-placeholder": "Enter your email (must end in .edu.pe)",
+            "password-label": "Password*",
+            "password-placeholder": "Enter your password",
+            "login-btn": "Log In",
+            "signup-label": "Don't have an account?",
+            "signup-text": "Sign up",
+
+            /* Footer */
+            "footer-text":  "2026 SkillSwap. All rights reserved.",
+            "footer-terms": "Terms and Conditions",
+            "footer-privacy": "Privacy Policy",
+          }
+        };
+
+        /* ────────────────────────────────────────────────
+          Función principal: aplica el idioma elegido
+          - Actualiza html[lang]                 → SEO
+          - Actualiza <title>                    → SEO
+          - Actualiza <meta name="description">  → SEO
+          - Actualiza todos los [data-i18n]      → UI
+          - Actualiza botones activos            → UI
+          - Guarda en localStorage               → Persistencia
+        ──────────────────────────────────────────────── */
+        function applyLanguage(lang) {
+          if (!translations[lang]) return;
+          const t = translations[lang];
+
+          /* 1. Atributo lang del HTML (SEO bilingüe) */
+          document.documentElement.lang = lang;
+
+          /* 2. <title> */
+          document.title = t["page-title"];
+
+          /* 3. Meta description */
+          const metaDesc = document.querySelector('meta[name="description"]');
+          if (metaDesc) metaDesc.setAttribute('content', t["meta-description"]);
+
+          /* 4. Todos los elementos con data-i18n */
+          document.querySelectorAll('[data-i18n]').forEach(el => {
+            const key = el.getAttribute('data-i18n');
+            if (!t[key]) return;
+
+            /* INPUTS */
+            if (el.tagName === "INPUT") {
+              if (el.type === "submit") {
+                el.value = t[key]; // botón
+              } else {
+                el.placeholder = t[key]; // inputs
+              }
+            } 
+            /* OTROS ELEMENTOS */
+            else {
+              el.textContent = t[key];
+            }
+          });
+
+          /* 5. Estado visual del selector de idioma */
+          document.querySelectorAll('.lang-btn').forEach(btn => {
+            btn.classList.toggle('active', btn.dataset.lang === lang);
+          });
+
+          /* 6. Persistencia en LocalStorage (Escenario 2) */
+          localStorage.setItem('skillswap-lang', lang);
+        }
+
+        /* ────────────────────────────────────────────────
+          Inicialización al cargar la página
+          Lee la preferencia guardada o usa 'es' por defecto
+        ──────────────────────────────────────────────── */
+        (function init() {
+          const savedLang = localStorage.getItem('skillswap-lang') || 'es';
+          applyLanguage(savedLang);
+        })();
+      </script>
+
+    </body>
+  </html>

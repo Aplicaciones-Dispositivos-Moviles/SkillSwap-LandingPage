@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- ── SEO Meta Tags ── -->
+    <meta name="description" content="Regístrate en SkillSwap, sube tus certificados y deja que la IA arme tu ruta de certificación." />
+    
+    <!-- ── SEO Bilingüe: hreflang (US35) ── -->
+    <!--
+      Estas etiquetas le dicen a Google qué versión de idioma mostrar según la región.
+      Cuando el usuario esté en español, el <head> se estructura así:
+      lang="es" + hreflang="es/en/x-default" apuntando a la misma URL
+      (una SPA no tiene rutas distintas, así que href apunta al mismo index.html)
+    -->
+    <link rel="alternate" hreflang="es" href="signup.html" />
+    <link rel="alternate" hreflang="en" href="signup.html" />
+    <link rel="alternate" hreflang="x-default" href="signup.html" />
+
+    <link rel="stylesheet" href="../assets/styles/signup_stylesheet.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <title>SkillSwap | Registro</title>
+  </head>
+
+  <body>
+    
+    <!-- ═══════════════════════════════════════ NAV ═══════════════════════════════════════ -->
+    <nav class="barra-navegacion">
+
+      <!-- Botón menú hamburguesa -->
+      <div class="menu-hamburguesa" id="btn-menu" aria-label="Abrir menú" role="button" tabindex="0">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <!-- Logo -->
+      <div class="logo">
+        <a href="../index.html">
+          <img src="../assets/images/SkillSwap_logo.png" alt="Logo SkillSwap" />
+        </a>
+      </div>
+
+      <!-- Menú principal -->
+      <div class="menu-horizontal">
+        <ul class="menu-horizontal-opciones">
+          <li><a href="../index.html#seccion-screenshots" data-i18n="nav-plataforma">Plataforma</a></li>
+          <li><a href="partnerships.html"   data-i18n="nav-alianzas">Alianzas</a></li>
+          <li><a href="aboutUs.html" data-i18n="nav-sobre-nosotros">Sobre nosotros</a></li>
+
+          <li>
+            <a href="login.html">
+              <button class="btn-iniciarsesion" data-i18n="nav-login">Iniciar Sesión</button>
+            </a>
+          </li>
+          <li>
+            <a href="signup.html">
+              <button class="btn-registrase" data-i18n="nav-register">Registrarse</button>
+            </a>
+          </li>
+
+          <!-- ── Selector de Idioma (US35) ── -->
+          <li class="lang-switcher-item">
+            <div class="lang-switcher" role="group" aria-label="Seleccionar idioma">
+              <button class="lang-btn active" data-lang="es" onclick="applyLanguage('es')" aria-label="Español">ES</button>
+              <span class="lang-divider">|</span>
+              <button class="lang-btn"        data-lang="en" onclick="applyLanguage('en')" aria-label="English">EN</button>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+    </nav>
+
+    <!-- ═══════════════════════════════════════ SECCIÓN SIGNUP ═══════════════════════════════════════ -->
+
+    <section id="registro-cuenta" class="pantalla activa">
+      <div class="seccion-registro-cuenta">
+
+        <div class="signup-titulo">
+          <h1 data-i18n="signup-title">Registrarse</h1>
+          <div class="titulo-decorador"></div>
+        </div>
+
+
+        <form class="formulario-registro" id="form">
+
+          <div class="formulario-registro-elemento">
+            <label data-i18n="name-label">Nombres*</label>
+            <input type="text" name="nombre" data-i18n="name-placeholder" placeholder="Ariana Marcela" required/>
+          </div>
+
+          <div class="formulario-registro-elemento">
+            <label data-i18n="lastname-label">Apellidos*</label>
+            <input type="text" name="apellido" data-i18n="lastname-placeholder" placeholder="Garcia Vasquez" required/>
+          </div>
+
+          <div class="formulario-registro-elemento">
+            <label for="email" data-i18n="email-label">Correo Institucional*</label>
+            <input
+              type="email"
+              id="email"
+              data-i18n="email-placeholder"
+              placeholder="Introduce tu email (debe terminar en .edu.pe)"
+              required
+            />
+          </div>
+
+          <div class="formulario-registro-elemento">
+            <label data-i18n="password-label">Contraseña*</label>
+            <input 
+              type="password" 
+              id="password" 
+              name="contrasenia"
+              data-i18n="password-placeholder"
+              placeholder="La contraseña debe tener un mínimo de 8 caracteres" 
+              required
+            />
+        </div>
+
+        <div class="formulario-registro-elemento">
+            <label data-i18n="confirm-password-label">Confirmar Contraseña*</label>
+            <input 
+              type="password" 
+              id="confirm-password" 
+              name="confirmar_contrasenia"
+              data-i18n="confirm-password-placeholder"
+              placeholder="Repite tu contraseña" 
+              required
+            />
+          </div>
+          <div class="formulario-registro-elemento">
+            <input type="submit" data-i18n="sign-btn" value="Registrarse" />
+          </div>
+          <div class="formulario-registro-elemento">
+            <label>
+              <span data-i18n="login-label">¿Ya tienes cuenta?</span>
+              <a href="login.html" data-i18n="login-text"> Entra Aquí</a>
+            </label>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <div class="seccion-footer">
+        <p>
+          <span data-i18n="footer-text">2026 SkillSwap. Todos los derechos reservados.</span>
+          <a href="../archivos/TerminosCondiciones.pdf" class="terminos-condiciones" data-i18n="footer-terms">Términos y Condiciones</a> 
+          <a href="../archivos/PoliticaPrivacidad.pdf" class="terminos-condiciones" data-i18n="footer-privacy">
+            Política de Privacidad
+          </a>
+        </p>
+      </div>
+    </footer>
+    
+    <script src="../assets/scripts/registro.js"></script>
+    
+    <script>
+    // 1. MENU HAMBURGUESA PRINCIPAL
+        const btnMenu = document.getElementById('btn-menu');
+        const menu = document.querySelector('.barra-navegacion .menu-horizontal');
+        
+        if(btnMenu) {
+            btnMenu.addEventListener('click', () => {
+                menu.classList.toggle('activo');
+            });
+        }
+
+        // 2. SUBMENU ALIANZAS (SOLO MÓVIL)
+        const btnAlianzas = document.getElementById("btn-alianzas");
+        const submenuAlianzas = document.getElementById("submenu-alianzas");
+
+        if (btnAlianzas && submenuAlianzas) {
+            btnAlianzas.addEventListener("click", (event) => {
+                if (window.innerWidth <= 768) {
+                    event.preventDefault(); 
+                    submenuAlianzas.classList.toggle("activo"); 
+                }
+            });
+        }
+    </script>
+
+    <script>
+      const translations = {
+        es: {
+          /* Navbar */
+          "nav-alianzas": "Alianzas",
+          "nav-alianzas-beneficios": "Beneficios",
+          "nav-alianzas-universidades": "Universidades Afiliadas",
+          "nav-alianzas-contacto": "Contacto",
+          "nav-sobre-nosotros": "Sobre nosotros",
+          "nav-login": "Iniciar Sesión",
+          "nav-register": "Registrarse",
+
+          /* Register Form */
+          "sign-title": "Registrarse",
+          "name-label": "Nombres*",
+          "name-placeholder": "Ariana Marcela",
+          "lastname-label": "Apellidos*",
+          "lastname-placeholder": "Garcia Vasquez",
+          "email-label": "Correo Institucional*",
+          "email-placeholder": "Introduce tu email (debe terminar en .edu.pe)",
+          "password-label": "Contraseña*",
+          "password-placeholder": "La contraseña debe tener un mínimo de 8 caracteres",
+          "confirm-password-label": "Confirmar Contraseña*",
+          "confirm-password-placeholder": "Repite tu contraseña",
+          "sign-btn": "Registrarse",
+          "login-label": "¿Ya tienes cuenta?",
+          "login-text": "Entra Aquí",
+
+          /* Footer */
+          "footer-text": "2026 SkillSwap. Todos los derechos reservados.",
+          "footer-terms": "Términos y Condiciones",
+          "footer-privacy": "Política de Privacidad",
+        },
+
+        en: {
+          /* Navbar */
+          "nav-alianzas": "Alliances",
+          "nav-alianzas-beneficios": "Benefits",
+          "nav-alianzas-universidades": "Affiliated Universities",
+          "nav-alianzas-contacto": "Contact",
+          "nav-sobre-nosotros": "About us",
+          "nav-login": "Log In",
+          "nav-register": "Sign Up",
+
+          /* Register Form */
+          "signup-title": "Sign Up",
+          "name-label": "First Name*",
+          "name-placeholder": "Ariana Marcela",
+          "lastname-label": "Last Name*",
+          "lastname-placeholder": "Garcia Vasquez",
+          "email-label": "University Email*",
+          "email-placeholder": "Enter your email (must end in .edu.pe)",
+          "password-label": "Password*",
+          "password-placeholder": "Password must have at least 8 characters",
+          "confirm-password-label": "Confirm Password*",
+          "confirm-password-placeholder": "Repeat your password",
+          "signup-btn": "Sign Up",
+          "login-label": "Already have an account?",
+          "login-text": "Log In Here",
+
+          /* Footer */
+          "footer-text": "2026 SkillSwap. All rights reserved.",
+          "footer-terms": "Terms and Conditions",
+          "footer-privacy": "Privacy Policy",
+        }
+      };
+
+      function applyLanguage(lang) {
+        if (!translations[lang]) return;
+        const t = translations[lang];
+
+        document.documentElement.lang = lang;
+
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+          const key = el.getAttribute('data-i18n');
+          if (!t[key]) return;
+
+          /* INPUTS */
+          if (el.tagName === "INPUT") {
+            if (el.type === "submit") {
+              el.value = t[key]; // botón
+            } else {
+              el.placeholder = t[key]; // placeholders
+            }
+          } 
+          /* OTROS ELEMENTOS */
+          else {
+            el.textContent = t[key];
+          }
+        });
+
+        /* Estado visual del selector de idioma */
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+          btn.classList.toggle('active', btn.dataset.lang === lang);
+        });
+
+        /* Persistencia en LocalStorage */
+        localStorage.setItem('skillswap-lang', lang);
+      }
+
+      /* Inicialización al cargar la página */
+      (function init() {
+        const savedLang = localStorage.getItem('skillswap-lang') || 'es';
+        applyLanguage(savedLang);
+      })();
+    </script>
+  </body>
+</html>

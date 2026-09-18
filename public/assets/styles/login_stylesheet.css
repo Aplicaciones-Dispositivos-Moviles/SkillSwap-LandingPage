@@ -1,0 +1,497 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+/* ═══════════════════════════════════════════════════════════════
+   RESET & BASE
+═══════════════════════════════════════════════════════════════ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   VARIABLES DE DISEÑO
+═══════════════════════════════════════════════════════════════ */
+:root {
+  /* Colores principales */
+  --primary-color:     #193b69;
+  --primary-dark:      #0f2540;
+  --primary-light:     #1e4d8a;
+  --secondary-color:   #FFC107;
+  --secondary-dark:    #e6a800;
+  --background-color:  #f7f9fc;
+  --surface-color:     #ffffff;
+  --border-color:      #dce3ec;
+  --white-color:       #ffffff;
+
+  /* Colores de texto */
+  --text-color:        #1a1a2e;
+  --text-muted:        #64748b;
+  --button-text-color: #ffffff;
+
+  /* Dimensiones del layout */
+  --nav-bar-height:    72px;
+  --footer-height:     60px;
+  --section-padding:   80px;
+  --section-gap:       60px;
+
+  /* Tipografía */
+  --h1-font-size:   36px;
+  --h2-font-size:   28px;
+  --h3-font-size:   20px;
+  --base-font-size: 16px;
+  --label-font-size:14px;
+  --line-height:    1.6;
+
+  /* Bordes y sombras */
+  --radius-sm:  6px;
+  --radius-md:  12px;
+  --radius-lg:  24px;
+  --radius-xl:  999px;
+  --shadow-sm:  0 1px 3px rgba(0,0,0,0.08);
+  --shadow-md:  0 4px 16px rgba(0,0,0,0.10);
+  --shadow-lg:  0 8px 32px rgba(0,0,0,0.12);
+
+  /* Transiciones */
+  --transition: 0.25s ease;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   BODY
+═══════════════════════════════════════════════════════════════ */
+body {
+  background-color: var(--background-color);
+  margin-top: var(--nav-bar-height);
+  color: var(--text-color);
+  line-height: var(--line-height);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   BARRA DE NAVEGACIÓN
+═══════════════════════════════════════════════════════════════ */
+.barra-navegacion {
+  display: flex;
+  background-color: var(--surface-color);
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 28px;
+  height: var(--nav-bar-height);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.logo img {
+  width: 160px;
+  max-width: 160px;
+  display: block;
+}
+
+/* Menú horizontal */
+.menu-horizontal-opciones {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0;
+}
+
+.menu-horizontal-opciones li a {
+  text-decoration: none;
+  display: block;
+  color: var(--text-color);
+  padding: 8px 14px;
+  font-weight: 600;
+  font-size: 15px;
+  border-radius: var(--radius-sm);
+  transition: color var(--transition), background-color var(--transition);
+}
+
+.menu-horizontal-opciones li a:hover {
+  color: var(--primary-color);
+  background-color: #f0f5ff;
+}
+
+/* Botones navbar */
+.btn-iniciarsesion {
+  border-radius: var(--radius-xl);
+  padding: 8px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  background-color: var(--primary-color);
+  color: var(--button-text-color);
+  border: 2px solid var(--primary-color);
+  cursor: pointer;
+  transition: transform var(--transition), background-color var(--transition), box-shadow var(--transition);
+}
+
+.btn-iniciarsesion:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(25, 59, 105, 0.35);
+}
+
+.btn-registrase {
+  border-radius: var(--radius-xl);
+  padding: 8px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  background-color: var(--secondary-color);
+  color: var(--primary-dark);
+  border: 2px solid var(--secondary-color);
+  cursor: pointer;
+  transition: transform var(--transition), background-color var(--transition), box-shadow var(--transition);
+}
+
+.btn-registrase:hover {
+  background-color: var(--secondary-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(255, 193, 7, 0.45);
+}
+
+/* ─────────────────────────────────────────
+   SELECTOR DE IDIOMA — US35
+   Pill con dos botones ES | EN
+───────────────────────────────────────── */
+.lang-switcher-item {
+  margin-left: 8px;
+}
+
+.lang-switcher {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  background-color: var(--background-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-xl);
+  padding: 3px 5px;
+}
+
+.lang-btn {
+  border: none;
+  background: transparent;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-muted);
+  padding: 4px 10px;
+  border-radius: var(--radius-xl);
+  cursor: pointer;
+  transition: background-color var(--transition), color var(--transition);
+  letter-spacing: 0.04em;
+}
+
+.lang-btn.active {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
+
+.lang-btn:not(.active):hover {
+  background-color: #e8edf5;
+  color: var(--primary-color);
+}
+
+.lang-divider {
+  color: var(--border-color);
+  font-size: 14px;
+  font-weight: 300;
+  user-select: none;
+}
+
+/* Hamburguesa */
+.menu-hamburguesa {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: var(--radius-sm);
+}
+
+.menu-hamburguesa span {
+  width: 26px;
+  height: 2.5px;
+  background-color: var(--primary-color);
+  border-radius: 2px;
+  transition: 0.3s;
+  display: block;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   TÍTULO DE SECCIÓN (compartido)
+═══════════════════════════════════════════════════════════════ */
+.titulo-seccion {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.login-titulo {
+  font-size: var(--h2-font-size);
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 32px;
+}
+
+/* Línea decorativa debajo del título */
+.titulo-decorador {
+  width: 60px;
+  height: 4px;
+  border-radius: 2px;
+  justify-self: center;
+  background: linear-gradient(90deg, var(--secondary-color), var(--primary-color));
+}
+
+/* ═══════════════════════════════════════════════════════════════
+    SECCIÓN LOGIN
+═══════════════════════════════════════════════════════════════ */
+#inicio-sesion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - var(--footer-height)); /* Ocupa toda la pantalla */
+  padding: 60px 24px;
+  background: linear-gradient(135deg, var(--background-color) 0%, #e2e8f0 100%);
+}
+
+.seccion-inicio-sesion {
+  background-color: var(--surface-color);
+  width: 100%;
+  max-width: 480px;
+  padding: 48px 40px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-color);
+}
+
+.seccion-inicio-sesion h1 {
+  font-size: var(--h2-font-size);
+  color: var(--primary-color);
+  text-align: center;
+  font-weight: 800;
+}
+
+.formulario-inicio-sesion {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.formulario-inicio-sesion-elemento {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.formulario-inicio-sesion-elemento label {
+  font-size: var(--label-font-size);
+  font-weight: 600;
+  color: var(--primary-dark);
+}
+
+/* Estilos para los campos de texto */
+.formulario-inicio-sesion-elemento input[type="email"],
+.formulario-inicio-sesion-elemento input[type="password"] {
+  width: 100%;
+  padding: 14px 16px;
+  font-size: var(--base-font-size);
+  color: var(--text-color);
+  background-color: var(--background-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  transition: border-color var(--transition), box-shadow var(--transition), background-color var(--transition);
+}
+
+.formulario-inicio-sesion-elemento input::placeholder {
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+.formulario-inicio-sesion-elemento input:focus {
+  outline: none;
+  background-color: var(--surface-color);
+  border-color: var(--primary-light);
+  box-shadow: 0 0 0 4px rgba(30, 77, 138, 0.1);
+}
+
+/* Botón Submit */
+.formulario-inicio-sesion-elemento input[type="submit"] {
+  margin-top: 12px;
+  background-color: var(--secondary-color);
+  color: var(--primary-dark);
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 16px;
+  border: none;
+  border-radius: var(--radius-xl);
+  cursor: pointer;
+  transition: transform var(--transition), box-shadow var(--transition), background-color var(--transition);
+}
+
+.formulario-inicio-sesion-elemento input[type="submit"]:hover {
+  background-color: var(--secondary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(255, 193, 7, 0.45);
+}
+
+/* Enlace "Entra Aquí" */
+.formulario-inicio-sesion-elemento:last-child {
+  margin-top: 8px;
+  align-items: center;
+}
+
+.formulario-inicio-sesion-elemento:last-child label {
+  font-size: 14px;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.formulario-inicio-sesion-elemento:last-child a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 700;
+  margin-left: 6px;
+  transition: color var(--transition);
+}
+
+.formulario-inicio-sesion-elemento:last-child a:hover {
+  color: var(--primary-light);
+  text-decoration: underline;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   FOOTER
+═══════════════════════════════════════════════════════════════ */
+footer {
+  margin-top: auto; /* Empuja el footer al fondo de la pantalla */
+}
+
+.seccion-footer {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  text-align: center;
+  padding: 22px 24px;
+}
+.seccion-footer p { font-size: 14px; color: rgba(255, 255, 255, 0.85); margin: 0 auto; }
+.terminos-condiciones {
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.4);
+  transition: color var(--transition), border-color var(--transition);
+}
+.terminos-condiciones:hover { color: var(--secondary-color); border-color: var(--secondary-color); }
+
+
+/* Tablets y pantallas medianas */
+@media screen and (max-width: 1024px) 
+{
+    .barra-navegacion 
+    {
+        padding: 0 10px;
+    }
+}
+
+/* Móviles (smartphones) */
+@media screen and (max-width: 768px) 
+{
+    .menu-horizontal-opciones 
+    {
+        display: flex;
+        flex-direction: column; 
+        align-items: center;            
+        gap: 20px;                
+        padding: 30px 0;               
+        background-color: #ffffff;
+        position: absolute;   
+        top: 0;     
+        left: -100%;         
+        width: 100%;
+        height: auto;       
+        transition: left 0.3s ease; 
+        z-index: 1000;
+        box-shadow: 0px 5px 10px rgba(0,0,0,0.1);
+    }
+
+    .llamado-accion-texto {
+        font-size: 28px;
+    }
+
+    .division-nosotros-ima img {
+        width: 90%;
+        max-width: 400px;
+    }
+
+    .seccion-nosotros {
+        margin: 20px;
+    }
+
+    .elementos-nosotros-txt
+    {
+        width: 90%;
+    }
+
+    .llamado-accion-boton,
+    .llamado-accion-boton2 {
+        width: 80%;
+        font-size: 16px;
+        padding: 12px 20px;
+    }
+
+     /* mostrar hamburguesa */
+    .menu-hamburguesa {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    padding: 10px;
+    z-index: 1100;
+    }
+
+    .menu-hamburguesa span {
+    width: 30px;
+    height: 3px;
+    background-color: #000;
+    transition: 0.3s;
+    }
+
+     /* Ocultar menú horizontal */
+    .menu-horizontal {
+    display: none;
+    position: absolute;
+    top: 75px;
+    left: 0;
+    width: 100%;
+    background: white;
+    border-bottom: 1px solid #ccc;
+    z-index: 999;
+    }
+
+     /* Mostrar menú cuando esté abierto */
+    .menu-horizontal.activo {
+    display: block;
+    }
+
+   /* Botones más grandes */
+    .btn-iniciarsesion,
+   .btn-registrase {
+    width: 100%;
+    text-align: center;
+  }
+  .menu-horizontal.activo .menu-horizontal-opciones {
+        left: 0;
+    }
+}

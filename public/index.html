@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ── SEO Meta Tags ── -->
+    <meta name="description" content="SkillSwap verifica tus habilidades con IA: sube tus certificados, recibe una ruta de certificación personalizada y demuestra lo que sabes." />
+    <meta name="keywords" content="verificación de habilidades, inteligencia artificial, certificaciones, ruta de aprendizaje, estudiantes universitarios, SkillSwap, Perú, empleabilidad" />
+    <meta name="author" content="Innovify" />
+
+    <!-- ── SEO Bilingüe: hreflang (US35) ── -->
+    <link rel="alternate" hreflang="es" href="index.html" />
+    <link rel="alternate" hreflang="en" href="index.html" />
+    <link rel="alternate" hreflang="x-default" href="index.html" />
+
+    <link rel="stylesheet" href="assets/styles/index_stylesheet.css" />
+    <link rel="stylesheet" href="assets/styles/screenshots_stylesheet.css" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <title>SkillSwap | Verificación de Habilidades con IA</title>
+  </head>
+  <body>
+
+    <!-- ═══════════════════════════════════════ NAV ═══════════════════════════════════════ -->
+    <nav class="barra-navegacion">
+
+      <!-- Botón menú hamburguesa -->
+      <div class="menu-hamburguesa" id="btn-menu" aria-label="Abrir menú" role="button" tabindex="0">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <!-- Logo -->
+      <div class="logo">
+        <a href="index.html">
+          <img src="assets/images/SkillSwap_logo.png" alt="Logo SkillSwap" />
+        </a>
+      </div>
+
+      <!-- Menú principal -->
+      <div class="menu-horizontal">
+        <ul class="menu-horizontal-opciones">
+
+          <li><a href="#seccion-screenshots" data-i18n="nav-plataforma">Plataforma</a></li>
+          <li><a href="sites/partnerships.html"   data-i18n="nav-alianzas">Alianzas</a></li>
+          <li><a href="sites/aboutUs.html" data-i18n="nav-sobre-nosotros">Sobre nosotros</a></li>
+
+          <li> 
+            <a href="index.html">
+              <button class="btn-iniciarsesion" data-i18n="nav-login">Iniciar Sesión</button>
+            </a>
+          </li>
+          <li>
+            <a href="index.html">
+              <button class="btn-registrase" data-i18n="nav-register">Registrarse</button>
+            </a>
+          </li>
+
+          <!-- ── Selector de Idioma (US35) ── -->
+          <li class="lang-switcher-item">
+            <div class="lang-switcher" role="group" aria-label="Seleccionar idioma">
+              <button class="lang-btn active" data-lang="es" onclick="applyLanguage('es')" aria-label="Español">ES</button>
+              <span class="lang-divider">|</span>
+              <button class="lang-btn"        data-lang="en" onclick="applyLanguage('en')" aria-label="English">EN</button>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+    </nav>
+
+    <!-- ═══════════════════════════════════════ SECCIÓN 1 — HERO ═══════════════════════════════════════ -->
+    <section class="seccion-llamado-accion">
+      <div class="hero-badge" data-i18n="hero-badge"> Verificación de habilidades con IA</div>
+      <h1 class="llamado-accion-texto" data-i18n="hero-title">
+        Demuestra lo que sabes. Deja que la IA valide tu ruta hacia la habilidad que necesitas.
+      </h1>
+      <p class="hero-subtitulo" data-i18n="hero-subtitle">
+        Sube tus certificados, nuestra IA detecta qué te falta para tu meta profesional y genera una ruta de certificación con evaluaciones diseñadas para ti — revisadas por IA y, si lo necesitas, por un Verificador humano.
+      </p>
+      <div class="hero-cta-group">
+        <a href="index.html" class="llamado-accion-boton" data-i18n="hero-btn">
+          ¡Empieza tu ruta ahora!
+        </a>
+        <a href="#seccion-screenshots" class="hero-btn-secundario" data-i18n="hero-btn-sec">
+          Ver cómo funciona ↓
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-number">IA</span>
+          <span class="stat-label" data-i18n="stat-ai">Detecta tus gaps de habilidad</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number">100%</span>
+          <span class="stat-label" data-i18n="stat-verified">Certificados verificados</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number">+1</span>
+          <span class="stat-label" data-i18n="stat-verifier">Revisión humana si lo necesitas</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════ SECCIÓN 2 — SOBRE NOSOTROS / CÓMO FUNCIONA ═══════════════════════════════════════ -->
+    <section class="seccion-nosotros">
+      <div class="division-general-nosotros">
+
+        <div class="titulo-seccion">
+          <h2 class="nosotros-titulo" data-i18n="about-title">¿Cómo funciona SkillSwap?</h2>
+          <div class="titulo-decorador"></div>
+          <p class="seccion-subtitulo" data-i18n="about-subtitle">Tu ruta de certificación, generada y evaluada por IA</p>
+        </div>
+
+        <div class="division-contenido-row">
+
+          <div class="division-nosotros-txt">
+
+            <!-- PASO 1 — Sube tus certificados -->
+            <div class="elementos-nosotros-txt">
+              <div class="ns-icono">
+                <img src="assets/images/imagen-lupa.png" alt="Sube tus certificados — lupa" />
+              </div>
+              <div class="ns-texto">
+                <h3 data-i18n="about-skill1-title">1. Sube tus certificados</h3>
+                <p data-i18n="about-skill1-desc">Declara tu meta profesional y sube los certificados externos que ya tienes</p>
+              </div>
+            </div>
+
+            <!-- PASO 2 -->
+            <div class="elementos-nosotros-txt">
+              <div class="ns-icono">
+                <img src="assets/images/imagen-intercambio.png" alt="IA genera tu ruta" />
+              </div>
+              <div class="ns-texto">
+                <h3 data-i18n="about-skill2-title">2. La IA arma tu ruta</h3>
+                <p data-i18n="about-skill2-desc">Detecta los gaps frente a tu meta y genera una ruta de certificación paso a paso</p>
+              </div>
+            </div>
+
+            <!-- PASO 3 -->
+            <div class="elementos-nosotros-txt">
+              <div class="ns-icono">
+                <img src="assets/images/imagen-foco.png" alt="Demuestra la habilidad" />
+              </div>
+              <div class="ns-texto">
+                <h3 data-i18n="about-skill3-title">3. Demuestra la habilidad</h3>
+                <p data-i18n="about-skill3-desc">Rinde un quiz o miniproyecto generado por IA; si no lo logras, un Verificador humano revisa tu caso</p>
+              </div>
+            </div>
+
+            <a href="index.html" class="llamado-accion-boton2" data-i18n="about-btn">
+              Empezar mi ruta
+            </a>
+          </div>
+
+          <div class="division-nosotros-ima">
+            <div class="screenshot-placeholder">
+              <span data-i18n="screenshot-placeholder">Captura de pantalla de la interfaz de SkillSwap</span>
+            </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════ SECCIÓN — ROLES ═══════════════════════════════════════ -->
+<section class="seccion-roles">
+  <div class="titulo-seccion">
+    <h2 class="roles-titulo" data-i18n="roles-title">Tres roles, un mismo sistema de verificación</h2>
+    <div class="titulo-decorador"></div>
+    <p class="seccion-subtitulo" data-i18n="roles-subtitle">Cada uno participa en un punto distinto de la ruta de certificación</p>
+  </div>
+
+  <div class="roles-grid">
+  <div class="rol-card">
+    <div class="rol-icono">
+      <svg width="34" height="34" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 4.5C4 3.67 4.67 3 5.5 3H11a2 2 0 0 1 2 2v14a1.5 1.5 0 0 0-1.5-1.5H4.5A1.5 1.5 0 0 1 3 16V6c0-.83.67-1.5 1-1.5z" stroke="var(--primary-color)" stroke-width="1.6" stroke-linejoin="round"/><path d="M20 4.5c0-.83-.67-1.5-1.5-1.5H13a2 2 0 0 0-2 2v14a1.5 1.5 0 0 1 1.5-1.5h6.5a1.5 1.5 0 0 0 1.5-1.5V6c0-.83-.33-1.5-1-1.5z" stroke="var(--secondary-dark)" stroke-width="1.6" stroke-linejoin="round"/></svg>
+    </div>
+    <h3 data-i18n="rol-learner-title">Estudiante</h3>
+    <p data-i18n="rol-learner-desc">Sube certificados, sigue la ruta que la IA genera para él y rinde sus evaluaciones.</p>
+    <div class="rol-dashboard-preview">
+      <span data-i18n="rol-learner-preview">Dashboard del Estudiante</span>
+    </div>
+    
+  </div>
+
+    <div class="rol-card">
+    <div class="rol-icono">
+      <svg width="34" height="34" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L4 5v6c0 5.25 3.4 10.14 8 11 4.6-.86 8-5.75 8-11V5l-8-3z" stroke="var(--primary-color)" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="var(--secondary-color)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </div>
+    <h3 data-i18n="rol-tutor-title">Verificador / Coordinador-Profesor</h3>
+    <p data-i18n="rol-tutor-desc">Como Verificador, revisa los casos que la IA no logró resolver y gana SkillCredits. Con el rol de Coordinador o Profesor, además supervisa la confiabilidad de los Verificadores, resuelve disputas y ve métricas agregadas del sistema.</p>
+    <div class="rol-dashboard-preview">
+      <span data-i18n="rol-coordinador-preview">Dashboard del Verificador / Coordinador</span>
+    </div>
+  </div>
+</div>
+</section>
+
+    <!-- ═══════════════════════════════════════ SECCIÓN — PITCH / VALOR ═══════════════════════════════════════ -->
+    <section class="seccion-pitch">
+      <div class="pitch-contenido">
+        <div class="pitch-texto">
+          <h2 data-i18n="pitch-title">¿Por qué SkillSwap y no otra plataforma?</h2>
+          <p data-i18n="pitch-desc">
+            Certificar una habilidad no debería depender solo de un examen puntual ni de la disponibilidad de un profesor. En SkillSwap, la IA es quien arma tu ruta, genera tus evaluaciones y hace la primera revisión de cada intento — y si no logras demostrar la habilidad, un Verificador humano especializado entra recién ahí.
+          </p>
+          <ul class="pitch-lista">
+            <li>
+              <span class="pitch-check">✓</span>
+              <span data-i18n="pitch-item1">La IA detecta tus gaps de habilidad a partir de tus certificados y tu meta profesional</span>
+            </li>
+            <li>
+              <span class="pitch-check">✓</span>
+              <span data-i18n="pitch-item2">Evaluaciones (quiz o miniproyecto) generadas dinámicamente para cada paso de tu ruta</span>
+            </li>
+            <li>
+              <span class="pitch-check">✓</span>
+              <span data-i18n="pitch-item3">Revisión con IA en primera instancia; Verificador humano solo si el intento no la demuestra</span>
+            </li>
+            <li>
+              <span class="pitch-check">✓</span>
+              <span data-i18n="pitch-item4">SkillCredits: reconocimiento interno para quienes verifican casos como par evaluador</span>
+            </li>
+          </ul>
+          <a href="index.html" class="llamado-accion-boton" data-i18n="pitch-btn">
+            Empieza tu ruta — tarda 2 minutos
+          </a>
+        </div>
+        <div class="pitch-imagen">
+          <div class="pitch-card">
+            <img src="assets/images/ima-chico2.png" alt="Estudiante usando SkillSwap" class="pitch-avatar" />
+            <div class="pitch-quote">
+              <p data-i18n="pitch-quote">"Subí mis certificados y en minutos ya tenía una ruta clara de lo que me faltaba para el puesto que quería."</p>
+              <span class="pitch-quote-autor" data-i18n="pitch-quote-author">— Estudiante de Ingeniería, UPC</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════ SECCIÓN — SCREENSHOTS DE LA APP ═══════════════════════════════════════ -->
+
+    <section class="screenshots-section" id="seccion-screenshots">
+
+      <div class="hero-screenshot-card">
+
+        <div class="hero-text">
+
+          <div class="feature-tag" data-i18n="ss-hero-tag">
+            Tu ruta de certificación
+          </div>
+
+          <h3 data-i18n="ss-hero-title">
+            Una ruta generada por IA, hecha para tu meta profesional
+          </h3>
+
+          <p data-i18n="ss-hero-desc">
+            Sube tus certificados, deja que la IA detecte tus gaps y sigue
+            una ruta con evaluaciones diseñadas para demostrar cada
+            habilidad, paso a paso.
+          </p>
+
+          <div class="feature-points">
+
+            <span data-i18n="ss-hero-point-1">
+              ✓ Rutas generadas por IA
+            </span>
+
+            <span data-i18n="ss-hero-point-2">
+              ✓ Evaluaciones dinámicas por habilidad
+            </span>
+
+            <span data-i18n="ss-hero-point-3">
+              ✓ Verificador humano como respaldo
+            </span>
+
+          </div>
+
+        </div>
+
+        <div class="hero-screenshot-placeholder">
+          <span data-i18n="ss-hero-image">Imagen de la app</span>
+        </div>
+
+      </div>
+
+      <div class="screenshots-grid">
+
+        <!-- SEARCH -->
+        <div class="screenshot-card-modern">
+
+          <div class="card-badge" data-i18n="ss-search-badge">
+            Sube tu certificado
+          </div>
+
+          <div class="screenshot-placeholder">
+            <span data-i18n="ss-search-image">Imagen de la búsqueda</span>
+          </div>
+
+          <div class="card-content">
+            <h4 data-i18n="ss-search-title">Sube tus certificados externos en segundos</h4>
+            <p data-i18n="ss-search-desc">La IA lee y valida tus certificados para saber exactamente dónde estás parado frente a tu meta profesional.</p>
+          </div>
+
+        </div>
+
+        <!-- CHAT -->
+        <div class="screenshot-card-modern">
+
+          <div class="card-badge" data-i18n="ss-chat-badge">
+            Ruta de certificación
+          </div>
+
+          <div class="screenshot-placeholder">
+            <span data-i18n="ss-chat-image">Imagen del chat</span>
+          </div>
+
+          <div class="card-content">
+            <h4 data-i18n="ss-chat-title">Tu ruta, paso a paso, generada por IA</h4>
+            <p data-i18n="ss-chat-desc">Cada paso te muestra la habilidad que falta certificar y cómo vas a demostrarla.</p>
+          </div>
+
+        </div>
+
+        <!-- PROFILE -->
+        <div class="screenshot-card-modern">
+
+          <div class="card-badge" data-i18n="ss-profile-badge">
+            Perfil de Verificador
+          </div>
+
+          <div class="screenshot-placeholder">
+            <span data-i18n="ss-profile-image">Imagen del perfil de Verificador</span>
+          </div>
+
+          <div class="card-content">
+            <h4 data-i18n="ss-profile-title">Verificadores que ya certificaron esa habilidad</h4>
+            <p data-i18n="ss-profile-desc">Revisa el perfil del par evaluador que atendió tu caso y su historial de confiabilidad.</p>
+          </div>
+
+        </div>
+
+        <!-- SESSION -->
+        <div class="screenshot-card-modern">
+
+          <div class="card-badge" data-i18n="ss-session-badge">
+            Evaluación dinámica
+          </div>
+
+          <div class="screenshot-placeholder">
+            <span data-i18n="ss-session-image">Imagen de la sesión</span>
+          </div>
+
+          <div class="card-content">
+            <h4 data-i18n="ss-session-title">Demuestra la habilidad con un quiz o miniproyecto</h4>
+            <p data-i18n="ss-session-desc">Cada evaluación la genera la IA para el paso exacto de tu ruta, sin bancos de preguntas fijos.</p>
+          </div>
+
+        </div>
+
+        <!-- WALLET -->
+        <div class="screenshot-card-modern">
+
+          <div class="card-badge" data-i18n="ss-wallet-badge">
+            SkillCredits
+          </div>
+
+          <div class="screenshot-placeholder">
+            <span data-i18n="ss-wallet-image">Imagen del Wallet de SkillCredits</span>
+          </div>
+
+          <div class="card-content">
+            <h4 data-i18n="ss-wallet-title">Gana SkillCredits al verificar casos de otros</h4>
+            <p data-i18n="ss-wallet-desc">Reconocimiento 100% interno: se gana revisando casos como Verificador y se canjea por beneficios dentro de la plataforma.</p>
+          </div>
+
+        </div>
+
+        <!-- REVIEW -->
+        <div class="screenshot-card-modern">
+
+          <div class="card-badge" data-i18n="ss-review-badge">
+            Revisión con rúbrica
+          </div>
+
+          <div class="screenshot-placeholder">
+            <span data-i18n="ss-review-image">Imagen de la revisión con rúbrica</span>
+          </div>
+
+          <div class="card-content">
+            <h4 data-i18n="ss-review-title">Revisión con rúbrica, no con criterio a ojo</h4>
+            <p data-i18n="ss-review-desc">La IA hace la primera revisión y, si escala, el Verificador humano evalúa con una rúbrica estructurada por habilidad.</p>
+          </div>
+
+        </div>
+
+      </div>
+
+        <!-- CTA dentro de screenshots -->
+        <div class="screenshots-cta">
+          <p data-i18n="screenshots-cta-txt">¿Listo para probarlo tú mismo?</p>
+          <a href="index.html" class="llamado-accion-boton" data-i18n="screenshots-cta-btn">
+            Crear mi cuenta gratis
+          </a>
+        </div>
+
+    </section>
+
+    <!-- ═══════════════════════════════════════ SECCIÓN — VERIFICACIÓN CON IA ═══════════════════════════════════════ -->
+    <section class="seccion-iot">
+      <div class="division-general-iot">
+        <div class="titulo-seccion">
+          <h2 class="iot-titulo" data-i18n="iot-title">La IA revisa tu ruta, no solo la genera</h2>
+          <div class="titulo-decorador"></div>
+        </div>
+
+        <div class="division-contenido-row-iot">
+          <div class="division-iot-txt">
+            <p class="iot-desc" data-i18n="iot-desc">
+              Esta es la idea central de SkillSwap: la Inteligencia Artificial no solo arma tu ruta de certificación, también hace la primera evaluación de cada intento. Un Verificador humano solo entra cuando el intento no logra demostrar la habilidad, y siempre con una rúbrica estructurada — nunca a criterio libre.
+            </p>
+
+            <div class="elementos-iot-txt">
+              <div class="ns-icono">
+                <span style="font-size: 32px;">1.</span>
+              </div>
+              <div class="ns-texto">
+                <h3 data-i18n="iot-feature1-title">Revisión automática con IA</h3>
+                <p data-i18n="iot-feature1-desc">Cada quiz o miniproyecto se evalúa primero con IA contra el objetivo de la habilidad, antes de escalar a una persona.</p>
+              </div>
+            </div>
+
+            <div class="elementos-iot-txt">
+              <div class="ns-icono">
+                <span style="font-size: 32px;">2.</span>
+              </div>
+              <div class="ns-texto">
+                <h3 data-i18n="iot-feature2-title">Employability Score</h3>
+                <p data-i18n="iot-feature2-desc">Tu historial de habilidades certificadas construye un puntaje de empleabilidad que refleja lo que realmente demostraste saber.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="division-iot-ima">
+            <div class="screenshot-placeholder">
+              <span data-i18n="screenshot-placeholder">Captura de pantalla de la interfaz de SkillSwap</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════ SECCIÓN — SOCIOS ═══════════════════════════════════════ -->
+    <section class="seccion-socios">
+      <div class="titulo-seccion">
+        <h2 class="socios-titulo-h" data-i18n="partners-title">Socios — Universidades Afiliadas</h2>
+        <div class="titulo-decorador"></div>
+      </div>
+      <div class="socios-logos">
+        <div class="socios-logos-row">
+          <a href="https://www.esan.edu.pe" target="_blank" rel="noopener">
+            <div class="socio-logo"><img src="assets/images/esan_logo2.png" alt="ESAN"></div>
+          </a>
+          <a href="https://www.upc.edu.pe" target="_blank" rel="noopener">
+            <div class="socio-logo"><img src="assets/images/upc_logo.png" alt="UPC"></div>
+          </a>
+          <a href="https://www.pucp.edu.pe" target="_blank" rel="noopener">
+            <div class="socio-logo"><img src="assets/images/pucp_logo.png" alt="PUCP"></div>
+          </a>
+          <a href="https://www.ulima.edu.pe" target="_blank" rel="noopener">
+            <div class="socio-logo"><img src="assets/images/u_lima_logo.svg" alt="ULIMA"></div>
+          </a>
+          <a href="https://www.unmsm.edu.pe" target="_blank" rel="noopener">
+            <div class="socio-logo"><img src="assets/images/unmsm_logo.png" alt="UNMSM"></div>
+          </a>
+          <a href="https://www.usil.edu.pe" target="_blank" rel="noopener">
+            <div class="socio-logo"><img src="assets/images/usil_logo.jpg" alt="USIL"></div>
+          </a>
+          <a href="https://www.upn.edu.pe" target="_blank" rel="noopener">
+            <div class="socio-logo"><img src="assets/images/upn_logo.png" alt="UPN"></div>
+          </a>
+          <a href="https://www.cayetano.edu.pe" target="_blank" rel="noopener">
+            <div class="socio-logo"><img src="assets/images/cayetano_logo.jpg" alt="Cayetano Heredia"></div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════ SECCIÓN — VIDEO + REDES ═══════════════════════════════════════ -->
+    <section class="seccion-atp">
+      <div class="titulo-seccion">
+        <h2 class="atp-titulo-h" data-i18n="atp-title">Conoce más y Conecta</h2>
+        <div class="titulo-decorador"></div>
+      </div>
+
+      <div class="contenido-atp-grid">
+
+        <div class="div-video-atp">
+          <video src="assets/videos/video-atp.mp4" controls muted></video>
+        </div>
+
+        <div class="div-info-atp">
+
+          <div class="atp-coordinacion">
+            <h3 data-i18n="atp-chat-title">Coordinación Directa</h3>
+            <p data-i18n="atp-chat-desc">
+              Para que te organices mejor, en SkillSwap no usamos calendarios automatizados rígidos; promovemos la coordinación manual y directa entre estudiantes para que elijas el momento ideal.
+            </p>
+          </div>
+
+          <div class="atp-redes">
+            <h3 data-i18n="atp-social-title">Síguenos en nuestras redes</h3>
+            <div class="redes-iconos">
+              <a href="https://wa.me/51999999999" aria-label="WhatsApp SkillSwap" target="_blank" rel="noopener">
+                <svg width="36" height="36" viewBox="0 0 24 24" fill="#25D366" xmlns="http://www.w3.org/2000/svg"><path d="M12.004 2.003c-5.514 0-9.997 4.483-9.997 9.997 0 1.762.464 3.484 1.345 4.997L2 22l5.117-1.341a9.96 9.96 0 004.887 1.244h.004c5.514 0 9.997-4.483 9.997-9.997 0-2.67-1.04-5.182-2.929-7.071a9.935 9.935 0 00-7.072-2.832zm0 18.174h-.003a8.28 8.28 0 01-4.223-1.156l-.303-.18-3.036.796.81-2.96-.198-.304a8.264 8.264 0 01-1.266-4.393c0-4.567 3.716-8.283 8.222-8.283 2.196 0 4.26.855 5.813 2.409a8.166 8.166 0 012.407 5.813c0 4.567-3.716 8.258-8.223 8.258zm4.508-6.196c-.247-.124-1.463-.722-1.69-.805-.227-.083-.392-.124-.557.124-.164.247-.638.805-.783.97-.144.164-.288.185-.535.062-.247-.124-1.043-.385-1.987-1.227-.734-.655-1.23-1.463-1.374-1.71-.144-.247-.015-.38.109-.503.112-.111.247-.288.37-.432.124-.144.165-.247.247-.412.083-.165.041-.309-.02-.432-.062-.124-.557-1.343-.764-1.84-.201-.483-.406-.418-.557-.426l-.474-.008a.91.91 0 00-.66.309c-.227.247-.866.847-.866 2.065 0 1.218.887 2.394 1.01 2.56.124.164 1.746 2.666 4.23 3.738.591.255 1.052.407 1.412.521.593.189 1.132.162 1.559.098.476-.071 1.463-.598 1.669-1.176.206-.577.206-1.073.144-1.176-.062-.103-.227-.165-.474-.288z"/></svg>
+              </a>
+              <a href="https://facebook.com/skillswapperu" aria-label="Facebook SkillSwap" target="_blank" rel="noopener">
+                <svg width="36" height="36" viewBox="0 0 24 24" fill="#1877F2" xmlns="http://www.w3.org/2000/svg"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.469h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              </a>
+              <a href="https://instagram.com/skillswapperu" aria-label="Instagram SkillSwap" target="_blank" rel="noopener">
+                <svg width="36" height="36" viewBox="0 0 24 24" fill="#E4405F" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm3.98-10.98a1.44 1.44 0 11-2.88 0 1.44 1.44 0 012.88 0z"/></svg>
+              </a>
+              <a href="https://x.com/skillswapperu" aria-label="X / Twitter SkillSwap" target="_blank" rel="noopener">
+                <svg width="36" height="36" viewBox="0 0 24 24" fill="#000000" xmlns="http://www.w3.org/2000/svg"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════ SECCIÓN — CONTACTO ═══════════════════════════════════════ -->
+    <section class="contact-section">
+      <div class="contact-bar">
+
+        <div class="contact-bar-info">
+          <div class="contact-icon">✉</div>
+          <div>
+            <h3 data-i18n="contact-title">¿Necesitas contactarte con nosotros?</h3>
+            <p class="contact-email">
+              <a href="mailto:contacto@skillswap.pe" data-i18n="contact-email">contacto@skillswap.pe</a>
+              &nbsp;|&nbsp;
+              <a href="mailto:soporte@skillswap.pe" data-i18n="contact-soporte">soporte@skillswap.pe</a>
+            </p>
+          </div>
+        </div>
+
+        <div class="dropdown-container">
+          <button class="contact-button">
+            <span data-i18n="contact-btn">Selecciona</span>
+            <svg width="10" height="10" viewBox="0 0 38 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M4.75 0L19 16.2L33.25 0L38 5.4L19 27L0 5.4L4.75 0Z" fill="currentColor"/>
+            </svg>
+          </button>
+          <div class="dropdown-menu">
+            <a href="sites/partnerships.html" data-i18n="contact-alianzas">Alianzas</a>
+            <a href="mailto:contacto@skillswap.pe" data-i18n="contact-email-link">Enviar email</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════ FOOTER ═══════════════════════════════════════ -->
+    <footer>
+      <div class="seccion-footer">
+        <p>
+          <span data-i18n="footer-text">2026 SkillSwap — Innovify. Todos los derechos reservados.</span>
+          <a href="archivos/TerminosCondiciones.pdf" class="terminos-condiciones" data-i18n="footer-terms">
+            Términos y Condiciones
+          </a>
+          <a href="archivos/PoliticaPrivacidad.pdf" class="terminos-condiciones" data-i18n="footer-privacy">
+            Política de Privacidad
+          </a>
+          <a href="mailto:contacto@skillswap.pe" class="terminos-condiciones" data-i18n="footer-contact">
+            Contacto
+          </a>
+        </p>
+      </div>
+    </footer>
+
+    <!-- ═══════════════════════════════════════ SCRIPTS ═══════════════════════════════════════ -->
+
+    <!-- Script menú hamburguesa -->
+    <script>
+      const btnMenu = document.getElementById('btn-menu');
+      const menu = document.querySelector('.barra-navegacion .menu-horizontal');
+
+      btnMenu.addEventListener('click', () => {
+        menu.classList.toggle('activo');
+      });
+    </script>
+
+    <!-- Script Tabs Screenshots -->
+    <script>
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          // Actualizar botones
+          document.querySelectorAll('.tab-btn').forEach(b => {
+            b.classList.remove('active');
+            b.setAttribute('aria-selected', 'false');
+          });
+          btn.classList.add('active');
+          btn.setAttribute('aria-selected', 'true');
+
+          // Actualizar paneles
+          document.querySelectorAll('.screenshots-panel').forEach(p => p.classList.remove('active'));
+          const target = btn.getAttribute('data-tab');
+          document.getElementById('panel-' + target).classList.add('active');
+        });
+      });
+    </script>
+
+    <!-- ── Script i18n — US35 ── -->
+    <script>
+      const translations = {
+        es: {
+          /* Página */
+          "page-title":       "SkillSwap | Verificación de Habilidades con IA",
+          "meta-description": "SkillSwap verifica tus habilidades con IA: sube tus certificados, recibe una ruta de certificación personalizada y demuestra lo que sabes.",
+
+          /* Navbar */
+          "nav-plataforma":     "Plataforma",
+          "nav-alianzas":       "Alianzas",
+          "nav-sobre-nosotros": "Sobre nosotros",
+          "nav-login":          "Iniciar Sesión",
+          "nav-register":       "Registrarse",
+
+          /* Hero */
+          "hero-badge":    " Verificación de habilidades con IA",
+          "hero-title":    "Demuestra lo que sabes. Deja que la IA valide tu ruta hacia la habilidad que necesitas.",
+          "hero-subtitle": "Sube tus certificados, nuestra IA detecta qué te falta para tu meta profesional y genera una ruta de certificación con evaluaciones diseñadas para ti — revisadas por IA y, si lo necesitas, por un Verificador humano.",
+          "hero-btn":      "¡Empieza tu ruta ahora!",
+          "hero-btn-sec":  "Ver cómo funciona ↓",
+          "stat-ai":       "Detecta tus gaps de habilidad",
+          "stat-verified": "Certificados verificados",
+          "stat-verifier": "Revisión humana si lo necesitas",
+
+          /* Sobre nosotros */
+          "about-title":        "¿Cómo funciona SkillSwap?",
+          "about-subtitle":     "Tu ruta de certificación, generada y evaluada por IA",
+          "about-skill1-title": "1. Sube tus certificados",
+          "about-skill1-desc":  "Declara tu meta profesional y sube los certificados externos que ya tienes",
+          "about-skill2-title": "2. La IA arma tu ruta",
+          "about-skill2-desc":  "Detecta los gaps frente a tu meta y genera una ruta de certificación paso a paso",
+          "about-skill3-title": "3. Demuestra la habilidad",
+          "about-skill3-desc":  "Rinde un quiz o miniproyecto generado por IA; si no lo logras, un Verificador humano revisa tu caso",
+          "about-btn":          "Empezar mi ruta",
+          "roles-title":            "Tres roles, un mismo sistema de verificación",
+          "roles-subtitle":         "Cada uno participa en un punto distinto de la ruta de certificación",
+          "rol-learner-title":      "Estudiante",
+          "rol-learner-desc":       "Sube certificados, sigue la ruta que la IA genera para él y rinde sus evaluaciones.",
+          "rol-tutor-title":        "Verificador",
+          "rol-tutor-desc":         "Estudiante que ya certificó esa habilidad; revisa los casos que la IA no logró resolver y gana SkillCredits.",
+          "rol-coordinador-title":  "Coordinador / Profesor",
+          "rol-coordinador-desc":   "Supervisa la confiabilidad de los Verificadores, resuelve disputas y ve métricas agregadas del sistema.",
+
+          /* Pitch */
+          "pitch-title":        "¿Por qué SkillSwap y no otra plataforma?",
+          "pitch-desc":         "Certificar una habilidad no debería depender solo de un examen puntual ni de la disponibilidad de un profesor. En SkillSwap, la IA es quien arma tu ruta, genera tus evaluaciones y hace la primera revisión de cada intento — y si no logras demostrar la habilidad, un Verificador humano especializado entra recién ahí.",
+          "pitch-item1":        "La IA detecta tus gaps de habilidad a partir de tus certificados y tu meta profesional",
+          "pitch-item2":        "Evaluaciones (quiz o miniproyecto) generadas dinámicamente para cada paso de tu ruta",
+          "pitch-item3":        "Revisión con IA en primera instancia; Verificador humano solo si el intento no la demuestra",
+          "pitch-item4":        "SkillCredits: reconocimiento interno para quienes verifican casos como par evaluador",
+          "pitch-btn":          "Empieza tu ruta — tarda 2 minutos",
+          "pitch-quote":        '"Subí mis certificados y en minutos ya tenía una ruta clara de lo que me faltaba para el puesto que quería."',
+          "pitch-quote-author": "— Estudiante de Ingeniería, UPC",
+
+          /* Screenshots */
+          "ss-hero-tag": "Tu ruta de certificación",
+          "ss-hero-title": "Una ruta generada por IA, hecha para tu meta profesional",
+          "ss-hero-desc": "Sube tus certificados, deja que la IA detecte tus gaps y sigue una ruta con evaluaciones diseñadas para demostrar cada habilidad, paso a paso.",
+
+          "ss-hero-point-1": "✓ Rutas generadas por IA",
+          "ss-hero-point-2": "✓ Evaluaciones dinámicas por habilidad",
+          "ss-hero-point-3": "✓ Verificador humano como respaldo",
+
+          "ss-search-badge": "Sube tu certificado",
+          "ss-search-title": "Sube tus certificados externos en segundos",
+          "ss-search-desc": "La IA lee y valida tus certificados para saber exactamente dónde estás parado frente a tu meta profesional.",
+
+          "ss-chat-badge": "Ruta de certificación",
+          "ss-chat-title": "Tu ruta, paso a paso, generada por IA",
+          "ss-chat-desc": "Cada paso te muestra la habilidad que falta certificar y cómo vas a demostrarla.",
+
+          "ss-profile-badge": "Perfil de Verificador",
+          "ss-profile-title": "Verificadores que ya certificaron esa habilidad",
+          "ss-profile-desc": "Revisa el perfil del par evaluador que atendió tu caso y su historial de confiabilidad.",
+
+          "ss-session-badge": "Evaluación dinámica",
+          "ss-session-title": "Demuestra la habilidad con un quiz o miniproyecto",
+          "ss-session-desc": "Cada evaluación la genera la IA para el paso exacto de tu ruta, sin bancos de preguntas fijos.",
+
+          "ss-wallet-badge": "SkillCredits",
+          "ss-wallet-title": "Gana SkillCredits al verificar casos de otros",
+          "ss-wallet-desc": "Reconocimiento 100% interno: se gana revisando casos como Verificador y se canjea por beneficios dentro de la plataforma.",
+
+          "ss-review-badge": "Revisión con rúbrica",
+          "ss-review-title": "Revisión con rúbrica, no con criterio a ojo",
+          "ss-review-desc": "La IA hace la primera revisión y, si escala, el Verificador humano evalúa con una rúbrica estructurada por habilidad.",
+          "screenshots-title":    "La plataforma en acción",
+          "screenshots-subtitle": "Diseñada para ser intuitiva en web y móvil",
+          "tab-web":   "Vista Web",
+          "tab-movil": "Vista Móvil",
+          "ss-dashboard":       "Panel de control",
+          "ss-dashboard-desc":  "Supervisa rutas de certificación, la confiabilidad de tus Verificadores y las métricas agregadas del sistema.",
+          "ss-registro":        "Registro de usuario",
+          "ss-registro-desc":   "Regístrate y declara tu meta profesional para que la IA arme tu primera ruta de certificación.",
+          "ss-validacion":      "Revisión de casos",
+          "ss-validacion-desc": "Cada caso escalado se asigna a un Verificador disponible que ya certificó esa misma habilidad.",
+          "ss-dashboard-m":       "Dashboard móvil",
+          "ss-dashboard-m-desc":  "Sigue tu ruta y el estado de tus casos escalados desde cualquier dispositivo.",
+          "ss-registro-m":        "Registro móvil",
+          "ss-registro-m-desc":   "Regístrate en menos de 2 minutos y empieza a subir tus certificados desde tu celular.",
+          "ss-validacion-m":        "SkillCredits móvil",
+          "ss-validacion-m-desc":   "Revisa tu balance de SkillCredits ganados como Verificador y canjéalos por beneficios.",
+          "screenshots-cta-txt": "¿Listo para probarlo tú mismo?",
+          "screenshots-cta-btn": "Crear mi cuenta gratis",
+
+          /* Revisión con IA */
+          "iot-title":          "La IA revisa tu ruta, no solo la genera",
+          "iot-desc":           "Esta es la idea central de SkillSwap: la Inteligencia Artificial no solo arma tu ruta de certificación, también hace la primera evaluación de cada intento. Un Verificador humano solo entra cuando el intento no logra demostrar la habilidad, y siempre con una rúbrica estructurada — nunca a criterio libre.",
+          "iot-feature1-title": "Revisión automática con IA",
+          "iot-feature1-desc":  "Cada quiz o miniproyecto se evalúa primero con IA contra el objetivo de la habilidad, antes de escalar a una persona.",
+          "iot-feature2-title": "Employability Score",
+          "iot-feature2-desc":  "Tu historial de habilidades certificadas construye un puntaje de empleabilidad que refleja lo que realmente demostraste saber.",
+
+          /* Socios */
+          "partners-title": "Socios — Universidades Afiliadas",
+
+          /* Video y Comunidad */
+          "atp-title":       "Conoce más y Conecta",
+          "atp-chat-title":  "Coordinación Directa",
+          "atp-chat-desc":   "¿Tienes dudas sobre tu ruta o un caso escalado? Coordínalo directamente por nuestro chat interno con tu Verificador o el equipo de soporte.",
+          "atp-social-title": "Síguenos en nuestras redes",
+
+          /* Contacto */
+          "contact-title":    "¿Necesitas contactarte con nosotros?",
+          "contact-email":    "contacto@skillswap.pe",
+          "contact-soporte":  "soporte@skillswap.pe",
+          "contact-btn":      "Selecciona",
+          "contact-alianzas": "Alianzas",
+          "contact-email-link":"Enviar email",
+
+          /* Footer */
+          "footer-text":    "2026 SkillSwap — Innovify. Todos los derechos reservados.",
+          "footer-terms":   "Términos y Condiciones",
+          "footer-privacy": "Política de Privacidad",
+          "footer-contact": "Contacto",
+        },
+
+        en: {
+          /* Page */
+          "page-title":       "SkillSwap | AI-Powered Skill Verification",
+          "meta-description": "SkillSwap verifies your skills with AI: upload your certificates, get a personalized certification path, and prove what you know.",
+
+          /* Navbar */
+          "nav-plataforma":     "Platform",
+          "nav-alianzas":       "Alliances",
+          "nav-sobre-nosotros": "About us",
+          "nav-login":          "Log In",
+          "nav-register":       "Sign Up",
+
+          /* Hero */
+          "hero-badge":    " AI-Powered Skill Verification",
+          "hero-title":    "Prove what you know. Let AI validate your path to the skill you need.",
+          "hero-subtitle": "Upload your certificates, let our AI detect what's missing for your career goal, and get a certification path with assessments designed for you — reviewed by AI and, if needed, by a human Verifier.",
+          "hero-btn":      "Start your path now!",
+          "hero-btn-sec":  "See how it works ↓",
+          "stat-ai":       "Detects your skill gaps",
+          "stat-verified": "Verified certificates",
+          "stat-verifier": "Human review when you need it",
+
+          /* About */
+          "about-title":        "How does SkillSwap work?",
+          "about-subtitle":     "Your certification path, generated and reviewed by AI",
+          "about-skill1-title": "1. Upload your certificates",
+          "about-skill1-desc":  "State your career goal and upload the external certificates you already have",
+          "about-skill2-title": "2. AI builds your path",
+          "about-skill2-desc":  "It detects the gaps against your goal and generates a step-by-step certification path",
+          "about-skill3-title": "3. Prove the skill",
+          "about-skill3-desc":  "Take an AI-generated quiz or mini-project; if you don't pass, a human Verifier reviews your case",
+          "about-btn":          "Start my path",
+          "roles-title":            "Three roles, one verification system",
+          "roles-subtitle":         "Each one takes part at a different point of the certification path",
+          "rol-learner-title":      "Student",
+          "rol-learner-desc":       "Uploads certificates, follows the path AI generates for them, and takes their assessments.",
+          "rol-tutor-title":        "Verifier",
+          "rol-tutor-desc":         "A student who already certified that skill; reviews the cases AI couldn't resolve and earns SkillCredits.",
+          "rol-coordinador-title":  "Coordinator / Professor",
+          "rol-coordinador-desc":   "Oversees Verifier reliability, resolves disputes, and views aggregate system metrics.",
+
+          /* Pitch */
+          "pitch-title":        "Why SkillSwap and not another platform?",
+          "pitch-desc":         "Certifying a skill shouldn't depend only on a one-off exam or a professor's availability. On SkillSwap, AI builds your path, generates your assessments, and does the first review of every attempt — a human Verifier only steps in if you can't prove the skill.",
+          "pitch-item1":        "AI detects your skill gaps from your certificates and your career goal",
+          "pitch-item2":        "Assessments (quiz or mini-project) generated dynamically for each step of your path",
+          "pitch-item3":        "AI review first; a human Verifier only if the attempt doesn't prove the skill",
+          "pitch-item4":        "SkillCredits: internal recognition for those who verify cases as peer reviewers",
+          "pitch-btn":          "Start your path — takes 2 minutes",
+          "pitch-quote":        '"I uploaded my certificates and in minutes I had a clear path of what I was missing for the role I wanted."',
+          "pitch-quote-author": "— Engineering student, UPC",
+
+          /* Screenshots */
+          "ss-hero-tag": "Your certification path",
+          "ss-hero-title": "A path generated by AI, built for your career goal",
+          "ss-hero-desc": "Upload your certificates, let AI detect your gaps, and follow a path with assessments designed to prove each skill, step by step.",
+
+          "ss-hero-point-1": "✓ AI-generated paths",
+          "ss-hero-point-2": "✓ Dynamic assessments per skill",
+          "ss-hero-point-3": "✓ Human Verifier as backup",
+
+          "ss-search-badge": "Upload your certificate",
+          "ss-search-title": "Upload your external certificates in seconds",
+          "ss-search-desc": "AI reads and validates your certificates to know exactly where you stand against your career goal.",
+
+          "ss-chat-badge": "Certification path",
+          "ss-chat-title": "Your path, step by step, generated by AI",
+          "ss-chat-desc": "Each step shows you the skill still pending certification and how you'll prove it.",
+
+          "ss-profile-badge": "Verifier profile",
+          "ss-profile-title": "Verifiers who already certified that skill",
+          "ss-profile-desc": "Check the peer reviewer's profile for your case and their reliability track record.",
+
+          "ss-session-badge": "Dynamic assessment",
+          "ss-session-title": "Prove the skill with a quiz or mini-project",
+          "ss-session-desc": "Every assessment is generated by AI for the exact step of your path — no fixed question banks.",
+
+          "ss-wallet-badge": "SkillCredits",
+          "ss-wallet-title": "Earn SkillCredits by verifying others' cases",
+          "ss-wallet-desc": "100% internal recognition: earned by reviewing cases as a Verifier and redeemed for in-platform benefits.",
+
+          "ss-review-badge": "Rubric-based review",
+          "ss-review-title": "Rubric-based review, not gut feeling",
+          "ss-review-desc": "AI does the first review and, if escalated, the human Verifier evaluates with a structured skill rubric.",
+
+          "screenshots-title":    "The platform in action",
+          "screenshots-subtitle": "Designed to be intuitive on web and mobile",
+          "tab-web":   "Web View",
+          "tab-movil": "Mobile View",
+          "ss-dashboard":       "Control panel",
+          "ss-dashboard-desc":  "Oversee certification paths, Verifier reliability, and aggregate system metrics.",
+          "ss-registro":        "User registration",
+          "ss-registro-desc":   "Sign up and state your career goal so AI can build your first certification path.",
+          "ss-validacion":      "Case review",
+          "ss-validacion-desc": "Every escalated case is assigned to an available Verifier who already certified that same skill.",
+          "ss-dashboard-m":       "Mobile dashboard",
+          "ss-dashboard-m-desc":  "Follow your path and the status of your escalated cases from any device.",
+          "ss-registro-m":        "Mobile registration",
+          "ss-registro-m-desc":   "Sign up in under 2 minutes and start uploading your certificates from your phone.",
+          "ss-validacion-m":        "SkillCredits mobile",
+          "ss-validacion-m-desc":   "Check your SkillCredits balance earned as a Verifier and redeem it for benefits.",
+          "screenshots-cta-txt": "Ready to try it yourself?",
+          "screenshots-cta-btn": "Create my free account",
+
+          /* AI review */
+          "iot-title":          "AI reviews your path, not just generates it",
+          "iot-desc":           "This is SkillSwap's core idea: AI doesn't just build your certification path, it also does the first review of every attempt. A human Verifier only steps in when an attempt fails to prove the skill, always with a structured rubric — never with free judgment.",
+          "iot-feature1-title": "Automatic AI review",
+          "iot-feature1-desc":  "Every quiz or mini-project is first evaluated by AI against the skill's goal, before escalating to a person.",
+          "iot-feature2-title": "Employability Score",
+          "iot-feature2-desc":  "Your history of certified skills builds an employability score that reflects what you actually proved you know.",
+
+          /* Partners */
+          "partners-title": "Partners — Affiliated Universities",
+
+          /* Video y Comunidad */
+          "atp-title":       "Learn more and Connect",
+          "atp-chat-title":  "Direct Coordination",
+          "atp-chat-desc":   "Questions about your path or an escalated case? Coordinate directly with your Verifier or the support team through our internal chat.",
+          "atp-social-title": "Follow us on our networks",
+
+          /* Contact */
+          "contact-title":    "Need to get in touch with us?",
+          "contact-email":    "contacto@skillswap.pe",
+          "contact-soporte":  "soporte@skillswap.pe",
+          "contact-btn":      "Select",
+          "contact-alianzas": "Alliances",
+          "contact-email-link":"Send email",
+
+          /* Footer */
+          "footer-text":    "2026 SkillSwap — Innovify. All rights reserved.",
+          "footer-terms":   "Terms and Conditions",
+          "footer-privacy": "Privacy Policy",
+          "footer-contact": "Contact",
+        }
+      };
+
+      function applyLanguage(lang) {
+        if (!translations[lang]) return;
+        const t = translations[lang];
+
+        document.documentElement.lang = lang;
+        document.title = t["page-title"];
+
+        const metaDesc = document.querySelector('meta[name="description"]');
+        if (metaDesc) metaDesc.setAttribute('content', t["meta-description"]);
+
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+          const key = el.getAttribute('data-i18n');
+          if (t[key] !== undefined) el.textContent = t[key];
+        });
+
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+          btn.classList.toggle('active', btn.dataset.lang === lang);
+        });
+
+        localStorage.setItem('skillswap-lang', lang);
+      }
+
+      (function init() {
+        const savedLang = localStorage.getItem('skillswap-lang') || 'es';
+        applyLanguage(savedLang);
+      })();
+    </script>
+
+  </body>
+</html>

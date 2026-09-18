@@ -1,0 +1,441 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+/* ═══════════════════════════════════════════════════════════════
+   RESET & BASE
+═══════════════════════════════════════════════════════════════ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+:root {
+  /* Colores principales */
+  --primary-color:     #193b69;
+  --primary-dark:      #0f2540;
+  --primary-light:     #1e4d8a;
+  --secondary-color:   #FFC107;
+  --secondary-dark:    #e6a800;
+  --background-color:  #f7f9fc;
+  --surface-color:     #ffffff;
+  --border-color:      #dce3ec;
+  --white-color:       #ffffff;
+
+  /* Colores de texto */
+  --text-color:        #1a1a2e;
+  --text-muted:        #64748b;
+  --button-text-color: #ffffff;
+
+  /* Dimensiones del layout */
+  --nav-bar-height:    72px;
+  --footer-height:     60px;
+  --section-padding:   80px;
+
+  /* Tipografía */
+  --h1-font-size:   36px;
+  --h2-font-size:   28px;
+  --h3-font-size:   20px;
+  --base-font-size: 16px;
+  --label-font-size:14px;
+  --line-height:    1.6;
+
+  /* Bordes y sombras */
+  --radius-sm:  6px;
+  --radius-md:  12px;
+  --radius-lg:  24px;
+  --radius-xl:  999px;
+  --shadow-sm:  0 1px 3px rgba(0,0,0,0.08);
+  --shadow-md:  0 4px 16px rgba(0,0,0,0.10);
+  --shadow-lg:  0 8px 32px rgba(0,0,0,0.12);
+
+  /* Transiciones */
+  --transition: 0.25s ease;
+}
+
+body {
+  background-color: var(--background-color);
+  margin-top: var(--nav-bar-height);
+  color: var(--text-color);
+  line-height: var(--line-height);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Asegura que el footer quede abajo */
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   BARRA DE NAVEGACIÓN
+═══════════════════════════════════════════════════════════════ */
+.barra-navegacion {
+  display: flex;
+  background-color: var(--surface-color);
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 28px;
+  height: var(--nav-bar-height);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+}
+
+.logo { display: flex; align-items: center; flex-shrink: 0; }
+.logo img { width: 160px; max-width: 160px; display: block; }
+
+.menu-horizontal-opciones {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0;
+}
+
+.menu-horizontal-opciones li a {
+  text-decoration: none;
+  display: block;
+  color: var(--text-color);
+  padding: 8px 14px;
+  font-weight: 600;
+  font-size: 15px;
+  border-radius: var(--radius-sm);
+  transition: color var(--transition), background-color var(--transition);
+}
+
+.menu-horizontal-opciones li a:hover {
+  color: var(--primary-color);
+  background-color: #f0f5ff;
+}
+
+/* Dropdown Alianzas */
+.dropdown { position: relative; display: inline-block; }
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--surface-color);
+  min-width: 200px;
+  box-shadow: var(--shadow-md);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+  z-index: 1;
+  top: 100%;
+  overflow: hidden;
+}
+.dropdown-content a {
+  color: var(--text-color);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-weight: 500;
+}
+.dropdown-content a:hover { background-color: var(--background-color); color: var(--primary-color); }
+.dropdown:hover .dropdown-content { display: block; }
+
+/* Botones Navbar */
+.btn-iniciarsesion, .btn-registrase {
+  border-radius: var(--radius-xl);
+  padding: 8px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform var(--transition), background-color var(--transition), box-shadow var(--transition);
+}
+.btn-iniciarsesion {
+  background-color: var(--primary-color);
+  color: var(--button-text-color);
+  border: 2px solid var(--primary-color);
+}
+.btn-iniciarsesion:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(25, 59, 105, 0.35);
+}
+.btn-registrase {
+  background-color: var(--secondary-color);
+  color: var(--primary-dark);
+  border: 2px solid var(--secondary-color);
+}
+.btn-registrase:hover {
+  background-color: var(--secondary-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(255, 193, 7, 0.45);
+}
+/* ─────────────────────────────────────────
+   SELECTOR DE IDIOMA
+───────────────────────────────────────── */
+.lang-switcher-item {
+  margin-left: 8px;
+}
+
+.lang-switcher {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  background-color: var(--background-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-xl);
+  padding: 3px 5px;
+}
+
+.lang-btn {
+  border: none;
+  background: transparent;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-muted);
+  padding: 4px 10px;
+  border-radius: var(--radius-xl);
+  cursor: pointer;
+  transition: background-color var(--transition), color var(--transition);
+  letter-spacing: 0.04em;
+}
+
+.lang-btn.active {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
+
+.lang-btn:not(.active):hover {
+  background-color: #e8edf5;
+  color: var(--primary-color);
+}
+
+.lang-divider {
+  color: var(--border-color);
+  font-size: 14px;
+  font-weight: 300;
+  user-select: none;
+}
+
+.menu-hamburguesa {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: var(--radius-sm);
+}
+.menu-hamburguesa span {
+  width: 26px;
+  height: 2.5px;
+  background-color: var(--primary-color);
+  border-radius: 2px;
+  transition: 0.3s;
+  display: block;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   MÓDULO: REGISTRO DE CUENTA
+═══════════════════════════════════════════════════════════════ */
+#registro-cuenta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1; /* Ocupa el espacio disponible entre nav y footer */
+  padding: 60px 24px;
+  background: linear-gradient(135deg, var(--background-color) 0%, #e2e8f0 100%);
+}
+
+.seccion-registro-cuenta {
+  background-color: var(--surface-color);
+  width: 100%;
+  max-width: 480px;
+  padding: 48px 40px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-color);
+}
+
+.seccion-registro-cuenta h1 {
+  font-size: var(--h2-font-size);
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: 32px;
+  font-weight: 800;
+}
+
+.formulario-registro {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.formulario-registro-elemento {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.formulario-registro-elemento label {
+  font-size: var(--label-font-size);
+  font-weight: 600;
+  color: var(--primary-dark);
+}
+
+/* Estilos para los campos de texto */
+.formulario-registro-elemento input[type="text"],
+.formulario-registro-elemento input[type="email"],
+.formulario-registro-elemento input[type="password"] {
+  width: 100%;
+  padding: 14px 16px;
+  font-size: var(--base-font-size);
+  color: var(--text-color);
+  background-color: var(--background-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  transition: border-color var(--transition), box-shadow var(--transition), background-color var(--transition);
+}
+
+.formulario-registro-elemento input::placeholder {
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+.formulario-registro-elemento input:focus {
+  outline: none;
+  background-color: var(--surface-color);
+  border-color: var(--primary-light);
+  box-shadow: 0 0 0 4px rgba(30, 77, 138, 0.1);
+}
+
+/* Botón Submit */
+.formulario-registro-elemento input[type="submit"] {
+  margin-top: 12px;
+  background-color: var(--secondary-color);
+  color: var(--primary-dark);
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 16px;
+  border: none;
+  border-radius: var(--radius-xl);
+  cursor: pointer;
+  transition: transform var(--transition), box-shadow var(--transition), background-color var(--transition);
+}
+
+.formulario-registro-elemento input[type="submit"]:hover {
+  background-color: var(--secondary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(255, 193, 7, 0.45);
+}
+
+/* Enlace "Entra Aquí" */
+.formulario-registro-elemento:last-child {
+  margin-top: 8px;
+  align-items: center;
+}
+
+.formulario-registro-elemento:last-child label {
+  font-size: 14px;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.formulario-registro-elemento:last-child a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 700;
+  margin-left: 6px;
+  transition: color var(--transition);
+}
+
+.formulario-registro-elemento:last-child a:hover {
+  color: var(--primary-light);
+  text-decoration: underline;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   FOOTER
+═══════════════════════════════════════════════════════════════ */
+footer {
+  margin-top: auto; /* Empuja el footer al fondo de la pantalla */
+}
+
+.seccion-footer {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  text-align: center;
+  padding: 22px 24px;
+}
+.seccion-footer p { font-size: 14px; color: rgba(255, 255, 255, 0.85); margin: 0 auto; }
+.terminos-condiciones {
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.4);
+  transition: color var(--transition), border-color var(--transition);
+}
+.terminos-condiciones:hover { color: var(--secondary-color); border-color: var(--secondary-color); }
+
+/* ═══════════════════════════════════════════════════════════════
+   RESPONSIVE (MÓVILES Y TABLETS)
+═══════════════════════════════════════════════════════════════ */
+@media screen and (max-width: 768px) {
+  /* Navbar Móvil */
+  .menu-hamburguesa { display: flex; }
+  
+  .menu-horizontal-opciones {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px 20px;
+    background-color: var(--surface-color);
+    position: fixed;
+    top: var(--nav-bar-height);
+    left: -100%;
+    width: 270px;
+    height: calc(100vh - var(--nav-bar-height));
+    transition: left 0.3s ease;
+    z-index: 999;
+    box-shadow: 4px 0 20px rgba(0,0,0,0.08);
+    border-right: 1px solid var(--border-color);
+    overflow-y: auto;
+  }
+  
+  .menu-horizontal.activo .menu-horizontal-opciones { left: 0; }
+  .menu-horizontal-opciones li { width: 100%; }
+  .menu-horizontal-opciones li a {
+    padding: 12px 8px;
+    border-bottom: 1px solid var(--border-color);
+    border-radius: 0;
+  }
+  /* Selector de idioma en móvil */
+  .lang-switcher-item {
+    margin-left: 0;
+    margin-top: 8px;
+  }
+
+  .lang-switcher {
+    width: fit-content;
+  }
+  .btn-iniciarsesion, .btn-registrase {
+    width: 100%;
+    text-align: center;
+    margin-top: 8px;
+    display: block;
+  }
+
+  .dropdown-content {
+    position: static;
+    box-shadow: none;
+    border: none;
+    border-top: 1px solid var(--border-color);
+    min-width: 100%;
+  }
+
+  /* Formulario Móvil */
+  #registro-cuenta {
+    padding: 40px 16px;
+  }
+
+  .seccion-registro-cuenta {
+    padding: 32px 24px;
+    border-radius: var(--radius-md);
+  }
+
+  .seccion-registro-cuenta h1 {
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+}

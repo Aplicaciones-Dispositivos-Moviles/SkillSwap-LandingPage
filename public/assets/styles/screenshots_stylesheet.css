@@ -1,0 +1,754 @@
+/* ═══════════════════════════════════════════════════════════════
+   screenshots_stylesheet.css
+   Estilos adicionales para las secciones nuevas del index.html:
+   — Hero mejorado (stats + subtítulo + botón secundario)
+   — Sección Pitch / Valor diferencial
+   — Sección Screenshots (tabs + grid de imágenes)
+   Referencia: index_stylesheet.css (variables :root ya definidas)
+═══════════════════════════════════════════════════════════════ */
+
+/* ═══════════════════════════════════════════════════════════════
+   HERO — MEJORAS
+═══════════════════════════════════════════════════════════════ */
+
+/* Subtítulo del Hero */
+.hero-subtitulo {
+  color: rgba(255, 255, 255, 0.88);
+  font-size: clamp(15px, 1.8vw, 19px);
+  font-weight: 400;
+  max-width: 680px;
+  line-height: 1.65;
+  margin-top: -4px;
+}
+
+/* Grupo de botones CTA */
+.hero-cta-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+/* Botón secundario (outline) */
+.hero-btn-secundario {
+  display: inline-block;
+  font-family: inherit;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 13px 28px;
+  border-radius: 999px;
+  background-color: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.55);
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+}
+
+.hero-btn-secundario:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.9);
+  transform: translateY(-2px);
+}
+
+/* Estadísticas del Hero */
+.hero-stats {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  margin-top: 20px;
+  background: rgba(255, 255, 255, 0.10);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  padding: 18px 36px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.stat-number {
+  font-size: 28px;
+  font-weight: 800;
+  color: #FFC107;
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.80);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.stat-divider {
+  width: 1px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+/* ── Subtítulo compartido de secciones ── */
+.seccion-subtitulo {
+  font-size: 15px;
+  color: #64748b;
+  margin-top: 4px;
+  line-height: 1.5;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   SECCIÓN PITCH / VALOR DIFERENCIAL
+═══════════════════════════════════════════════════════════════ */
+
+.seccion-pitch {
+  background: linear-gradient(135deg, #0f2540 0%, #193b69 100%);
+  padding: 80px 60px;
+}
+
+.pitch-contenido {
+  display: flex;
+  flex-direction: row;
+  gap: 60px;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.pitch-texto {
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.pitch-texto h2 {
+  font-size: clamp(22px, 3vw, 34px);
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.25;
+}
+
+.pitch-texto p {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.80);
+  line-height: 1.7;
+}
+
+/* Lista de beneficios */
+.pitch-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.pitch-lista li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.88);
+  line-height: 1.5;
+}
+
+.pitch-check {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background-color: #FFC107;
+  color: #0f2540;
+  font-weight: 800;
+  font-size: 13px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* Tarjeta de testimonio */
+.pitch-imagen {
+  flex: 0.8;
+  display: flex;
+  justify-content: center;
+}
+
+.pitch-card {
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 340px;
+  backdrop-filter: blur(6px);
+}
+
+.pitch-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #FFC107;
+  align-self: center;
+}
+
+.pitch-quote p {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.90);
+  line-height: 1.65;
+  font-style: italic;
+}
+
+.pitch-quote-autor {
+  display: block;
+  margin-top: 10px;
+  font-size: 13px;
+  color: #FFC107;
+  font-weight: 600;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   SECCIÓN SCREENSHOTS
+═══════════════════════════════════════════════════════════════ */
+
+.seccion-screenshots {
+  padding: 80px 60px;
+  background-color: #ffffff;
+}
+
+.screenshots-contenedor {
+  max-width: 1400px; 
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.screenshots-titulo {
+  font-size: 28px;
+  font-weight: 700;
+  color: #193b69;
+}
+
+/* ── Tabs ── */
+.screenshots-tabs {
+  display: flex;
+  gap: 8px;
+  border-bottom: 2px solid #dce3ec;
+  padding-bottom: 0;
+}
+
+.tab-btn {
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  color: #64748b;
+  padding: 10px 22px;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -2px;
+  border-radius: 6px 6px 0 0;
+  transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.tab-btn:hover {
+  color: #193b69;
+  background-color: #f0f5ff;
+}
+
+.tab-btn.active {
+  color: #193b69;
+  border-bottom-color: #193b69;
+  background-color: #f0f5ff;
+}
+
+/* ── Paneles ── */
+.screenshots-panel {
+  display: none;
+}
+
+.screenshots-panel.active {
+  display: block;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0);   }
+}
+
+/* ── Grid de screenshots ── */
+.screenshots-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.screenshots-grid-movil {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* Tarjeta de screenshot */
+
+.screenshots-section {
+  padding: 120px 8%;
+  background:
+    radial-gradient(circle at top, rgba(88, 101, 242, 0.10), transparent 35%),
+    #ffffff;
+
+  color: #111827;
+}
+
+.section-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 80px;
+}
+
+.section-badge {
+  display: inline-block;
+  padding: 8px 18px;
+  border-radius: 999px;
+
+  background: rgba(88, 101, 242, 0.10);
+  border: 1px solid rgba(88, 101, 242, 0.18);
+
+  color: var(--primary-color);
+
+  font-size: .9rem;
+  font-weight: 600;
+
+  margin-bottom: 20px;
+}
+
+.section-header h2 {
+  font-size: 3rem;
+  line-height: 1.1;
+  margin-bottom: 24px;
+
+  color: #111827;
+}
+
+.section-header p {
+  color: #6b7280;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+/* HERO */
+
+.hero-screenshot-card {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 50px;
+  align-items: center;
+
+  background: var(--primary-color);
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  backdrop-filter: blur(16px);
+
+  border-radius: 32px;
+
+  padding: 50px;
+
+  margin-bottom: 50px;
+
+  overflow: hidden;
+
+  position: relative;
+
+  box-shadow:
+    0 20px 60px rgba(33, 46, 110, 0.28);
+}
+
+.feature-tag {
+  display: inline-block;
+
+  background: var(--secondary-color);
+
+  color: black;
+
+  padding: 10px 18px;
+
+  border-radius: 999px;
+
+  margin-bottom: 20px;
+
+  font-weight: 600;
+}
+
+.hero-text h3 {
+  font-size: 2.4rem;
+  margin-bottom: 24px;
+  line-height: 1.2;
+
+  color: rgb(251, 251, 251);
+}
+
+.hero-text p {
+  color: rgb(226, 226, 226);
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+.feature-points {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.feature-points span {
+  background: #f3f4f6;
+
+  color: #374151;
+
+  padding: 10px 16px;
+
+  border-radius: 999px;
+
+  font-size: .95rem;
+}
+
+.hero-image-container img {
+  width: 100%;
+
+  border-radius: 24px;
+
+  box-shadow:
+    0 30px 60px rgba(15, 23, 42, 0.15);
+
+  transition: .4s ease;
+}
+
+.hero-image-container img:hover {
+  transform: translateY(-8px) scale(1.01);
+}
+
+/* GRID */
+
+.screenshots-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.screenshot-card-modern {
+  background: rgba(255,255,255,0.9);
+
+  border: 1px solid rgba(15, 23, 42, 0.08);
+
+  border-radius: 28px;
+
+  overflow: hidden;
+
+  transition: .35s ease;
+
+  position: relative;
+
+  box-shadow:
+    0 10px 35px rgba(15, 23, 42, 0.05);
+}
+
+.screenshot-card-modern:hover {
+  transform: translateY(-10px);
+
+  border-color: rgba(88, 101, 242, 0.18);
+
+  box-shadow:
+    0 20px 50px rgba(15, 23, 42, 0.10);
+}
+
+.card-badge {
+  position: absolute;
+
+  margin: 20px;
+
+  background: rgba(255, 180, 19, 0.85);
+
+  color: #111827;
+
+  border: 1px solid rgba(15, 23, 42, 0.08);
+
+  backdrop-filter: blur(10px);
+
+  padding: 10px 16px;
+
+  border-radius: 999px;
+
+  font-size: .9rem;
+
+  font-weight: 600;
+
+  z-index: 5;
+}
+
+.screenshot-card-modern img {
+  width: 100%;
+  display: block;
+}
+
+.card-content {
+  padding: 28px;
+}
+
+.card-content h4 {
+  font-size: 1.4rem;
+  margin-bottom: 16px;
+
+  color: #111827;
+}
+
+.card-content p {
+  color: #6b7280;
+  line-height: 1.7;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+
+  .hero-screenshot-card {
+    grid-template-columns: 1fr;
+  }
+
+  .screenshots-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-header h2 {
+    font-size: 2.3rem;
+  }
+
+  .hero-text h3 {
+    font-size: 2rem;
+  }
+
+}
+
+.screenshot-card {
+  background: #f7f9fc;
+  border: 1px solid #dce3ec;
+  border-radius: 14px;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.screenshot-card-2 {
+  background: #f7f9fc;
+  max-width: 50%;
+  border: 1px solid #dce3ec;
+  border-radius: 14px;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.screenshot-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(25, 59, 105, 0.14);
+}
+
+/* Etiqueta sobre la imagen */
+.screenshot-etiqueta {
+  background: #193b69;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 7px 16px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.screenshot-card img {
+ 
+  height: 800px; /* ANTES: 220px. Esto hace la imagen mucho más alta */
+  object-fit: cover;
+  object-position: top;
+  display: block;
+  border-bottom: 1px solid #dce3ec;
+}
+
+/* Tarjetas móvil — imagen más alta y estrecha */
+.screenshot-card-movil img {
+  height: 800px; /* ANTES: 280px. Aumenta la altura del celular */
+  object-fit: contain;
+  background-color: #eef2f8;
+  padding: 12px;
+}
+
+.screenshot-desc {
+  font-size: 13px;
+  color: #64748b;
+  line-height: 1.55;
+  padding: 14px 16px 18px;
+  flex: 1;
+}
+
+/* ── CTA al final de screenshots ── */
+.screenshots-cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 36px 24px;
+  margin-top: 30px;
+  background: linear-gradient(135deg, #f0f5ff, #e8f0fe);
+  border-radius: 16px;
+  border: 1px solid #c7d9f8;
+  text-align: center;
+}
+
+.screenshots-cta p {
+  font-size: 20px;
+  font-weight: 700;
+  color: #193b69;
+  margin: 0;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   SECCIÓN CONTACTO — EMAIL VISIBLE
+═══════════════════════════════════════════════════════════════ */
+
+.contact-email {
+  font-size: 13px;
+  color: #64748b;
+  margin-top: 4px;
+}
+
+.contact-email a {
+  color: #193b69;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.contact-email a:hover {
+  color: #FFC107;
+  text-decoration: underline;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   RESPONSIVE — TABLETS (≤ 1024px)
+═══════════════════════════════════════════════════════════════ */
+@media screen and (max-width: 1024px) {
+
+  .seccion-pitch {
+    padding: 60px 32px;
+  }
+
+  .pitch-contenido {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .pitch-card {
+    max-width: 100%;
+  }
+
+  .seccion-screenshots {
+    padding: 60px 32px;
+  }
+
+  .screenshots-grid,
+  .screenshots-grid-movil {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero-stats {
+    gap: 20px;
+    padding: 14px 24px;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   RESPONSIVE — MÓVILES (≤ 768px)
+═══════════════════════════════════════════════════════════════ */
+@media screen and (max-width: 768px) {
+
+  /* Hero */
+  .hero-cta-group {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .hero-btn-secundario,
+  .llamado-accion-boton {
+    width: 100%;
+    max-width: 320px;
+    text-align: center;
+  }
+
+  .hero-stats {
+    gap: 14px;
+    padding: 14px 16px;
+  }
+
+  .stat-divider {
+    display: none;
+  }
+
+  .hero-stats {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  /* Pitch */
+  .seccion-pitch {
+    padding: 48px 20px;
+  }
+
+  .pitch-texto h2 {
+    font-size: 22px;
+  }
+
+  /* Screenshots */
+  .seccion-screenshots {
+    padding: 48px 20px;
+  }
+
+  .screenshots-grid,
+  .screenshots-grid-movil {
+    grid-template-columns: 1fr;
+  }
+
+  .screenshot-card img {
+    height: 260px;
+  }
+
+  .screenshot-card-movil img {
+    height: 260px;
+  }
+
+  .screenshots-tabs {
+    flex-wrap: wrap;
+  }
+
+  .tab-btn {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  /* Contacto */
+  .contact-email {
+    font-size: 12px;
+  }
+}
