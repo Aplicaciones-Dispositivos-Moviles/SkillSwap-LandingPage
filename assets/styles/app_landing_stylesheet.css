@@ -1,0 +1,702 @@
+/* ═══════════════════════════════════════════════════════════════
+   LANDING ORIENTADA A LA DESCARGA DE LA APP
+   Hero con pantallas reales, "Cómo funciona" en 5 pasos,
+   sección "Descarga la app" y CTA en nav/footer.
+   Se carga después de index_stylesheet.css y screenshots_stylesheet.css.
+═══════════════════════════════════════════════════════════════ */
+
+:root {
+  --app-gradient: linear-gradient(150deg, #0f2540 0%, #193b69 55%, #1e4d8a 100%);
+  --phone-bezel: #0b1220;
+}
+
+/* ── Foco visible y consistente (WCAG 2.4.7) ── */
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible,
+[tabindex]:focus-visible {
+  outline: 3px solid var(--primary-light);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+.hero-app a:focus-visible,
+.descarga-card a:focus-visible,
+.footer-descarga a:focus-visible {
+  outline-color: var(--secondary-color);
+}
+
+/* ── Botones de la app ── */
+.btn-app {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 48px;
+  padding: 12px 26px;
+  border-radius: var(--radius-xl);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-decoration: none;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: transform var(--transition), box-shadow var(--transition), background-color var(--transition), color var(--transition);
+}
+
+.btn-app-primario {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+  color: var(--primary-dark);
+}
+
+.btn-app-primario:hover {
+  background-color: var(--secondary-dark);
+  border-color: var(--secondary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(255, 193, 7, 0.4);
+}
+
+.btn-app-secundario {
+  background-color: transparent;
+  border-color: rgba(255, 255, 255, 0.7);
+  color: var(--white-color);
+}
+
+.btn-app-secundario:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+  border-color: var(--white-color);
+}
+
+.btn-app-sm {
+  min-height: 44px;
+  padding: 10px 20px;
+  font-size: 14px;
+}
+
+/* ── Marco de teléfono para las pantallas reales ── */
+.telefono {
+  margin: 0;
+  padding: 8px;
+  border-radius: 36px;
+  background: var(--phone-bezel);
+  box-shadow: 0 24px 60px rgba(8, 20, 40, 0.35), inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+
+.telefono img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 28px;
+  background: #fff;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   NAV — CTA de descarga
+═══════════════════════════════════════════════════════════════ */
+.menu-hamburguesa {
+  background: none;
+  border: 0;
+  min-width: 44px;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-horizontal-opciones li a.nav-cta-descarga {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 10px 20px;
+  margin-left: 8px;
+  border-radius: var(--radius-xl);
+  background-color: var(--secondary-color);
+  color: var(--primary-dark);
+  font-weight: 700;
+}
+
+.menu-horizontal-opciones li a.nav-cta-descarga:hover {
+  background-color: var(--secondary-dark);
+  color: var(--primary-dark);
+}
+
+.nav-cta-movil {
+  display: none;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   HERO
+═══════════════════════════════════════════════════════════════ */
+.hero-app {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 80% 30%, rgba(96, 165, 250, 0.28) 0, rgba(96, 165, 250, 0) 45%),
+    var(--app-gradient);
+  color: var(--white-color);
+  padding: 72px 24px 88px;
+}
+
+.hero-app-contenido {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.hero-app-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: var(--radius-xl);
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.hero-app-titulo {
+  font-size: clamp(34px, 4.6vw, 58px);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  margin-bottom: 20px;
+}
+
+.hero-app-subtitulo {
+  font-size: 18px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.88);
+  max-width: 580px;
+}
+
+.hero-app-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 32px;
+}
+
+.hero-app-nota {
+  margin-top: 14px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.hero-app-datos {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 40px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  max-width: 580px;
+}
+
+.hero-app-datos li {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.hero-app-datos strong {
+  color: var(--secondary-color);
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.hero-app-datos span {
+  font-size: 13px;
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.hero-app-visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 600px;
+}
+
+.telefono-frente {
+  position: relative;
+  z-index: 2;
+  width: 280px;
+  transform: translateX(56px) rotate(3deg);
+}
+
+.telefono-atras {
+  position: absolute;
+  z-index: 1;
+  width: 245px;
+  transform: translateX(-110px) rotate(-7deg);
+  opacity: 0.92;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   CÓMO FUNCIONA — 5 pasos con pantallas reales
+═══════════════════════════════════════════════════════════════ */
+.seccion-flujo {
+  background-color: var(--surface-color);
+  padding: var(--section-padding) 24px;
+  scroll-margin-top: var(--nav-bar-height);
+}
+
+.seccion-flujo > .titulo-seccion {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.flujo-pasos {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  max-width: 1180px;
+  margin: 40px auto 0;
+  padding: 0;
+}
+
+.flujo-paso {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px 18px 24px;
+  border-radius: 20px;
+  background-color: var(--background-color);
+  border: 1px solid var(--border-color);
+}
+
+.flujo-paso .telefono-sm {
+  align-self: center;
+  width: 100%;
+  max-width: 190px;
+  margin-bottom: 20px;
+}
+
+.telefono-sm {
+  padding: 6px;
+  border-radius: 28px;
+  box-shadow: 0 14px 32px rgba(8, 20, 40, 0.22);
+}
+
+.telefono-sm img,
+.telefono-sm .credencial {
+  border-radius: 22px;
+  aspect-ratio: 9 / 20;
+  object-fit: cover;
+  object-position: top;
+}
+
+.flujo-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  font-weight: 800;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.flujo-paso h3 {
+  font-size: 17px;
+  line-height: 1.3;
+  color: var(--primary-color);
+  margin-bottom: 6px;
+}
+
+.flujo-paso p {
+  font-size: 14.5px;
+  line-height: 1.55;
+  color: var(--text-muted);
+}
+
+/* Tarjeta "Habilidad certificada" (paso 5) */
+.credencial {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px 14px;
+  background: var(--app-gradient);
+  color: var(--white-color);
+  text-align: center;
+}
+
+.credencial-icono {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--white-color);
+}
+
+.credencial-etiqueta {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--secondary-color);
+}
+
+.credencial-nombre {
+  font-size: 18px;
+  line-height: 1.25;
+}
+
+.credencial-detalle {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.credencial-chip {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: var(--radius-xl);
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.flujo-cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   DESCARGA LA APP
+═══════════════════════════════════════════════════════════════ */
+.seccion-descarga {
+  padding: var(--section-padding) 24px;
+  background-color: var(--background-color);
+  scroll-margin-top: var(--nav-bar-height);
+}
+
+.descarga-card {
+  position: relative;
+  overflow: hidden;
+  max-width: 1180px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  gap: 40px;
+  align-items: center;
+  padding: 56px;
+  border-radius: 28px;
+  background:
+    radial-gradient(circle at 85% 20%, rgba(96, 165, 250, 0.28) 0, rgba(96, 165, 250, 0) 50%),
+    var(--app-gradient);
+  color: var(--white-color);
+  box-shadow: var(--shadow-lg);
+}
+
+.descarga-eyebrow {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--secondary-color);
+  margin-bottom: 10px;
+}
+
+.descarga-titulo {
+  font-size: clamp(28px, 3.4vw, 42px);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  margin-bottom: 14px;
+}
+
+.descarga-desc {
+  font-size: 17px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.88);
+  max-width: 600px;
+}
+
+.descarga-lista {
+  list-style: none;
+  display: grid;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.descarga-lista li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 15.5px;
+}
+
+.descarga-check {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  margin-top: 1px;
+  border-radius: 50%;
+  background: rgba(255, 193, 7, 0.2);
+  color: var(--secondary-color);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.descarga-acciones {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+/* Insignia neutral "Muy pronto en Google Play" (no es la insignia oficial ni un enlace) */
+.badge-proximamente {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 56px;
+  padding: 8px 18px;
+  border-radius: 12px;
+  background: #000;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  color: var(--white-color);
+}
+
+.badge-proximamente-txt {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+}
+
+.badge-proximamente-txt small {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.badge-proximamente-txt strong {
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.descarga-nota {
+  margin-top: 20px;
+  font-size: 14.5px;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.descarga-nota a {
+  color: var(--secondary-color);
+  font-weight: 600;
+  text-underline-offset: 3px;
+  display: inline-block;
+  padding: 12px 0;
+}
+
+.descarga-visual {
+  display: flex;
+  justify-content: center;
+}
+
+.telefono-descarga {
+  width: 260px;
+  transform: rotate(4deg);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   FOOTER — CTA de descarga
+═══════════════════════════════════════════════════════════════ */
+.footer-descarga {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 12px 20px;
+  padding: 20px 16px;
+  background-color: var(--primary-dark);
+  color: var(--white-color);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  text-align: center;
+}
+
+.footer-descarga p {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   RESPONSIVE
+═══════════════════════════════════════════════════════════════ */
+@media (max-width: 1100px) {
+  /* El nav no entra completo: se compacta el menú */
+  .menu-horizontal-opciones li a {
+    padding: 8px 10px;
+  }
+}
+
+@media (max-width: 1024px) {
+  /* Pasos como carrusel horizontal con scroll-snap (no genera scroll de página) */
+  .flujo-pasos {
+    grid-template-columns: none;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(240px, 32%);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 14px;
+    max-width: 100%;
+  }
+
+  .flujo-paso {
+    scroll-snap-align: start;
+  }
+}
+
+@media (max-width: 900px) {
+  .hero-app {
+    padding: 48px 16px 56px;
+  }
+
+  .hero-app-contenido {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .hero-app-visual {
+    min-height: 470px;
+  }
+
+  .telefono-frente {
+    width: 220px;
+    transform: translateX(44px) rotate(3deg);
+  }
+
+  .telefono-atras {
+    width: 195px;
+    transform: translateX(-84px) rotate(-7deg);
+  }
+
+  .descarga-card {
+    grid-template-columns: 1fr;
+    padding: 36px 24px;
+    gap: 32px;
+  }
+
+  .telefono-descarga {
+    width: 190px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-cta-movil {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 0 16px;
+    border-radius: var(--radius-xl);
+    background-color: var(--secondary-color);
+    color: var(--primary-dark);
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .barra-navegacion {
+    padding: 0 16px;
+  }
+
+  /* Áreas táctiles de al menos 44px (WCAG 2.5.8 / Material) */
+  .logo a {
+    display: block;
+    padding: 8px 0;
+  }
+
+  .menu-horizontal-opciones li a {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+
+  .lang-btn {
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  .menu-horizontal-opciones li a.nav-cta-descarga {
+    width: 100%;
+    justify-content: center;
+    margin: 12px 0 0;
+    border-bottom: 0;
+    border-radius: var(--radius-xl);
+  }
+
+  .seccion-flujo,
+  .seccion-descarga {
+    padding: 56px 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .logo img {
+    width: 128px;
+  }
+
+  .hero-app-subtitulo {
+    font-size: 16.5px;
+  }
+
+  .hero-app-badge {
+    font-size: 13px;
+  }
+
+  .hero-app-ctas .btn-app {
+    width: 100%;
+  }
+
+  .hero-app-datos {
+    gap: 12px;
+  }
+
+  .hero-app-datos strong {
+    font-size: 18px;
+  }
+
+  .hero-app-datos span {
+    font-size: 12px;
+  }
+
+  .flujo-pasos {
+    grid-auto-columns: 78%;
+  }
+
+  .descarga-acciones {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .badge-proximamente {
+    justify-content: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-app,
+  .btn-app:hover {
+    transition: none;
+    transform: none;
+  }
+}

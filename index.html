@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- ── SEO Meta Tags ── -->
-    <meta name="description" content="SkillSwap verifica tus habilidades con IA: sube tus certificados, recibe una ruta de certificación personalizada y demuestra lo que sabes." />
+    <meta name="description" content="SkillSwap es la app para Android que certifica tus habilidades: declara tu meta, sube tus certificados, sigue tu ruta y rinde quizzes generados por IA. Muy pronto en Google Play." />
     <meta name="keywords" content="verificación de habilidades, inteligencia artificial, certificaciones, ruta de aprendizaje, estudiantes universitarios, SkillSwap, Perú, empleabilidad" />
     <meta name="author" content="Innovify" />
 
@@ -16,6 +16,7 @@
 
     <link rel="stylesheet" href="assets/styles/index_stylesheet.css" />
     <link rel="stylesheet" href="assets/styles/screenshots_stylesheet.css" />
+    <link rel="stylesheet" href="assets/styles/app_landing_stylesheet.css" />
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <title>SkillSwap | Verificación de Habilidades con IA</title>
   </head>
@@ -25,37 +26,33 @@
     <nav class="barra-navegacion">
 
       <!-- Botón menú hamburguesa -->
-      <div class="menu-hamburguesa" id="btn-menu" aria-label="Abrir menú" role="button" tabindex="0">
+      <button type="button" class="menu-hamburguesa" id="btn-menu" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-principal">
         <span></span>
         <span></span>
         <span></span>
-      </div>
+      </button>
 
       <!-- Logo -->
       <div class="logo">
         <a href="index.html">
-          <img src="assets/images/SkillSwap_logo.png" alt="Logo SkillSwap" />
+          <img src="assets/images/SkillSwap_logo.png" alt="SkillSwap — inicio" />
         </a>
       </div>
 
+      <!-- CTA de descarga visible en móvil (fuera del menú) -->
+      <a href="#descarga" class="nav-cta-movil" data-i18n="nav-download-short">Descargar</a>
+
       <!-- Menú principal -->
-      <div class="menu-horizontal">
+      <div class="menu-horizontal" id="menu-principal">
         <ul class="menu-horizontal-opciones">
 
-          <li><a href="#seccion-screenshots" data-i18n="nav-plataforma">Plataforma</a></li>
+          <li><a href="#como-funciona" data-i18n="nav-como-funciona">Cómo funciona</a></li>
           <li><a href="#seccion-planes" data-i18n="nav-planes">Planes</a></li>
           <li><a href="sites/partnerships.html"   data-i18n="nav-alianzas">Alianzas</a></li>
           <li><a href="sites/aboutUs.html" data-i18n="nav-sobre-nosotros">Sobre nosotros</a></li>
 
-          <li> 
-            <a href="index.html">
-              <button class="btn-iniciarsesion" data-i18n="nav-login">Iniciar Sesión</button>
-            </a>
-          </li>
-          <li>
-            <a href="index.html">
-              <button class="btn-registrase" data-i18n="nav-register">Registrarse</button>
-            </a>
+          <li class="nav-cta-item">
+            <a href="#descarga" class="nav-cta-descarga" data-i18n="nav-download">Descarga la app</a>
           </li>
 
           <!-- ── Selector de Idioma (US35) ── -->
@@ -72,99 +69,106 @@
     </nav>
 
     <!-- ═══════════════════════════════════════ SECCIÓN 1 — HERO ═══════════════════════════════════════ -->
-    <section class="seccion-llamado-accion">
-      <div class="hero-badge" data-i18n="hero-badge"> Verificación de habilidades con IA</div>
-      <h1 class="llamado-accion-texto" data-i18n="hero-title">
-        Demuestra lo que sabes. Deja que la IA valide tu ruta hacia la habilidad que necesitas.
-      </h1>
-      <p class="hero-subtitulo" data-i18n="hero-subtitle">
-        Sube tus certificados, nuestra IA detecta qué te falta para tu meta profesional y genera una ruta de certificación con evaluaciones diseñadas para ti — revisadas por IA y, si lo necesitas, por un Verificador humano.
-      </p>
-      <div class="hero-cta-group">
-        <a href="index.html" class="llamado-accion-boton" data-i18n="hero-btn">
-          ¡Empieza tu ruta ahora!
-        </a>
-        <a href="#seccion-screenshots" class="hero-btn-secundario" data-i18n="hero-btn-sec">
-          Ver cómo funciona ↓
-        </a>
-      </div>
-      <div class="hero-stats">
-        <div class="stat-item">
-          <span class="stat-number">IA</span>
-          <span class="stat-label" data-i18n="stat-ai">Detecta tus gaps de habilidad</span>
+    <section class="hero-app" aria-labelledby="hero-titulo">
+      <div class="hero-app-contenido">
+
+        <div class="hero-app-texto">
+          <p class="hero-app-badge">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><rect x="6" y="2" width="12" height="20" rx="3" stroke="currentColor" stroke-width="2"/><path d="M11 18h2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            <span data-i18n="hero-badge">App para Android · Muy pronto en Google Play</span>
+          </p>
+          <h1 class="hero-app-titulo" id="hero-titulo" data-i18n="hero-title">Demuestra lo que sabes, no solo lo que estudiaste.</h1>
+          <p class="hero-app-subtitulo" data-i18n="hero-subtitle">Declara tu meta profesional, sube tus certificados y SkillSwap arma tu ruta con las habilidades que te faltan. Demuestra cada una con quizzes generados por IA y, si no apruebas o no estás de acuerdo con el resultado, un Verificador humano revisa tu caso.</p>
+
+          <div class="hero-app-ctas">
+            <a href="#descarga" class="btn-app btn-app-primario">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M12 3v12m0 0l-5-5m5 5l5-5M5 21h14" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span data-i18n="hero-btn">Descarga la app</span>
+            </a>
+            <a href="#como-funciona" class="btn-app btn-app-secundario" data-i18n="hero-btn-sec">Ver cómo funciona</a>
+          </div>
+          <p class="hero-app-nota" data-i18n="hero-note">Gratis para empezar · Lanzamiento muy pronto en Google Play</p>
+
+          <ul class="hero-app-datos">
+            <li><strong data-i18n="stat1-num">5 preguntas</strong><span data-i18n="stat1-label">por quiz; apruebas con 4</span></li>
+            <li><strong data-i18n="stat2-num">48 h</strong><span data-i18n="stat2-label">revisión humana con el plan mensual</span></li>
+            <li><strong data-i18n="stat3-num">S/ 0</strong><span data-i18n="stat3-label">para empezar tu primera ruta</span></li>
+          </ul>
         </div>
-        <div class="stat-divider"></div>
-        <div class="stat-item">
-          <span class="stat-number">100%</span>
-          <span class="stat-label" data-i18n="stat-verified">Certificados verificados</span>
+
+        <div class="hero-app-visual">
+          <figure class="telefono telefono-atras">
+            <img src="assets/images/app/app-certificado.webp" width="560" height="1246" alt="Pantalla de la app: verificando un certificado de Coursera con ML Kit, datos extraídos y sin duplicados" />
+          </figure>
+          <figure class="telefono telefono-frente">
+            <img src="assets/images/app/app-ruta.webp" width="560" height="1246" alt="Pantalla de la app: ruta activa Python para Data Science con 2 de 5 nodos completados" fetchpriority="high" />
+          </figure>
         </div>
-        <div class="stat-divider"></div>
-        <div class="stat-item">
-          <span class="stat-number">+1</span>
-          <span class="stat-label" data-i18n="stat-verifier">Revisión humana si lo necesitas</span>
-        </div>
+
       </div>
     </section>
 
     <!-- ═══════════════════════════════════════ SECCIÓN 2 — SOBRE NOSOTROS / CÓMO FUNCIONA ═══════════════════════════════════════ -->
-    <section class="seccion-nosotros">
-      <div class="division-general-nosotros">
+    <section class="seccion-flujo" id="como-funciona" aria-labelledby="flujo-titulo">
+      <div class="titulo-seccion">
+        <h2 class="nosotros-titulo" id="flujo-titulo" data-i18n="flow-title">Cómo funciona</h2>
+        <div class="titulo-decorador"></div>
+        <p class="seccion-subtitulo" data-i18n="flow-subtitle">De tu meta profesional a una habilidad certificada, en 5 pasos dentro de la app.</p>
+      </div>
 
-        <div class="titulo-seccion">
-          <h2 class="nosotros-titulo" data-i18n="about-title">¿Cómo funciona SkillSwap?</h2>
-          <div class="titulo-decorador"></div>
-          <p class="seccion-subtitulo" data-i18n="about-subtitle">Tu ruta de certificación, generada y evaluada por IA</p>
-        </div>
-
-        <div class="division-contenido-row">
-
-          <div class="division-nosotros-txt">
-
-            <!-- PASO 1 — Sube tus certificados -->
-            <div class="elementos-nosotros-txt">
-              <div class="ns-icono">
-                <img src="assets/images/imagen-lupa.png" alt="Sube tus certificados — lupa" />
-              </div>
-              <div class="ns-texto">
-                <h3 data-i18n="about-skill1-title">1. Sube tus certificados</h3>
-                <p data-i18n="about-skill1-desc">Declara tu meta profesional y sube los certificados externos que ya tienes</p>
-              </div>
+      <ol class="flujo-pasos" tabindex="0" aria-labelledby="flujo-titulo">
+        <li class="flujo-paso">
+          <figure class="telefono telefono-sm">
+            <img src="assets/images/app/app-meta.webp" width="310" height="672" loading="lazy" alt="Pantalla Nueva ruta: el estudiante escribe su meta de aprendizaje y pulsa Generar mi ruta" />
+          </figure>
+          <span class="flujo-num" aria-hidden="true">1</span>
+          <h3 data-i18n="flow1-title">Declara tu meta</h3>
+          <p data-i18n="flow1-desc">Escribe con tus palabras qué quieres lograr y sube los certificados que ya tienes. La IA interpreta tu meta y ML Kit lee tus certificados.</p>
+        </li>
+        <li class="flujo-paso">
+          <figure class="telefono telefono-sm">
+            <img src="assets/images/app/app-ruta.webp" width="560" height="1246" loading="lazy" alt="Pantalla Mi ruta: nodos completados, siguiente paso y nodos bloqueados" />
+          </figure>
+          <span class="flujo-num" aria-hidden="true">2</span>
+          <h3 data-i18n="flow2-title">Recibe tu ruta</h3>
+          <p data-i18n="flow2-desc">SkillSwap compara tu meta con su catálogo de habilidades, calcula qué te falta y arma tu ruta nodo por nodo.</p>
+        </li>
+        <li class="flujo-paso">
+          <figure class="telefono telefono-sm">
+            <img src="assets/images/app/app-quiz.webp" width="560" height="1246" loading="lazy" alt="Pantalla Evaluaciones: quizzes pendientes e historial de intentos" />
+          </figure>
+          <span class="flujo-num" aria-hidden="true">3</span>
+          <h3 data-i18n="flow3-title">Rinde el quiz</h3>
+          <p data-i18n="flow3-desc">Cada nodo tiene un quiz de 5 preguntas generado por IA. Con 4 respuestas correctas, desbloqueas el siguiente.</p>
+        </li>
+        <li class="flujo-paso">
+          <figure class="telefono telefono-sm">
+            <img src="assets/images/app/app-revision-verificador.webp" width="560" height="1246" loading="lazy" alt="Pantalla de seguimiento de caso: un Verificador está revisando el intento con rúbrica" />
+          </figure>
+          <span class="flujo-num" aria-hidden="true">4</span>
+          <h3 data-i18n="flow4-title">Un Verificador revisa tu caso</h3>
+          <p data-i18n="flow4-desc">Si no apruebas o no estás de acuerdo con el resultado, escalas el caso y un Verificador humano lo evalúa con una rúbrica.</p>
+        </li>
+        <li class="flujo-paso">
+          <figure class="telefono telefono-sm">
+            <div class="credencial">
+              <span class="credencial-icono" aria-hidden="true">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="M12 2l2.4 1.8 3-.2.9 2.9 2.5 1.7-1 2.8 1 2.8-2.5 1.7-.9 2.9-3-.2L12 22l-2.4-1.8-3 .2-.9-2.9-2.5-1.7 1-2.8-1-2.8 2.5-1.7.9-2.9 3 .2L12 2z" fill="#1f8a4c"/><path d="M8.5 12.2l2.3 2.3 4.7-4.7" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              <span class="credencial-etiqueta" data-i18n="flow5-card-label">Habilidad certificada</span>
+              <strong class="credencial-nombre">Python para Data Science</strong>
+              <span class="credencial-detalle" data-i18n="flow5-card-detail">5 de 5 nodos · Quiz 5/5</span>
+              <span class="credencial-chip" data-i18n="flow5-card-chip">Visible en tu perfil</span>
             </div>
+          </figure>
+          <span class="flujo-num" aria-hidden="true">5</span>
+          <h3 data-i18n="flow5-title">Certifica la habilidad</h3>
+          <p data-i18n="flow5-desc">Al completar tu ruta, la habilidad queda certificada en tu perfil con la evidencia de cada evaluación.</p>
+        </li>
+      </ol>
 
-            <!-- PASO 2 -->
-            <div class="elementos-nosotros-txt">
-              <div class="ns-icono">
-                <img src="assets/images/imagen-intercambio.png" alt="IA genera tu ruta" />
-              </div>
-              <div class="ns-texto">
-                <h3 data-i18n="about-skill2-title">2. La IA arma tu ruta</h3>
-                <p data-i18n="about-skill2-desc">Detecta los gaps frente a tu meta y genera una ruta de certificación paso a paso</p>
-              </div>
-            </div>
-
-            <!-- PASO 3 -->
-            <div class="elementos-nosotros-txt">
-              <div class="ns-icono">
-                <img src="assets/images/imagen-foco.png" alt="Demuestra la habilidad" />
-              </div>
-              <div class="ns-texto">
-                <h3 data-i18n="about-skill3-title">3. Demuestra la habilidad</h3>
-                <p data-i18n="about-skill3-desc">Rinde un quiz o miniproyecto generado por IA; si no lo logras, un Verificador humano revisa tu caso</p>
-              </div>
-            </div>
-
-            <a href="index.html" class="llamado-accion-boton2" data-i18n="about-btn">
-              Empezar mi ruta
-            </a>
-          </div>
-
-          <div class="division-nosotros-ima">
-            <div class="screenshot-placeholder">
-              <img src="assets/images/UX-movil-interfaz-SS.png" alt="Pantalla de la app SkillSwap: nodo 3 de la ruta con los pasos para completarlo" width="824" height="1834" loading="lazy" />
-            </div>
-          </div>
-
-        </div>
+      <div class="flujo-cta">
+        <a href="#descarga" class="btn-app btn-app-primario" data-i18n="flow-btn">Quiero la app</a>
       </div>
     </section>
 
@@ -280,8 +284,8 @@
               <span data-i18n="pitch-item4">SkillCredits: reconocimiento interno para quienes verifican casos como par evaluador</span>
             </li>
           </ul>
-          <a href="index.html" class="llamado-accion-boton" data-i18n="pitch-btn">
-            Empieza tu ruta — tarda 2 minutos
+          <a href="#descarga" class="llamado-accion-boton" data-i18n="pitch-btn">
+            Descarga la app
           </a>
         </div>
         <div class="pitch-imagen">
@@ -442,8 +446,8 @@
         <!-- CTA dentro de screenshots -->
         <div class="screenshots-cta">
           <p data-i18n="screenshots-cta-txt">¿Listo para probarlo tú mismo?</p>
-          <a href="index.html" class="llamado-accion-boton" data-i18n="screenshots-cta-btn">
-            Crear mi cuenta gratis
+          <a href="#descarga" class="llamado-accion-boton" data-i18n="screenshots-cta-btn">
+            Descarga la app
           </a>
         </div>
 
@@ -517,7 +521,7 @@
             <li><span class="plan-check" aria-hidden="true">✓</span><span data-i18n="plan-free-f4">Escala casos a un Verificador</span></li>
           </ul>
           <p class="plan-limite" data-i18n="plan-free-limit">Incluye 1 ruta activa, hasta 3 rutas en total y 3 escalamientos al mes, con revisión en hasta 5 días hábiles.</p>
-          <a href="index.html" class="plan-cta plan-cta-secundario" data-i18n="plan-free-btn">Empezar gratis</a>
+          <a href="#descarga" class="plan-cta plan-cta-secundario" data-i18n="plan-free-btn">Empezar gratis</a>
         </article>
 
         <!-- Plan mensual (recomendado) -->
@@ -537,7 +541,7 @@
             <li><span class="plan-check" aria-hidden="true">✓</span><span data-i18n="plan-premium-f4">Cobro seguro con Google Play</span></li>
             <li><span class="plan-check" aria-hidden="true">✓</span><span data-i18n="plan-premium-f5">Cancelas cuando quieras</span></li>
           </ul>
-          <a href="index.html" class="plan-cta" data-i18n="plan-premium-btn">Empezar con el plan mensual</a>
+          <a href="#descarga" class="plan-cta" data-i18n="plan-premium-btn">Empezar con el plan mensual</a>
         </article>
 
       </div>
@@ -576,6 +580,54 @@
           <summary data-i18n="faq-q5">¿En qué dispositivos funciona SkillSwap?</summary>
           <p data-i18n="faq-a5">SkillSwap es una app móvil pensada para Android. Esta página informativa funciona en celular, tablet y escritorio.</p>
         </details>
+        <details class="faq-item">
+          <summary data-i18n="faq-q6">¿Cuándo puedo descargar SkillSwap?</summary>
+          <p data-i18n="faq-a6">Muy pronto. Estamos preparando el lanzamiento en Google Play. Escríbenos a contacto@skillswap.pe y te avisamos apenas puedas descargarla.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════ SECCIÓN — DESCARGA LA APP ═══════════════════════════════════════ -->
+    <section class="seccion-descarga" id="descarga" aria-labelledby="descarga-titulo">
+      <div class="descarga-card">
+
+        <div class="descarga-texto">
+          <p class="descarga-eyebrow" data-i18n="dl-eyebrow">Descarga la app</p>
+          <h2 class="descarga-titulo" id="descarga-titulo" data-i18n="dl-title">Lleva tu ruta de certificación en el bolsillo</h2>
+          <p class="descarga-desc" data-i18n="dl-desc">SkillSwap es una app para Android. Estamos preparando su lanzamiento en Google Play: escríbenos y te avisamos el día en que puedas descargarla.</p>
+
+          <ul class="descarga-lista">
+            <li><span class="descarga-check" aria-hidden="true">✓</span><span data-i18n="dl-f1">Sube tus certificados con la cámara del celular</span></li>
+            <li><span class="descarga-check" aria-hidden="true">✓</span><span data-i18n="dl-f2">Rinde tus quizzes y sigue tu ruta desde donde estés</span></li>
+            <li><span class="descarga-check" aria-hidden="true">✓</span><span data-i18n="dl-f3">Recibe avisos cuando un Verificador resuelva tu caso</span></li>
+            <li><span class="descarga-check" aria-hidden="true">✓</span><span data-i18n="dl-f4">Empieza gratis con 1 ruta activa</span></li>
+          </ul>
+
+          <div class="descarga-acciones">
+            <div class="badge-proximamente">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><rect x="6" y="2" width="12" height="20" rx="3" stroke="currentColor" stroke-width="1.8"/><path d="M11 18h2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+              <span class="badge-proximamente-txt">
+                <small data-i18n="dl-badge-small">Muy pronto en</small>
+                <strong>Google Play</strong>
+              </span>
+            </div>
+            <a class="btn-app btn-app-primario" href="mailto:contacto@skillswap.pe?subject=Av%C3%ADsenme%20cuando%20SkillSwap%20est%C3%A9%20en%20Google%20Play">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M6 8a6 6 0 1112 0c0 7 3 8 3 8H3s3-1 3-8zM10 20a2 2 0 004 0" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span data-i18n="dl-btn-notify">Avísame del lanzamiento</span>
+            </a>
+          </div>
+          <p class="descarga-nota">
+            <span data-i18n="dl-note">¿Quieres ver los planes antes?</span>
+            <a href="#seccion-planes" data-i18n="dl-note-link">Compara el plan gratuito y el mensual</a>
+          </p>
+        </div>
+
+        <div class="descarga-visual">
+          <figure class="telefono telefono-descarga">
+            <img src="assets/images/app/app-onboarding.webp" width="310" height="672" loading="lazy" alt="Pantalla de bienvenida de la app SkillSwap: Demuestra lo que sabes, no solo lo que estudiaste" />
+          </figure>
+        </div>
+
       </div>
     </section>
 
@@ -659,21 +711,6 @@
       </div>
     </section>
 
-    <!-- ═══════════════════════════════════════ SECCIÓN — APP MÓVIL ═══════════════════════════════════════ -->
-    <section class="seccion-app">
-      <div class="app-banner">
-        <div>
-          <h3 data-i18n="app-title">Tu ruta, siempre en tu celular</h3>
-          <p data-i18n="app-desc">SkillSwap es una app móvil para Android: sube certificados con la cámara, sigue tu ruta y recibe avisos del estado de tus casos.</p>
-        </div>
-        <div class="app-chips">
-          <span data-i18n="app-chip1">Android nativo</span>
-          <span data-i18n="app-chip2">Flutter (Android)</span>
-          <span data-i18n="app-chip3">Ruta sincronizada</span>
-        </div>
-      </div>
-    </section>
-
     <!-- ═══════════════════════════════════════ SECCIÓN — CONTACTO ═══════════════════════════════════════ -->
     <section class="contact-section">
       <div class="contact-bar">
@@ -708,6 +745,10 @@
 
     <!-- ═══════════════════════════════════════ FOOTER ═══════════════════════════════════════ -->
     <footer>
+      <div class="footer-descarga">
+        <p data-i18n="footer-dl-text">SkillSwap llega muy pronto a Google Play.</p>
+        <a href="#descarga" class="btn-app btn-app-primario btn-app-sm" data-i18n="footer-dl-btn">Descarga la app</a>
+      </div>
       <div class="seccion-footer">
         <p>
           <span data-i18n="footer-text">2026 SkillSwap — Innovify. Todos los derechos reservados.</span>
@@ -731,13 +772,24 @@
       const btnMenu = document.getElementById('btn-menu');
       const menu = document.querySelector('.barra-navegacion .menu-horizontal');
 
-      btnMenu.addEventListener('click', () => {
-        menu.classList.toggle('activo');
+      const setMenu = (abierto) => {
+        menu.classList.toggle('activo', abierto);
+        btnMenu.setAttribute('aria-expanded', String(abierto));
+      };
+
+      btnMenu.addEventListener('click', () => setMenu(!menu.classList.contains('activo')));
+
+      // Cierra el menú móvil al elegir un ancla interna (Cómo funciona, Planes, Descarga)
+      menu.querySelectorAll('a[href^="#"]').forEach(link => {
+        link.addEventListener('click', () => setMenu(false));
       });
 
-      // Cierra el menú móvil al elegir un ancla interna (Plataforma, Planes)
-      menu.querySelectorAll('a[href^="#"]').forEach(link => {
-        link.addEventListener('click', () => menu.classList.remove('activo'));
+      // Escape cierra el menú y devuelve el foco al botón
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && menu.classList.contains('activo')) {
+          setMenu(false);
+          btnMenu.focus();
+        }
       });
     </script>
 
@@ -767,36 +819,47 @@
         es: {
           /* Página */
           "page-title":       "SkillSwap | Verificación de Habilidades con IA",
-          "meta-description": "SkillSwap verifica tus habilidades con IA: sube tus certificados, recibe una ruta de certificación personalizada y demuestra lo que sabes.",
+          "meta-description": "SkillSwap es la app para Android que certifica tus habilidades: declara tu meta, sube tus certificados, sigue tu ruta y rinde quizzes generados por IA. Muy pronto en Google Play.",
 
           /* Navbar */
-          "nav-plataforma":     "Plataforma",
+          "nav-como-funciona":  "Cómo funciona",
           "nav-planes":         "Planes",
           "nav-alianzas":       "Alianzas",
           "nav-sobre-nosotros": "Sobre nosotros",
-          "nav-login":          "Iniciar Sesión",
-          "nav-register":       "Registrarse",
+          "nav-download":       "Descarga la app",
+          "nav-download-short": "Descargar",
 
           /* Hero */
-          "hero-badge":    " Verificación de habilidades con IA",
-          "hero-title":    "Demuestra lo que sabes. Deja que la IA valide tu ruta hacia la habilidad que necesitas.",
-          "hero-subtitle": "Sube tus certificados, nuestra IA detecta qué te falta para tu meta profesional y genera una ruta de certificación con evaluaciones diseñadas para ti — revisadas por IA y, si lo necesitas, por un Verificador humano.",
-          "hero-btn":      "¡Empieza tu ruta ahora!",
-          "hero-btn-sec":  "Ver cómo funciona ↓",
-          "stat-ai":       "Detecta tus gaps de habilidad",
-          "stat-verified": "Certificados verificados",
-          "stat-verifier": "Revisión humana si lo necesitas",
+          "hero-badge":    "App para Android · Muy pronto en Google Play",
+          "hero-title":    "Demuestra lo que sabes, no solo lo que estudiaste.",
+          "hero-subtitle": "Declara tu meta profesional, sube tus certificados y SkillSwap arma tu ruta con las habilidades que te faltan. Demuestra cada una con quizzes generados por IA y, si no apruebas o no estás de acuerdo con el resultado, un Verificador humano revisa tu caso.",
+          "hero-btn":      "Descarga la app",
+          "hero-btn-sec":  "Ver cómo funciona",
+          "hero-note":     "Gratis para empezar · Lanzamiento muy pronto en Google Play",
+          "stat1-num":     "5 preguntas",
+          "stat1-label":   "por quiz; apruebas con 4",
+          "stat2-num":     "48 h",
+          "stat2-label":   "revisión humana con el plan mensual",
+          "stat3-num":     "S/ 0",
+          "stat3-label":   "para empezar tu primera ruta",
 
-          /* Sobre nosotros */
-          "about-title":        "¿Cómo funciona SkillSwap?",
-          "about-subtitle":     "Tu ruta de certificación, generada y evaluada por IA",
-          "about-skill1-title": "1. Sube tus certificados",
-          "about-skill1-desc":  "Declara tu meta profesional y sube los certificados externos que ya tienes",
-          "about-skill2-title": "2. La IA arma tu ruta",
-          "about-skill2-desc":  "Detecta los gaps frente a tu meta y genera una ruta de certificación paso a paso",
-          "about-skill3-title": "3. Demuestra la habilidad",
-          "about-skill3-desc":  "Rinde un quiz o miniproyecto generado por IA; si no lo logras, un Verificador humano revisa tu caso",
-          "about-btn":          "Empezar mi ruta",
+          /* Cómo funciona */
+          "flow-title":        "Cómo funciona",
+          "flow-subtitle":     "De tu meta profesional a una habilidad certificada, en 5 pasos dentro de la app.",
+          "flow1-title":       "Declara tu meta",
+          "flow1-desc":        "Escribe con tus palabras qué quieres lograr y sube los certificados que ya tienes. La IA interpreta tu meta y ML Kit lee tus certificados.",
+          "flow2-title":       "Recibe tu ruta",
+          "flow2-desc":        "SkillSwap compara tu meta con su catálogo de habilidades, calcula qué te falta y arma tu ruta nodo por nodo.",
+          "flow3-title":       "Rinde el quiz",
+          "flow3-desc":        "Cada nodo tiene un quiz de 5 preguntas generado por IA. Con 4 respuestas correctas, desbloqueas el siguiente.",
+          "flow4-title":       "Un Verificador revisa tu caso",
+          "flow4-desc":        "Si no apruebas o no estás de acuerdo con el resultado, escalas el caso y un Verificador humano lo evalúa con una rúbrica.",
+          "flow5-title":       "Certifica la habilidad",
+          "flow5-desc":        "Al completar tu ruta, la habilidad queda certificada en tu perfil con la evidencia de cada evaluación.",
+          "flow5-card-label":  "Habilidad certificada",
+          "flow5-card-detail": "5 de 5 nodos · Quiz 5/5",
+          "flow5-card-chip":   "Visible en tu perfil",
+          "flow-btn":          "Quiero la app",
           "roles-title":            "Dos roles, un mismo sistema de verificación",
           "roles-subtitle":         "Cada uno participa en un punto distinto de la ruta de certificación",
           "rol-learner-title":      "Estudiante",
@@ -858,13 +921,21 @@
           "faq-a4": "No. Los SkillCredits solo se ganan revisando casos como Verificador y se usan dentro de la plataforma para obtener beneficios.",
           "faq-q5": "¿En qué dispositivos funciona SkillSwap?",
           "faq-a5": "SkillSwap es una app móvil pensada para Android. Esta página informativa funciona en celular, tablet y escritorio.",
+          "faq-q6": "¿Cuándo puedo descargar SkillSwap?",
+          "faq-a6": "Muy pronto. Estamos preparando el lanzamiento en Google Play. Escríbenos a contacto@skillswap.pe y te avisamos apenas puedas descargarla.",
 
-          /* App móvil */
-          "app-title": "Tu ruta, siempre en tu celular",
-          "app-desc":  "SkillSwap es una app móvil para Android: sube certificados con la cámara, sigue tu ruta y recibe avisos del estado de tus casos.",
-          "app-chip1": "Android nativo",
-          "app-chip2": "Flutter (Android)",
-          "app-chip3": "Ruta sincronizada",
+          /* Descarga la app */
+          "dl-eyebrow":     "Descarga la app",
+          "dl-title":       "Lleva tu ruta de certificación en el bolsillo",
+          "dl-desc":        "SkillSwap es una app para Android. Estamos preparando su lanzamiento en Google Play: escríbenos y te avisamos el día en que puedas descargarla.",
+          "dl-f1":          "Sube tus certificados con la cámara del celular",
+          "dl-f2":          "Rinde tus quizzes y sigue tu ruta desde donde estés",
+          "dl-f3":          "Recibe avisos cuando un Verificador resuelva tu caso",
+          "dl-f4":          "Empieza gratis con 1 ruta activa",
+          "dl-badge-small": "Muy pronto en",
+          "dl-btn-notify":  "Avísame del lanzamiento",
+          "dl-note":        "¿Quieres ver los planes antes?",
+          "dl-note-link":   "Compara el plan gratuito y el mensual",
 
           /* Pitch */
           "pitch-title":        "¿Por qué SkillSwap y no otra plataforma?",
@@ -873,7 +944,7 @@
           "pitch-item2":        "Evaluaciones (quiz o miniproyecto) generadas dinámicamente para cada paso de tu ruta",
           "pitch-item3":        "Revisión con IA en primera instancia; Verificador humano solo si el intento no la demuestra",
           "pitch-item4":        "SkillCredits: reconocimiento interno para quienes verifican casos como par evaluador",
-          "pitch-btn":          "Empieza tu ruta — tarda 2 minutos",
+          "pitch-btn":          "Descarga la app",
           "pitch-quote":        '"Subí mis certificados y en minutos ya tenía una ruta clara de lo que me faltaba para el puesto que quería."',
           "pitch-quote-author": "— Estudiante de Ingeniería, UPC",
 
@@ -926,7 +997,7 @@
           "ss-validacion-m":        "SkillCredits móvil",
           "ss-validacion-m-desc":   "Revisa tu balance de SkillCredits ganados como Verificador y canjéalos por beneficios.",
           "screenshots-cta-txt": "¿Listo para probarlo tú mismo?",
-          "screenshots-cta-btn": "Crear mi cuenta gratis",
+          "screenshots-cta-btn": "Descarga la app",
 
           /* Revisión con IA */
           "iot-title":          "La IA revisa tu ruta, no solo la genera",
@@ -954,6 +1025,8 @@
           "contact-email-link":"Enviar email",
 
           /* Footer */
+          "footer-dl-text": "SkillSwap llega muy pronto a Google Play.",
+          "footer-dl-btn":  "Descarga la app",
           "footer-text":    "2026 SkillSwap — Innovify. Todos los derechos reservados.",
           "footer-terms":   "Términos y Condiciones",
           "footer-privacy": "Política de Privacidad",
@@ -963,36 +1036,47 @@
         en: {
           /* Page */
           "page-title":       "SkillSwap | AI-Powered Skill Verification",
-          "meta-description": "SkillSwap verifies your skills with AI: upload your certificates, get a personalized certification path, and prove what you know.",
+          "meta-description": "SkillSwap is the Android app that certifies your skills: state your goal, upload your certificates, follow your path, and take AI-generated quizzes. Coming soon on Google Play.",
 
           /* Navbar */
-          "nav-plataforma":     "Platform",
+          "nav-como-funciona":  "How it works",
           "nav-planes":         "Plans",
           "nav-alianzas":       "Alliances",
           "nav-sobre-nosotros": "About us",
-          "nav-login":          "Log In",
-          "nav-register":       "Sign Up",
+          "nav-download":       "Get the app",
+          "nav-download-short": "Get app",
 
           /* Hero */
-          "hero-badge":    " AI-Powered Skill Verification",
-          "hero-title":    "Prove what you know. Let AI validate your path to the skill you need.",
-          "hero-subtitle": "Upload your certificates, let our AI detect what's missing for your career goal, and get a certification path with assessments designed for you — reviewed by AI and, if needed, by a human Verifier.",
-          "hero-btn":      "Start your path now!",
-          "hero-btn-sec":  "See how it works ↓",
-          "stat-ai":       "Detects your skill gaps",
-          "stat-verified": "Verified certificates",
-          "stat-verifier": "Human review when you need it",
+          "hero-badge":    "Android app · Coming soon on Google Play",
+          "hero-title":    "Prove what you know, not just what you studied.",
+          "hero-subtitle": "State your career goal, upload your certificates, and SkillSwap builds a path with the skills you're missing. Prove each one with AI-generated quizzes and, if you don't pass or disagree with the result, a human Verifier reviews your case.",
+          "hero-btn":      "Get the app",
+          "hero-btn-sec":  "See how it works",
+          "hero-note":     "Free to start · Launching soon on Google Play",
+          "stat1-num":     "5 questions",
+          "stat1-label":   "per quiz; pass with 4",
+          "stat2-num":     "48 h",
+          "stat2-label":   "human review on the monthly plan",
+          "stat3-num":     "S/ 0",
+          "stat3-label":   "to start your first path",
 
-          /* About */
-          "about-title":        "How does SkillSwap work?",
-          "about-subtitle":     "Your certification path, generated and reviewed by AI",
-          "about-skill1-title": "1. Upload your certificates",
-          "about-skill1-desc":  "State your career goal and upload the external certificates you already have",
-          "about-skill2-title": "2. AI builds your path",
-          "about-skill2-desc":  "It detects the gaps against your goal and generates a step-by-step certification path",
-          "about-skill3-title": "3. Prove the skill",
-          "about-skill3-desc":  "Take an AI-generated quiz or mini-project; if you don't pass, a human Verifier reviews your case",
-          "about-btn":          "Start my path",
+          /* How it works */
+          "flow-title":        "How it works",
+          "flow-subtitle":     "From your career goal to a certified skill, in 5 steps inside the app.",
+          "flow1-title":       "State your goal",
+          "flow1-desc":        "Describe what you want to achieve in your own words and upload the certificates you already have. AI interprets your goal and ML Kit reads your certificates.",
+          "flow2-title":       "Get your path",
+          "flow2-desc":        "SkillSwap matches your goal against its skill catalog, works out what you're missing, and builds your path node by node.",
+          "flow3-title":       "Take the quiz",
+          "flow3-desc":        "Each node has a 5-question AI-generated quiz. Get 4 right and the next node unlocks.",
+          "flow4-title":       "A Verifier reviews your case",
+          "flow4-desc":        "If you don't pass or disagree with the result, you escalate the case and a human Verifier assesses it with a rubric.",
+          "flow5-title":       "Certify the skill",
+          "flow5-desc":        "When you complete your path, the skill is certified on your profile with the evidence from every assessment.",
+          "flow5-card-label":  "Certified skill",
+          "flow5-card-detail": "5 of 5 nodes · Quiz 5/5",
+          "flow5-card-chip":   "Shown on your profile",
+          "flow-btn":          "I want the app",
           "roles-title":            "Two roles, one verification system",
           "roles-subtitle":         "Each one takes part at a different point of the certification path",
           "rol-learner-title":      "Student",
@@ -1054,13 +1138,21 @@
           "faq-a4": "No. SkillCredits are only earned by reviewing cases as a Verifier and are used inside the platform to get benefits.",
           "faq-q5": "Which devices does SkillSwap work on?",
           "faq-a5": "SkillSwap is a mobile app designed for Android. This informational page works on phones, tablets, and desktop.",
+          "faq-q6": "When can I download SkillSwap?",
+          "faq-a6": "Very soon. We're getting ready to launch on Google Play. Email us at contacto@skillswap.pe and we'll let you know as soon as you can download it.",
 
-          /* Mobile app */
-          "app-title": "Your path, always on your phone",
-          "app-desc":  "SkillSwap is an Android mobile app: upload certificates with your camera, follow your path, and get updates on your cases.",
-          "app-chip1": "Native Android",
-          "app-chip2": "Flutter (Android)",
-          "app-chip3": "Synced path",
+          /* Get the app */
+          "dl-eyebrow":     "Get the app",
+          "dl-title":       "Carry your certification path in your pocket",
+          "dl-desc":        "SkillSwap is an Android app. We're getting ready to launch it on Google Play: write to us and we'll let you know the day you can download it.",
+          "dl-f1":          "Upload your certificates with your phone's camera",
+          "dl-f2":          "Take your quizzes and follow your path wherever you are",
+          "dl-f3":          "Get notified when a Verifier resolves your case",
+          "dl-f4":          "Start for free with 1 active path",
+          "dl-badge-small": "Coming soon on",
+          "dl-btn-notify":  "Notify me at launch",
+          "dl-note":        "Want to see the plans first?",
+          "dl-note-link":   "Compare the free and monthly plans",
 
           /* Pitch */
           "pitch-title":        "Why SkillSwap and not another platform?",
@@ -1069,7 +1161,7 @@
           "pitch-item2":        "Assessments (quiz or mini-project) generated dynamically for each step of your path",
           "pitch-item3":        "AI review first; a human Verifier only if the attempt doesn't prove the skill",
           "pitch-item4":        "SkillCredits: internal recognition for those who verify cases as peer reviewers",
-          "pitch-btn":          "Start your path — takes 2 minutes",
+          "pitch-btn":          "Get the app",
           "pitch-quote":        '"I uploaded my certificates and in minutes I had a clear path of what I was missing for the role I wanted."',
           "pitch-quote-author": "— Engineering student, UPC",
 
@@ -1123,7 +1215,7 @@
           "ss-validacion-m":        "SkillCredits mobile",
           "ss-validacion-m-desc":   "Check your SkillCredits balance earned as a Verifier and redeem it for benefits.",
           "screenshots-cta-txt": "Ready to try it yourself?",
-          "screenshots-cta-btn": "Create my free account",
+          "screenshots-cta-btn": "Get the app",
 
           /* AI review */
           "iot-title":          "AI reviews your path, not just generates it",
@@ -1151,6 +1243,8 @@
           "contact-email-link":"Send email",
 
           /* Footer */
+          "footer-dl-text": "SkillSwap is coming soon to Google Play.",
+          "footer-dl-btn":  "Get the app",
           "footer-text":    "2026 SkillSwap — Innovify. All rights reserved.",
           "footer-terms":   "Terms and Conditions",
           "footer-privacy": "Privacy Policy",
