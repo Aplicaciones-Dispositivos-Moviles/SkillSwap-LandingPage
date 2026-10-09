@@ -752,3 +752,474 @@
     font-size: 12px;
   }
 }
+/* ═══════════════════════════════════════════════════════════════
+   MOCKUPS + RESPONSIVE v2
+   (este bloque va al final a propósito: pisa las reglas anteriores)
+   — Capturas del Figma (824×1834) con tamaño controlado
+   — Contenido centrado y más angosto en escritorio
+   — Breakpoints: tablet ≤ 900px · móvil ≤ 600px
+═══════════════════════════════════════════════════════════════ */
+:root {
+  --content-max: 1100px;  /* ancho máximo del contenido en escritorio */
+  --mockup-w: 230px;      /* ancho de una captura de celular */
+  --mockup-shadow: 0 14px 34px rgba(15, 37, 64, 0.20);
+}
+
+/* ── Contenido centrado: el fondo ocupa todo, el contenido no ── */
+.seccion-roles,
+.seccion-socios,
+.seccion-atp,
+.seccion-ruta,
+.seccion-faq,
+.seccion-app,
+.screenshots-section {
+  padding-inline: max(24px, calc((100% - var(--content-max)) / 2));
+}
+
+.screenshots-section {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+/* Hero principal un poco más compacto en escritorio */
+.seccion-llamado-accion {
+  min-height: min(100vh, 720px);
+}
+
+.llamado-accion-texto {
+  font-size: clamp(28px, 3.4vw, 46px);
+  max-width: 760px;
+}
+
+/* ── Capturas de celular: tamaño fijo, centradas, completas ── */
+.division-nosotros-ima img,
+.division-iot-ima img,
+.rol-dashboard-preview img,
+.hero-screenshot-placeholder img,
+.screenshot-card-modern img {
+  display: block;
+  width: 100%;
+  max-width: var(--mockup-w);
+  height: auto;
+  margin-inline: auto;
+  border-radius: 22px;
+  box-shadow: var(--mockup-shadow);
+}
+
+/* Los contenedores ya no fuerzan 16:10 ni borde punteado */
+.screenshot-placeholder,
+.rol-dashboard-preview,
+.hero-screenshot-placeholder {
+  aspect-ratio: auto;
+  border: 0;
+  background: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rol-dashboard-preview { margin-top: 24px; }
+
+.hero-screenshot-placeholder img { max-width: 250px; }
+
+/* ── Tarjeta hero de screenshots ── */
+.hero-screenshot-card {
+  grid-template-columns: 1.25fr 1fr;
+  gap: 40px;
+  padding: 40px 44px;
+  border-radius: 28px;
+}
+
+.hero-text h3 {
+  font-size: clamp(1.5rem, 2.6vw, 2.1rem);
+  margin-bottom: 18px;
+}
+
+.hero-text p { margin-bottom: 22px; line-height: 1.7; }
+
+.feature-points span { font-size: 0.85rem; padding: 8px 14px; }
+
+/* ── Grilla de tarjetas ── */
+.screenshots-grid {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.screenshot-card-modern {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  border-radius: 22px;
+}
+
+.card-badge {
+  position: static;
+  align-self: flex-start;
+  margin: 18px 0 0 18px;
+  padding: 7px 14px;
+  font-size: 0.8rem;
+}
+
+.screenshot-card-modern .screenshot-placeholder,
+.screenshot-card-modern .card-content > img:first-child {
+  margin-top: 16px;
+}
+
+.screenshot-card-modern .screenshot-placeholder { padding: 0 20px; }
+
+.card-content {
+  flex: 1;
+  padding: 16px 20px 22px;
+}
+
+.card-content > img { margin-bottom: 16px; }
+
+.card-content h4 { font-size: 1.05rem; margin-bottom: 8px; }
+
+.card-content p { font-size: 0.9rem; line-height: 1.6; }
+
+.screenshots-cta { max-width: var(--content-max); margin-inline: auto; }
+
+/* ═══════════════════════════════════════════════════════════════
+   SECCIÓN NUEVA — EJEMPLO DE RUTA
+═══════════════════════════════════════════════════════════════ */
+.seccion-ruta {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  background-color: var(--surface-color);
+}
+
+.ruta-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: center;
+  margin-top: 28px;
+}
+
+.ruta-intro p {
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 18px;
+}
+
+.ruta-leyenda {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 18px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.ruta-leyenda li { display: flex; align-items: center; gap: 8px; }
+
+.ruta-punto {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.ruta-punto.hecho    { background: #15803d; }
+.ruta-punto.actual   { background: #0022a8; box-shadow: 0 0 0 3px #c7d2fe; }
+.ruta-punto.bloqueado{ background: #cbd2dc; }
+
+.ruta-card {
+  background: var(--background-color);
+  border: 1px solid var(--border-color);
+  border-radius: 22px;
+  padding: 22px;
+  box-shadow: var(--shadow-md);
+  max-width: 460px;
+  width: 100%;
+  margin-inline: auto;
+}
+
+.ruta-resumen {
+  background: #0022a8;
+  color: #fff;
+  border-radius: 18px;
+  padding: 18px 20px;
+  margin-bottom: 22px;
+}
+
+.ruta-resumen small {
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+  opacity: 0.85;
+}
+
+.ruta-resumen strong { display: block; font-size: 1.15rem; margin: 2px 0 12px; }
+
+.ruta-progreso-txt {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  margin-bottom: 6px;
+}
+
+.ruta-barra { height: 8px; border-radius: 99px; background: rgba(255,255,255,0.3); overflow: hidden; }
+.ruta-barra span { display: block; height: 100%; width: 40%; background: #fff; border-radius: 99px; }
+
+.ruta-nodos { list-style: none; position: relative; }
+
+.ruta-nodo {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  gap: 14px;
+  align-items: center;
+  padding-bottom: 18px;
+  position: relative;
+}
+
+.ruta-nodo:last-child { padding-bottom: 0; }
+
+/* línea que conecta los nodos */
+.ruta-nodo:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  left: 19px;
+  top: 40px;
+  bottom: 0;
+  width: 2px;
+  background: #cbd2dc;
+}
+.ruta-nodo.hecho:not(:last-child)::before { background: #15803d; }
+
+.ruta-icono {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 0.95rem;
+  z-index: 1;
+}
+.hecho .ruta-icono     { background: #15803d; color: #fff; }
+.actual .ruta-icono    { background: #0022a8; color: #fff; box-shadow: 0 0 0 4px #c7d2fe; }
+.bloqueado .ruta-icono { background: #e5e7eb; color: #6b7280; }
+
+.ruta-nodo h4 { font-size: 0.95rem; color: var(--text-color); line-height: 1.3; }
+.ruta-nodo p  { font-size: 0.82rem; color: var(--text-muted); line-height: 1.4; }
+.hecho p      { color: #15803d; font-weight: 600; }
+.bloqueado h4 { color: #6b7280; }
+
+.actual .ruta-nodo-caja {
+  border: 2px solid #0022a8;
+  background: #fff;
+  border-radius: 14px;
+  padding: 10px 14px;
+}
+
+.ruta-etiqueta {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #0022a8;
+  background: #e0e7ff;
+  border-radius: 6px;
+  padding: 2px 8px;
+  margin-bottom: 4px;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   SECCIÓN NUEVA — PREGUNTAS FRECUENTES
+═══════════════════════════════════════════════════════════════ */
+.seccion-faq {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  background-color: var(--surface-color);
+}
+
+.faq-lista {
+  max-width: 820px;
+  margin-top: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.faq-item {
+  background: var(--background-color);
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+  transition: box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.faq-item[open] { border-color: var(--primary-color); box-shadow: var(--shadow-sm); }
+
+.faq-item summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 16px 20px;
+  font-weight: 700;
+  font-size: 0.98rem;
+  color: var(--primary-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.faq-item summary::-webkit-details-marker { display: none; }
+
+.faq-item summary::after {
+  content: "+";
+  font-size: 1.4rem;
+  line-height: 1;
+  color: var(--secondary-dark);
+  flex-shrink: 0;
+  transition: transform 0.25s ease;
+}
+
+.faq-item[open] summary::after { transform: rotate(45deg); }
+
+.faq-item p {
+  padding: 0 20px 18px;
+  color: var(--text-muted);
+  font-size: 0.93rem;
+  line-height: 1.7;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   SECCIÓN NUEVA — APP MÓVIL ANDROID
+═══════════════════════════════════════════════════════════════ */
+.seccion-app {
+  padding-top: 0;
+  padding-bottom: 40px;
+  background-color: var(--background-color);
+}
+
+.app-banner {
+  background: linear-gradient(135deg, #0f2540 0%, #193b69 100%);
+  border-radius: 24px;
+  padding: 32px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  color: #fff;
+}
+
+.app-banner h3 { font-size: 1.35rem; margin-bottom: 6px; }
+.app-banner p  { color: rgba(255,255,255,0.8); font-size: 0.95rem; max-width: 520px; line-height: 1.6; }
+
+.app-chips { display: flex; flex-wrap: wrap; gap: 10px; justify-content: flex-end; }
+
+.app-chips span {
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 999px;
+  padding: 8px 16px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   RESPONSIVE v2 — TABLET (≤ 900px)
+═══════════════════════════════════════════════════════════════ */
+@media (max-width: 900px) {
+  :root { --mockup-w: 210px; }
+
+  .hero-screenshot-card {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding: 32px 28px;
+    text-align: center;
+  }
+  .feature-points { justify-content: center; }
+  .hero-screenshot-placeholder img { max-width: 220px; }
+
+  .screenshots-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .ruta-layout { grid-template-columns: 1fr; gap: 32px; }
+
+  .app-banner { flex-direction: column; align-items: flex-start; }
+  .app-chips  { justify-content: flex-start; }
+
+  /* anula el 1024px previo que apilaba la imagen primero en "cómo funciona" */
+  .division-contenido-row { flex-direction: column; }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   RESPONSIVE v2 — CELULAR (≤ 600px)
+═══════════════════════════════════════════════════════════════ */
+@media (max-width: 600px) {
+  :root { --mockup-w: 200px; --section-padding: 48px; }
+
+  .seccion-roles,
+  .seccion-socios,
+  .seccion-atp,
+  .seccion-ruta,
+  .seccion-faq,
+  .seccion-app,
+  .screenshots-section { padding-inline: 20px; }
+
+  .screenshots-section { padding-top: 48px; padding-bottom: 48px; }
+  .seccion-nosotros, .seccion-iot { padding-inline: 20px; }
+
+  .seccion-llamado-accion { min-height: auto; padding-top: 40px; padding-bottom: 40px; }
+
+  .hero-stats { width: 100%; padding: 14px 10px; gap: 8px; }
+  .stat-item  { flex: 1; min-width: 0; }
+  .stat-number { font-size: 22px; }
+  .stat-label  { font-size: 10px; text-align: center; letter-spacing: 0.03em; }
+
+  .hero-screenshot-card { padding: 26px 18px; border-radius: 22px; }
+  .hero-screenshot-placeholder img { max-width: 200px; }
+
+  /* Carrusel horizontal con snap en vez de 6 tarjetas apiladas */
+  .screenshots-section .screenshots-grid {
+    display: flex;
+    overflow-x: auto;
+    gap: 14px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    margin-inline: -20px;
+    padding: 4px 20px 16px;
+  }
+  .screenshot-card-modern {
+    flex: 0 0 76%;
+    scroll-snap-align: center;
+  }
+  .screenshot-card-modern:hover { transform: none; }
+
+  .ruta-card { padding: 16px; }
+  .ruta-nodo { grid-template-columns: 36px 1fr; gap: 12px; }
+  .ruta-icono { width: 36px; height: 36px; }
+  .ruta-nodo:not(:last-child)::before { left: 17px; top: 36px; }
+
+  .app-banner { padding: 24px 20px; border-radius: 20px; }
+
+  .screenshots-cta { padding: 26px 16px; }
+
+  .pitch-card { padding: 24px 20px; }
+  .rol-card { padding: 24px 18px; }
+  .socio-logo { width: 130px; height: 90px; padding: 14px; }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   NAVBAR en tablet (769px – 1024px): que quepa en una sola línea
+   (≤ 768px sigue usando el menú hamburguesa)
+═══════════════════════════════════════════════════════════════ */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .barra-navegacion { padding: 0 16px; }
+  .logo img { width: 120px; max-width: 120px; }
+  .menu-horizontal-opciones { gap: 0; }
+  .menu-horizontal-opciones li a { padding: 8px 8px; font-size: 13px; white-space: nowrap; }
+  .btn-iniciarsesion,
+  .btn-registrase { padding: 7px 12px; font-size: 13px; white-space: nowrap; }
+  .lang-switcher-item { margin-left: 4px; }
+  .lang-btn { padding: 4px 7px; font-size: 12px; }
+}
+
+/* Estadísticas del hero: las 3 en una sola fila en tablet */
+@media (min-width: 601px) and (max-width: 900px) {
+  .hero-stats { flex-wrap: nowrap; gap: 16px; padding: 14px 20px; }
+  .stat-label { font-size: 11px; text-align: center; }
+}

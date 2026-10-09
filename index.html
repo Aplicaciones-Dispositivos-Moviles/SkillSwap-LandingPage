@@ -159,8 +159,9 @@
 
           <div class="division-nosotros-ima">
             <div class="screenshot-placeholder">
-              <span data-i18n="screenshot-placeholder">Captura de pantalla de la interfaz de SkillSwap</span>
+              <img src="assets/images/UX-movil-interfaz-SS.png" alt="Pantalla de la app SkillSwap: nodo 3 de la ruta con los pasos para completarlo" width="824" height="1834" loading="lazy" />
             </div>
+          </div>
 
         </div>
       </div>
@@ -169,7 +170,7 @@
     <!-- ═══════════════════════════════════════ SECCIÓN — ROLES ═══════════════════════════════════════ -->
 <section class="seccion-roles">
   <div class="titulo-seccion">
-    <h2 class="roles-titulo" data-i18n="roles-title">Tres roles, un mismo sistema de verificación</h2>
+    <h2 class="roles-titulo" data-i18n="roles-title">Dos roles, un mismo sistema de verificación</h2>
     <div class="titulo-decorador"></div>
     <p class="seccion-subtitulo" data-i18n="roles-subtitle">Cada uno participa en un punto distinto de la ruta de certificación</p>
   </div>
@@ -182,7 +183,7 @@
     <h3 data-i18n="rol-learner-title">Estudiante</h3>
     <p data-i18n="rol-learner-desc">Sube certificados, sigue la ruta que la IA genera para él y rinde sus evaluaciones.</p>
     <div class="rol-dashboard-preview">
-      <span data-i18n="rol-learner-preview">Dashboard del Estudiante</span>
+       <img src="assets/images/UX-movil-dashboard-rutas.png" alt="Inicio del Estudiante: ruta activa Python para Data Science con 2 de 5 nodos completados" width="824" height="1834" loading="lazy" />
     </div>
     
   </div>
@@ -194,11 +195,63 @@
     <h3 data-i18n="rol-tutor-title">Verificador / Coordinador-Profesor</h3>
     <p data-i18n="rol-tutor-desc">Como Verificador, revisa los casos que la IA no logró resolver y gana SkillCredits. Con el rol de Coordinador o Profesor, además supervisa la confiabilidad de los Verificadores, resuelve disputas y ve métricas agregadas del sistema.</p>
     <div class="rol-dashboard-preview">
-      <span data-i18n="rol-coordinador-preview">Dashboard del Verificador / Coordinador</span>
+       <img src="assets/images/UX-movil-interfaz.png" alt="Inicio del Verificador: casos asignados, SkillCredits y confiabilidad" width="824" height="1834" loading="lazy" />
     </div>
   </div>
 </div>
 </section>
+
+    <!-- ═══════════════════════════════════════ SECCIÓN — EJEMPLO DE RUTA ═══════════════════════════════════════ -->
+    <section class="seccion-ruta" id="seccion-ruta">
+      <div class="titulo-seccion">
+        <h2 class="nosotros-titulo" data-i18n="route-title">Así se ve una ruta de certificación</h2>
+        <div class="titulo-decorador"></div>
+        <p class="seccion-subtitulo" data-i18n="route-subtitle">Ejemplo real de la app: meta profesional "Python para Data Science"</p>
+      </div>
+
+      <div class="ruta-layout">
+        <div class="ruta-intro">
+          <p data-i18n="route-desc">Cada ruta se divide en nodos. Completas un nodo demostrando la habilidad con un quiz o un miniproyecto; recién ahí se desbloquea el siguiente. Así cada paso queda respaldado por una evaluación, no solo por un certificado.</p>
+          <ul class="ruta-leyenda">
+            <li><span class="ruta-punto hecho"></span><span data-i18n="route-legend-done">Completado</span></li>
+            <li><span class="ruta-punto actual"></span><span data-i18n="route-legend-current">Siguiente paso</span></li>
+            <li><span class="ruta-punto bloqueado"></span><span data-i18n="route-legend-locked">Bloqueado</span></li>
+          </ul>
+        </div>
+
+        <div class="ruta-card" role="group" aria-label="Ejemplo de ruta: Python para Data Science">
+          <div class="ruta-resumen">
+            <small data-i18n="route-active">TU RUTA ACTIVA</small>
+            <strong>Python para Data Science</strong>
+            <div class="ruta-progreso-txt"><span data-i18n="route-progress">2 de 5 nodos completados</span><b>40%</b></div>
+            <div class="ruta-barra"><span></span></div>
+          </div>
+
+          <ol class="ruta-nodos">
+            <li class="ruta-nodo hecho">
+              <span class="ruta-icono">✓</span>
+              <div><h4>Fundamentos de Python</h4><p data-i18n="route-n1">Completado · Quiz 92%</p></div>
+            </li>
+            <li class="ruta-nodo hecho">
+              <span class="ruta-icono">✓</span>
+              <div><h4>NumPy y estructuras de datos</h4><p data-i18n="route-n2">Completado · Miniproyecto aprobado</p></div>
+            </li>
+            <li class="ruta-nodo actual">
+              <span class="ruta-icono">3</span>
+              <div class="ruta-nodo-caja"><span class="ruta-etiqueta" data-i18n="route-next">Siguiente paso</span><h4>Análisis con pandas</h4><p data-i18n="route-n3">Sube tu certificado para empezar</p></div>
+            </li>
+            <li class="ruta-nodo bloqueado">
+              <span class="ruta-icono">🔒</span>
+              <div><h4>Visualización con Matplotlib</h4><p data-i18n="route-n4">Bloqueado · requiere el nodo 3</p></div>
+            </li>
+            <li class="ruta-nodo bloqueado">
+              <span class="ruta-icono">🔒</span>
+              <div><h4>Miniproyecto de ventas</h4><p data-i18n="route-n5">Bloqueado · entrega práctica obligatoria</p></div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
 
     <!-- ═══════════════════════════════════════ SECCIÓN — PITCH / VALOR ═══════════════════════════════════════ -->
     <section class="seccion-pitch">
@@ -283,7 +336,7 @@
         </div>
 
         <div class="hero-screenshot-placeholder">
-          <span data-i18n="ss-hero-image">Imagen de la app</span>
+         <img src="assets/images/UX-movil-dashboard-rutas.png" alt="Ruta de certificación del estudiante en la app SkillSwap" width="824" height="1834" />
         </div>
 
       </div>
@@ -297,12 +350,9 @@
             Sube tu certificado
           </div>
 
-          <div class="screenshot-placeholder">
-            <span data-i18n="ss-search-image">Imagen de la búsqueda</span>
-          </div>
 
           <div class="card-content">
-            <h4 data-i18n="ss-search-title">Sube tus certificados externos en segundos</h4>
+            <img src="assets/images/UX-movil-dashboard-subida-certificados.png" alt="Pantalla de verificación de un certificado subido" width="824" height="1834" loading="lazy" />
             <p data-i18n="ss-search-desc">La IA lee y valida tus certificados para saber exactamente dónde estás parado frente a tu meta profesional.</p>
           </div>
 
@@ -315,12 +365,8 @@
             Ruta de certificación
           </div>
 
-          <div class="screenshot-placeholder">
-            <span data-i18n="ss-chat-image">Imagen del chat</span>
-          </div>
-
           <div class="card-content">
-            <h4 data-i18n="ss-chat-title">Tu ruta, paso a paso, generada por IA</h4>
+            <img src="assets/images/UX-movil-dashboard-rutas.png" alt="Ruta de certificación con nodos completados y bloqueados" width="824" height="1834" loading="lazy" />
             <p data-i18n="ss-chat-desc">Cada paso te muestra la habilidad que falta certificar y cómo vas a demostrarla.</p>
           </div>
 
@@ -333,12 +379,8 @@
             Perfil de Verificador
           </div>
 
-          <div class="screenshot-placeholder">
-            <span data-i18n="ss-profile-image">Imagen del perfil de Verificador</span>
-          </div>
-
           <div class="card-content">
-            <h4 data-i18n="ss-profile-title">Verificadores que ya certificaron esa habilidad</h4>
+            <img src="assets/images/UX-movil-verificadores-habilidad.png" alt="Perfil de Verificador: requisitos y beneficios" width="824" height="1834" loading="lazy" />
             <p data-i18n="ss-profile-desc">Revisa el perfil del par evaluador que atendió tu caso y su historial de confiabilidad.</p>
           </div>
 
@@ -351,12 +393,8 @@
             Evaluación dinámica
           </div>
 
-          <div class="screenshot-placeholder">
-            <span data-i18n="ss-session-image">Imagen de la sesión</span>
-          </div>
-
           <div class="card-content">
-            <h4 data-i18n="ss-session-title">Demuestra la habilidad con un quiz o miniproyecto</h4>
+           <img src="assets/images/UX-movil-estudiante-quiz.png" alt="Evaluaciones: quiz de pandas e historial de intentos" width="824" height="1834" loading="lazy" />
             <p data-i18n="ss-session-desc">Cada evaluación la genera la IA para el paso exacto de tu ruta, sin bancos de preguntas fijos.</p>
           </div>
 
@@ -370,7 +408,7 @@
           </div>
 
           <div class="screenshot-placeholder">
-            <span data-i18n="ss-wallet-image">Imagen del Wallet de SkillCredits</span>
+           <img src="assets/images/UX-movil-SkillCredits.png" alt="Saldo de SkillCredits y tienda de beneficios" width="824" height="1834" loading="lazy" />
           </div>
 
           <div class="card-content">
@@ -388,7 +426,7 @@
           </div>
 
           <div class="screenshot-placeholder">
-            <span data-i18n="ss-review-image">Imagen de la revisión con rúbrica</span>
+            <img src="assets/images/UX-movil-dashboard-estudiante.png" alt="Revisión de un caso con rúbrica por criterio" width="824" height="1834" loading="lazy" />
           </div>
 
           <div class="card-content">
@@ -447,10 +485,41 @@
 
           <div class="division-iot-ima">
             <div class="screenshot-placeholder">
-              <span data-i18n="screenshot-placeholder">Captura de pantalla de la interfaz de SkillSwap</span>
+              <img src="assets/images/UX-movil-revision-rubrica.png" alt="Seguimiento de un caso: un Verificador está revisando el intento con rúbrica" width="824" height="1834" loading="lazy" />
             </div>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════ SECCIÓN — PREGUNTAS FRECUENTES ═══════════════════════════════════════ -->
+    <section class="seccion-faq" id="seccion-faq">
+      <div class="titulo-seccion">
+        <h2 class="nosotros-titulo" data-i18n="faq-title">Preguntas frecuentes</h2>
+        <div class="titulo-decorador"></div>
+      </div>
+
+      <div class="faq-lista">
+        <details class="faq-item">
+          <summary data-i18n="faq-q1">¿Qué certificados puedo subir?</summary>
+          <p data-i18n="faq-a1">Los certificados externos que ya tienes. La IA los lee, los valida y los compara con tu meta profesional para detectar qué habilidades te faltan.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq-q2">¿Qué pasa si no apruebo una evaluación?</summary>
+          <p data-i18n="faq-a2">Si el intento no demuestra la habilidad, se abre un caso que revisa un Verificador humano con una rúbrica estructurada por habilidad.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq-q3">¿Quién puede ser Verificador?</summary>
+          <p data-i18n="faq-a3">Un estudiante que ya certificó esa misma habilidad. Los casos se asignan según la habilidad, el historial de confiabilidad y la disponibilidad de cada Verificador.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq-q4">¿Los SkillCredits se pueden comprar o cambiar por dinero?</summary>
+          <p data-i18n="faq-a4">No. Los SkillCredits solo se ganan revisando casos como Verificador y se usan dentro de la plataforma para obtener beneficios.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq-q5">¿En qué dispositivos funciona SkillSwap?</summary>
+          <p data-i18n="faq-a5">SkillSwap es una app móvil pensada para Android. Esta página informativa funciona en celular, tablet y escritorio.</p>
+        </details>
       </div>
     </section>
 
@@ -530,6 +599,21 @@
             </div>
           </div>
 
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════ SECCIÓN — APP MÓVIL ═══════════════════════════════════════ -->
+    <section class="seccion-app">
+      <div class="app-banner">
+        <div>
+          <h3 data-i18n="app-title">Tu ruta, siempre en tu celular</h3>
+          <p data-i18n="app-desc">SkillSwap es una app móvil para Android: sube certificados con la cámara, sigue tu ruta y recibe avisos del estado de tus casos.</p>
+        </div>
+        <div class="app-chips">
+          <span data-i18n="app-chip1">Android nativo</span>
+          <span data-i18n="app-chip2">Flutter (Android)</span>
+          <span data-i18n="app-chip3">Ruta sincronizada</span>
         </div>
       </div>
     </section>
@@ -651,14 +735,50 @@
           "about-skill3-title": "3. Demuestra la habilidad",
           "about-skill3-desc":  "Rinde un quiz o miniproyecto generado por IA; si no lo logras, un Verificador humano revisa tu caso",
           "about-btn":          "Empezar mi ruta",
-          "roles-title":            "Tres roles, un mismo sistema de verificación",
+          "roles-title":            "Dos roles, un mismo sistema de verificación",
           "roles-subtitle":         "Cada uno participa en un punto distinto de la ruta de certificación",
           "rol-learner-title":      "Estudiante",
           "rol-learner-desc":       "Sube certificados, sigue la ruta que la IA genera para él y rinde sus evaluaciones.",
-          "rol-tutor-title":        "Verificador",
-          "rol-tutor-desc":         "Estudiante que ya certificó esa habilidad; revisa los casos que la IA no logró resolver y gana SkillCredits.",
+          "rol-tutor-title":        "Verificador / Coordinador-Profesor",
+          "rol-tutor-desc":         "Como Verificador, revisa los casos que la IA no logró resolver y gana SkillCredits. Con el rol de Coordinador o Profesor, además supervisa la confiabilidad de los Verificadores, resuelve disputas y ve métricas agregadas del sistema.",
           "rol-coordinador-title":  "Coordinador / Profesor",
           "rol-coordinador-desc":   "Supervisa la confiabilidad de los Verificadores, resuelve disputas y ve métricas agregadas del sistema.",
+
+          /* Ejemplo de ruta */
+          "route-title":    "Así se ve una ruta de certificación",
+          "route-subtitle": "Ejemplo real de la app: meta profesional \"Python para Data Science\"",
+          "route-desc":     "Cada ruta se divide en nodos. Completas un nodo demostrando la habilidad con un quiz o un miniproyecto; recién ahí se desbloquea el siguiente. Así cada paso queda respaldado por una evaluación, no solo por un certificado.",
+          "route-legend-done":    "Completado",
+          "route-legend-current": "Siguiente paso",
+          "route-legend-locked":  "Bloqueado",
+          "route-active":   "TU RUTA ACTIVA",
+          "route-progress": "2 de 5 nodos completados",
+          "route-next":     "Siguiente paso",
+          "route-n1": "Completado · Quiz 92%",
+          "route-n2": "Completado · Miniproyecto aprobado",
+          "route-n3": "Sube tu certificado para empezar",
+          "route-n4": "Bloqueado · requiere el nodo 3",
+          "route-n5": "Bloqueado · entrega práctica obligatoria",
+
+          /* FAQ */
+          "faq-title": "Preguntas frecuentes",
+          "faq-q1": "¿Qué certificados puedo subir?",
+          "faq-a1": "Los certificados externos que ya tienes. La IA los lee, los valida y los compara con tu meta profesional para detectar qué habilidades te faltan.",
+          "faq-q2": "¿Qué pasa si no apruebo una evaluación?",
+          "faq-a2": "Si el intento no demuestra la habilidad, se abre un caso que revisa un Verificador humano con una rúbrica estructurada por habilidad.",
+          "faq-q3": "¿Quién puede ser Verificador?",
+          "faq-a3": "Un estudiante que ya certificó esa misma habilidad. Los casos se asignan según la habilidad, el historial de confiabilidad y la disponibilidad de cada Verificador.",
+          "faq-q4": "¿Los SkillCredits se pueden comprar o cambiar por dinero?",
+          "faq-a4": "No. Los SkillCredits solo se ganan revisando casos como Verificador y se usan dentro de la plataforma para obtener beneficios.",
+          "faq-q5": "¿En qué dispositivos funciona SkillSwap?",
+          "faq-a5": "SkillSwap es una app móvil pensada para Android. Esta página informativa funciona en celular, tablet y escritorio.",
+
+          /* App móvil */
+          "app-title": "Tu ruta, siempre en tu celular",
+          "app-desc":  "SkillSwap es una app móvil para Android: sube certificados con la cámara, sigue tu ruta y recibe avisos del estado de tus casos.",
+          "app-chip1": "Android nativo",
+          "app-chip2": "Flutter (Android)",
+          "app-chip3": "Ruta sincronizada",
 
           /* Pitch */
           "pitch-title":        "¿Por qué SkillSwap y no otra plataforma?",
@@ -786,14 +906,50 @@
           "about-skill3-title": "3. Prove the skill",
           "about-skill3-desc":  "Take an AI-generated quiz or mini-project; if you don't pass, a human Verifier reviews your case",
           "about-btn":          "Start my path",
-          "roles-title":            "Three roles, one verification system",
+          "roles-title":            "Two roles, one verification system",
           "roles-subtitle":         "Each one takes part at a different point of the certification path",
           "rol-learner-title":      "Student",
           "rol-learner-desc":       "Uploads certificates, follows the path AI generates for them, and takes their assessments.",
-          "rol-tutor-title":        "Verifier",
-          "rol-tutor-desc":         "A student who already certified that skill; reviews the cases AI couldn't resolve and earns SkillCredits.",
+          "rol-tutor-title":        "Verifier / Coordinator-Professor",
+          "rol-tutor-desc":         "As a Verifier, reviews the cases AI couldn't resolve and earns SkillCredits. As a Coordinator or Professor, also oversees Verifier reliability, resolves disputes, and views aggregate system metrics.",
           "rol-coordinador-title":  "Coordinator / Professor",
           "rol-coordinador-desc":   "Oversees Verifier reliability, resolves disputes, and views aggregate system metrics.",
+
+          /* Route example */
+          "route-title":    "What a certification path looks like",
+          "route-subtitle": "Real example from the app: career goal \"Python for Data Science\"",
+          "route-desc":     "Each path is split into nodes. You complete a node by proving the skill with a quiz or a mini-project; only then does the next one unlock. Every step is backed by an assessment, not just a certificate.",
+          "route-legend-done":    "Completed",
+          "route-legend-current": "Next step",
+          "route-legend-locked":  "Locked",
+          "route-active":   "YOUR ACTIVE PATH",
+          "route-progress": "2 of 5 nodes completed",
+          "route-next":     "Next step",
+          "route-n1": "Completed · Quiz 92%",
+          "route-n2": "Completed · Mini-project approved",
+          "route-n3": "Upload your certificate to start",
+          "route-n4": "Locked · requires node 3",
+          "route-n5": "Locked · mandatory practical deliverable",
+
+          /* FAQ */
+          "faq-title": "Frequently asked questions",
+          "faq-q1": "Which certificates can I upload?",
+          "faq-a1": "The external certificates you already have. AI reads them, validates them, and compares them with your career goal to detect which skills you're missing.",
+          "faq-q2": "What happens if I don't pass an assessment?",
+          "faq-a2": "If the attempt doesn't prove the skill, a case is opened and a human Verifier reviews it with a structured, skill-specific rubric.",
+          "faq-q3": "Who can be a Verifier?",
+          "faq-a3": "A student who already certified that same skill. Cases are assigned based on skill, reliability history, and each Verifier's availability.",
+          "faq-q4": "Can SkillCredits be bought or exchanged for money?",
+          "faq-a4": "No. SkillCredits are only earned by reviewing cases as a Verifier and are used inside the platform to get benefits.",
+          "faq-q5": "Which devices does SkillSwap work on?",
+          "faq-a5": "SkillSwap is a mobile app designed for Android. This informational page works on phones, tablets, and desktop.",
+
+          /* Mobile app */
+          "app-title": "Your path, always on your phone",
+          "app-desc":  "SkillSwap is an Android mobile app: upload certificates with your camera, follow your path, and get updates on your cases.",
+          "app-chip1": "Native Android",
+          "app-chip2": "Flutter (Android)",
+          "app-chip3": "Synced path",
 
           /* Pitch */
           "pitch-title":        "Why SkillSwap and not another platform?",
