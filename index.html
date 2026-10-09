@@ -43,6 +43,7 @@
         <ul class="menu-horizontal-opciones">
 
           <li><a href="#seccion-screenshots" data-i18n="nav-plataforma">Plataforma</a></li>
+          <li><a href="#seccion-planes" data-i18n="nav-planes">Planes</a></li>
           <li><a href="sites/partnerships.html"   data-i18n="nav-alianzas">Alianzas</a></li>
           <li><a href="sites/aboutUs.html" data-i18n="nav-sobre-nosotros">Sobre nosotros</a></li>
 
@@ -193,7 +194,7 @@
       <svg width="34" height="34" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L4 5v6c0 5.25 3.4 10.14 8 11 4.6-.86 8-5.75 8-11V5l-8-3z" stroke="var(--primary-color)" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="var(--secondary-color)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </div>
     <h3 data-i18n="rol-tutor-title">Verificador</h3>
-    <p data-i18n="rol-tutor-desc">Como Verificador, revisa los casos que la IA no logró resolver y gana SkillCredits. Además, resuelve disputas y ve métricas agregadas del sistema.</p>
+    <p data-i18n="rol-tutor-desc">Revisa con rúbrica los casos que la IA no logró resolver y gana SkillCredits. Un Verificador senior, además, supervisa las apelaciones y los certificados sospechosos.</p>
     <div class="rol-dashboard-preview">
        <img src="assets/images/UX-movil-interfaz.png" alt="Inicio del Verificador: casos asignados, SkillCredits y confiabilidad" width="824" height="1834" loading="lazy" />
     </div>
@@ -492,6 +493,61 @@
       </div>
     </section>
 
+    <!-- ═══════════════════════════════════════ SECCIÓN — PLANES (US43 · modelo freemium) ═══════════════════════════════════════ -->
+    <section class="seccion-planes" id="seccion-planes" aria-labelledby="planes-titulo">
+      <div class="titulo-seccion">
+        <h2 class="nosotros-titulo" id="planes-titulo" data-i18n="plans-title">Planes</h2>
+        <div class="titulo-decorador"></div>
+        <p class="seccion-subtitulo" data-i18n="plans-subtitle">Empieza gratis y, cuando lo necesites, amplía tus límites.</p>
+      </div>
+
+      <div class="planes-grid">
+
+        <!-- Plan gratuito -->
+        <article class="plan-card" aria-labelledby="plan-free-name">
+          <h3 class="plan-nombre" id="plan-free-name" data-i18n="plan-free-name">Plan gratuito</h3>
+          <p class="plan-precio">
+            <span class="plan-monto" data-i18n="plan-free-price">S/ 0</span>
+          </p>
+          <p class="plan-desc" data-i18n="plan-free-desc">Todo lo esencial para certificar tus habilidades.</p>
+          <ul class="plan-lista">
+            <li><span class="plan-check" aria-hidden="true">✓</span><span data-i18n="plan-free-f1">Declara tu meta profesional</span></li>
+            <li><span class="plan-check" aria-hidden="true">✓</span><span data-i18n="plan-free-f2">Sigue tu ruta de certificación</span></li>
+            <li><span class="plan-check" aria-hidden="true">✓</span><span data-i18n="plan-free-f3">Rinde quizzes en cada paso de tu ruta</span></li>
+            <li><span class="plan-check" aria-hidden="true">✓</span><span data-i18n="plan-free-f4">Escala casos a un Verificador</span></li>
+          </ul>
+          <p class="plan-limite" data-i18n="plan-free-limit">Incluye 1 ruta activa, hasta 3 rutas en total y 3 escalamientos al mes, con revisión en hasta 5 días hábiles.</p>
+          <a href="index.html" class="plan-cta plan-cta-secundario" data-i18n="plan-free-btn">Empezar gratis</a>
+        </article>
+
+        <!-- Plan mensual (recomendado) -->
+        <article class="plan-card plan-destacado" aria-labelledby="plan-premium-name">
+          <span class="plan-badge" data-i18n="plan-premium-badge">Recomendado</span>
+          <h3 class="plan-nombre" id="plan-premium-name" data-i18n="plan-premium-name">Plan mensual</h3>
+          <p class="plan-precio">
+            <span class="plan-monto" data-i18n="plan-premium-price">S/ 29,90</span>
+            <span class="plan-periodo" data-i18n="plan-premium-period">al mes</span>
+          </p>
+          <p class="plan-igv" data-i18n="plan-premium-tax">IGV incluido</p>
+          <p class="plan-desc" data-i18n="plan-premium-desc">Todo lo del plan gratuito, con más margen para avanzar.</p>
+          <ul class="plan-lista">
+            <li><span class="plan-check" aria-hidden="true">✓</span><span data-i18n="plan-premium-f1">Hasta 3 rutas activas, sin tope de rutas en total</span></li>
+            <li><span class="plan-check" aria-hidden="true">✓</span><span data-i18n="plan-premium-f2">10 escalamientos al mes a un Verificador</span></li>
+            <li><span class="plan-check" aria-hidden="true">✓</span><span data-i18n="plan-premium-f3">Revisión de casos escalados en 48 horas</span></li>
+            <li><span class="plan-check" aria-hidden="true">✓</span><span data-i18n="plan-premium-f4">Cobro seguro con Google Play</span></li>
+            <li><span class="plan-check" aria-hidden="true">✓</span><span data-i18n="plan-premium-f5">Cancelas cuando quieras</span></li>
+          </ul>
+          <a href="index.html" class="plan-cta" data-i18n="plan-premium-btn">Empezar con el plan mensual</a>
+        </article>
+
+      </div>
+
+      <p class="planes-nota" role="note">
+        <svg class="planes-nota-icono" width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L4 5v6c0 5.25 3.4 10.14 8 11 4.6-.86 8-5.75 8-11V5l-8-3z" stroke="var(--primary-color)" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="var(--secondary-dark)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span data-i18n="plans-note">Ningún plan compra la aprobación: las evaluaciones y los criterios son los mismos para todos.</span>
+      </p>
+    </section>
+
     <!-- ═══════════════════════════════════════ SECCIÓN — PREGUNTAS FRECUENTES ═══════════════════════════════════════ -->
     <section class="seccion-faq" id="seccion-faq">
       <div class="titulo-seccion">
@@ -678,6 +734,11 @@
       btnMenu.addEventListener('click', () => {
         menu.classList.toggle('activo');
       });
+
+      // Cierra el menú móvil al elegir un ancla interna (Plataforma, Planes)
+      menu.querySelectorAll('a[href^="#"]').forEach(link => {
+        link.addEventListener('click', () => menu.classList.remove('activo'));
+      });
     </script>
 
     <!-- Script Tabs Screenshots -->
@@ -710,6 +771,7 @@
 
           /* Navbar */
           "nav-plataforma":     "Plataforma",
+          "nav-planes":         "Planes",
           "nav-alianzas":       "Alianzas",
           "nav-sobre-nosotros": "Sobre nosotros",
           "nav-login":          "Iniciar Sesión",
@@ -740,9 +802,7 @@
           "rol-learner-title":      "Estudiante",
           "rol-learner-desc":       "Sube certificados, sigue la ruta que la IA genera para él y rinde sus evaluaciones.",
           "rol-tutor-title":        "Verificador",
-          "rol-tutor-desc":         "Como Verificador, revisa los casos que la IA no logró resolver y gana SkillCredits. Además, resuelve disputas y ve métricas agregadas del sistema.",
-          "rol-coordinador-title":  "Coordinador / Profesor",
-          "rol-coordinador-desc":   "Supervisa la confiabilidad de los Verificadores, resuelve disputas y ve métricas agregadas del sistema.",
+          "rol-tutor-desc":         "Revisa con rúbrica los casos que la IA no logró resolver y gana SkillCredits. Un Verificador senior, además, supervisa las apelaciones y los certificados sospechosos.",
 
           /* Ejemplo de ruta */
           "route-title":    "Así se ve una ruta de certificación",
@@ -759,6 +819,32 @@
           "route-n3": "Sube tu certificado para empezar",
           "route-n4": "Bloqueado · requiere el nodo 3",
           "route-n5": "Bloqueado · entrega práctica obligatoria",
+
+          /* Planes (US43) */
+          "plans-title":         "Planes",
+          "plans-subtitle":      "Empieza gratis y, cuando lo necesites, amplía tus límites.",
+          "plan-free-name":      "Plan gratuito",
+          "plan-free-price":     "S/ 0",
+          "plan-free-desc":      "Todo lo esencial para certificar tus habilidades.",
+          "plan-free-f1":        "Declara tu meta profesional",
+          "plan-free-f2":        "Sigue tu ruta de certificación",
+          "plan-free-f3":        "Rinde quizzes en cada paso de tu ruta",
+          "plan-free-f4":        "Escala casos a un Verificador",
+          "plan-free-limit":     "Incluye 1 ruta activa, hasta 3 rutas en total y 3 escalamientos al mes, con revisión en hasta 5 días hábiles.",
+          "plan-free-btn":       "Empezar gratis",
+          "plan-premium-badge":  "Recomendado",
+          "plan-premium-name":   "Plan mensual",
+          "plan-premium-price":  "S/ 29,90",
+          "plan-premium-period": "al mes",
+          "plan-premium-tax":    "IGV incluido",
+          "plan-premium-desc":   "Todo lo del plan gratuito, con más margen para avanzar.",
+          "plan-premium-f1":     "Hasta 3 rutas activas, sin tope de rutas en total",
+          "plan-premium-f2":     "10 escalamientos al mes a un Verificador",
+          "plan-premium-f3":     "Revisión de casos escalados en 48 horas",
+          "plan-premium-f4":     "Cobro seguro con Google Play",
+          "plan-premium-f5":     "Cancelas cuando quieras",
+          "plan-premium-btn":    "Empezar con el plan mensual",
+          "plans-note":          "Ningún plan compra la aprobación: las evaluaciones y los criterios son los mismos para todos.",
 
           /* FAQ */
           "faq-title": "Preguntas frecuentes",
@@ -881,6 +967,7 @@
 
           /* Navbar */
           "nav-plataforma":     "Platform",
+          "nav-planes":         "Plans",
           "nav-alianzas":       "Alliances",
           "nav-sobre-nosotros": "About us",
           "nav-login":          "Log In",
@@ -911,9 +998,7 @@
           "rol-learner-title":      "Student",
           "rol-learner-desc":       "Uploads certificates, follows the path AI generates for them, and takes their assessments.",
           "rol-tutor-title":        "Verifier",
-          "rol-tutor-desc":         "As a Verifier, reviews the cases AI couldn't resolve and earns SkillCredits. As resolves disputes, and views aggregate system metrics.",
-          "rol-coordinador-title":  "Coordinator / Professor",
-          "rol-coordinador-desc":   "Oversees Verifier reliability, resolves disputes, and views aggregate system metrics.",
+          "rol-tutor-desc":         "Reviews, with a rubric, the cases AI couldn't resolve and earns SkillCredits. A senior Verifier also oversees appeals and suspicious certificates.",
 
           /* Route example */
           "route-title":    "What a certification path looks like",
@@ -930,6 +1015,32 @@
           "route-n3": "Upload your certificate to start",
           "route-n4": "Locked · requires node 3",
           "route-n5": "Locked · mandatory practical deliverable",
+
+          /* Plans (US43) */
+          "plans-title":         "Plans",
+          "plans-subtitle":      "Start for free and expand your limits whenever you need to.",
+          "plan-free-name":      "Free plan",
+          "plan-free-price":     "S/ 0",
+          "plan-free-desc":      "Everything you need to certify your skills.",
+          "plan-free-f1":        "State your career goal",
+          "plan-free-f2":        "Follow your certification path",
+          "plan-free-f3":        "Take quizzes at every step of your path",
+          "plan-free-f4":        "Escalate cases to a Verifier",
+          "plan-free-limit":     "Includes 1 active path, up to 3 paths in total and 3 escalations per month, reviewed within 5 business days.",
+          "plan-free-btn":       "Start for free",
+          "plan-premium-badge":  "Recommended",
+          "plan-premium-name":   "Monthly plan",
+          "plan-premium-price":  "S/ 29.90",
+          "plan-premium-period": "per month",
+          "plan-premium-tax":    "IGV (sales tax) included",
+          "plan-premium-desc":   "Everything in the free plan, with more room to move forward.",
+          "plan-premium-f1":     "Up to 3 active paths, no cap on total paths",
+          "plan-premium-f2":     "10 escalations per month to a Verifier",
+          "plan-premium-f3":     "Escalated cases reviewed within 48 hours",
+          "plan-premium-f4":     "Secure billing through Google Play",
+          "plan-premium-f5":     "Cancel anytime",
+          "plan-premium-btn":    "Start with the monthly plan",
+          "plans-note":          "No plan buys approval: assessments and criteria are the same for everyone.",
 
           /* FAQ */
           "faq-title": "Frequently asked questions",
