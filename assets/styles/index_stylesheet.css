@@ -10,6 +10,12 @@
   font-family: "Inter", sans-serif;
 }
 
+/* Ninguna imagen puede ser más ancha que su contenedor */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 /* ═══════════════════════════════════════════════════════════════
    VARIABLES DE DISEÑO
 ═══════════════════════════════════════════════════════════════ */
@@ -267,12 +273,13 @@ html
 
 .roles-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 28px;
   margin-top: 32px;
 }
 
 .rol-card {
+  min-width: 0; /* evita que una imagen ancha deforme la grilla */
   background-color: var(--surface-color);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-md);
@@ -365,12 +372,6 @@ html
   text-align: center;
   padding-left: 24px;
   padding-right: 24px;
-}
-.roles-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 28px;
-  margin-top: 32px;
 }
 
 /* Badge sobre el título */
