@@ -630,16 +630,28 @@ html
   padding-top: 32px;
 }
 
-.div-video-atp video {
+.div-video-atp .video-embed {
+  position: relative;
   width: 100%;
   max-width: 800px;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background-color: #000;
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-md);
   transition: box-shadow var(--transition);
 }
 
-.div-video-atp video:hover {
+.div-video-atp .video-embed:hover {
   box-shadow: var(--shadow-lg);
+}
+
+.div-video-atp .video-embed iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
 }
 
 .contenido-atp-grid {
