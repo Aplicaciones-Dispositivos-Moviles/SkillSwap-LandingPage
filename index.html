@@ -46,15 +46,14 @@
           <li><a href="sites/partnerships.html"   data-i18n="nav-alianzas">Alianzas</a></li>
           <li><a href="sites/aboutUs.html" data-i18n="nav-sobre-nosotros">Sobre nosotros</a></li>
 
-          <li> 
-            <a href="index.html">
-              <button class="btn-iniciarsesion" data-i18n="nav-login">Iniciar Sesión</button>
-            </a>
+          <li>
+            <a href="#descarga" class="btn-descarga" data-i18n="nav-descarga">Descarga la app</a>
           </li>
           <li>
-            <a href="index.html">
-              <button class="btn-registrase" data-i18n="nav-register">Registrarse</button>
-            </a>
+            <a href="sites/login.html" class="btn-iniciarsesion" data-i18n="nav-login">Iniciar Sesión</a>
+          </li>
+          <li>
+            <a href="sites/signup.html" class="btn-registrase" data-i18n="nav-register">Registrarse</a>
           </li>
 
           <!-- ── Selector de Idioma (US35) ── -->
@@ -80,8 +79,8 @@
         Sube tus certificados, nuestra IA detecta qué te falta para tu meta profesional y genera una ruta de certificación con evaluaciones diseñadas para ti — revisadas por IA y, si lo necesitas, por un Verificador humano.
       </p>
       <div class="hero-cta-group">
-        <a href="index.html" class="llamado-accion-boton" data-i18n="hero-btn">
-          ¡Empieza tu ruta ahora!
+        <a href="#descarga" class="llamado-accion-boton" data-i18n="hero-btn">
+          Descarga la app
         </a>
         <a href="#seccion-screenshots" class="hero-btn-secundario" data-i18n="hero-btn-sec">
           Ver cómo funciona ↓
@@ -152,8 +151,8 @@
               </div>
             </div>
 
-            <a href="index.html" class="llamado-accion-boton2" data-i18n="about-btn">
-              Empezar mi ruta
+            <a href="#descarga" class="llamado-accion-boton2" data-i18n="about-btn">
+              Empezar mi ruta en la app
             </a>
           </div>
 
@@ -279,8 +278,8 @@
               <span data-i18n="pitch-item4">SkillCredits: reconocimiento interno para quienes verifican casos como par evaluador</span>
             </li>
           </ul>
-          <a href="index.html" class="llamado-accion-boton" data-i18n="pitch-btn">
-            Empieza tu ruta — tarda 2 minutos
+          <a href="#descarga" class="llamado-accion-boton" data-i18n="pitch-btn">
+            Empieza tu ruta desde la app
           </a>
         </div>
         <div class="pitch-imagen">
@@ -441,8 +440,8 @@
         <!-- CTA dentro de screenshots -->
         <div class="screenshots-cta">
           <p data-i18n="screenshots-cta-txt">¿Listo para probarlo tú mismo?</p>
-          <a href="index.html" class="llamado-accion-boton" data-i18n="screenshots-cta-btn">
-            Crear mi cuenta gratis
+          <a href="#descarga" class="llamado-accion-boton" data-i18n="screenshots-cta-btn">
+            Descarga la app y crea tu cuenta
           </a>
         </div>
 
@@ -604,7 +603,7 @@
     </section>
 
     <!-- ═══════════════════════════════════════ SECCIÓN — APP MÓVIL ═══════════════════════════════════════ -->
-    <section class="seccion-app">
+    <section class="seccion-app" id="descarga">
       <div class="app-banner">
         <div>
           <h3 data-i18n="app-title">Tu ruta, siempre en tu celular</h3>
@@ -614,6 +613,21 @@
           <span data-i18n="app-chip1">Android nativo</span>
           <span data-i18n="app-chip2">Flutter (Android)</span>
           <span data-i18n="app-chip3">Ruta sincronizada</span>
+        </div>
+      </div>
+
+      <div class="app-descarga">
+        <div class="app-descarga-card">
+          <h4 data-i18n="app-android-title">Android</h4>
+          <p data-i18n="app-android-desc">Disponible hoy por invitación a través de Firebase App Distribution: abre el enlace desde tu celular Android y sigue los pasos para instalarla.</p>
+        </div>
+        <div class="app-descarga-card">
+          <h4 data-i18n="app-play-title">Google Play</h4>
+          <p data-i18n="app-play-desc">Todavía no está publicada en Google Play; por ahora se instala con el enlace de invitación.</p>
+        </div>
+        <div class="app-descarga-card app-descarga-accion">
+          <p data-i18n="app-requirement">Para registrarte necesitas un correo institucional con dominio .edu.pe.</p>
+          <a href="https://appdistribution.firebase.dev/i/eb345a85ef8857fa" class="llamado-accion-boton" target="_blank" rel="noopener" data-i18n="app-download-btn">Descargar para Android</a>
         </div>
       </div>
     </section>
@@ -714,12 +728,13 @@
           "nav-sobre-nosotros": "Sobre nosotros",
           "nav-login":          "Iniciar Sesión",
           "nav-register":       "Registrarse",
+          "nav-descarga":       "Descarga la app",
 
           /* Hero */
           "hero-badge":    " Verificación de habilidades con IA",
           "hero-title":    "Demuestra lo que sabes. Deja que la IA valide tu ruta hacia la habilidad que necesitas.",
           "hero-subtitle": "Sube tus certificados, nuestra IA detecta qué te falta para tu meta profesional y genera una ruta de certificación con evaluaciones diseñadas para ti — revisadas por IA y, si lo necesitas, por un Verificador humano.",
-          "hero-btn":      "¡Empieza tu ruta ahora!",
+          "hero-btn":      "Descarga la app",
           "hero-btn-sec":  "Ver cómo funciona ↓",
           "stat-ai":       "Detecta tus gaps de habilidad",
           "stat-verified": "Certificados verificados",
@@ -734,7 +749,7 @@
           "about-skill2-desc":  "Detecta los gaps frente a tu meta y genera una ruta de certificación paso a paso",
           "about-skill3-title": "3. Demuestra la habilidad",
           "about-skill3-desc":  "Rinde un quiz o miniproyecto generado por IA; si no lo logras, un Verificador humano revisa tu caso",
-          "about-btn":          "Empezar mi ruta",
+          "about-btn":          "Empezar mi ruta en la app",
           "roles-title":            "Dos roles, un mismo sistema de verificación",
           "roles-subtitle":         "Cada uno participa en un punto distinto de la ruta de certificación",
           "rol-learner-title":      "Estudiante",
@@ -779,6 +794,12 @@
           "app-chip1": "Android nativo",
           "app-chip2": "Flutter (Android)",
           "app-chip3": "Ruta sincronizada",
+          "app-android-title":  "Android",
+          "app-android-desc":   "Disponible hoy por invitación a través de Firebase App Distribution: abre el enlace desde tu celular Android y sigue los pasos para instalarla.",
+          "app-play-title":     "Google Play",
+          "app-play-desc":      "Todavía no está publicada en Google Play; por ahora se instala con el enlace de invitación.",
+          "app-requirement":    "Para registrarte necesitas un correo institucional con dominio .edu.pe.",
+          "app-download-btn":   "Descargar para Android",
 
           /* Pitch */
           "pitch-title":        "¿Por qué SkillSwap y no otra plataforma?",
@@ -787,7 +808,7 @@
           "pitch-item2":        "Evaluaciones (quiz o miniproyecto) generadas dinámicamente para cada paso de tu ruta",
           "pitch-item3":        "Revisión con IA en primera instancia; Verificador humano solo si el intento no la demuestra",
           "pitch-item4":        "SkillCredits: reconocimiento interno para quienes verifican casos como par evaluador",
-          "pitch-btn":          "Empieza tu ruta — tarda 2 minutos",
+          "pitch-btn":          "Empieza tu ruta desde la app",
           "pitch-quote":        '"Subí mis certificados y en minutos ya tenía una ruta clara de lo que me faltaba para el puesto que quería."',
           "pitch-quote-author": "— Estudiante de Ingeniería, UPC",
 
@@ -840,7 +861,7 @@
           "ss-validacion-m":        "SkillCredits móvil",
           "ss-validacion-m-desc":   "Revisa tu balance de SkillCredits ganados como Verificador y canjéalos por beneficios.",
           "screenshots-cta-txt": "¿Listo para probarlo tú mismo?",
-          "screenshots-cta-btn": "Crear mi cuenta gratis",
+          "screenshots-cta-btn": "Descarga la app y crea tu cuenta",
 
           /* Revisión con IA */
           "iot-title":          "La IA revisa tu ruta, no solo la genera",
@@ -885,12 +906,13 @@
           "nav-sobre-nosotros": "About us",
           "nav-login":          "Log In",
           "nav-register":       "Sign Up",
+          "nav-descarga":       "Download the app",
 
           /* Hero */
           "hero-badge":    " AI-Powered Skill Verification",
           "hero-title":    "Prove what you know. Let AI validate your path to the skill you need.",
           "hero-subtitle": "Upload your certificates, let our AI detect what's missing for your career goal, and get a certification path with assessments designed for you — reviewed by AI and, if needed, by a human Verifier.",
-          "hero-btn":      "Start your path now!",
+          "hero-btn":      "Download the app",
           "hero-btn-sec":  "See how it works ↓",
           "stat-ai":       "Detects your skill gaps",
           "stat-verified": "Verified certificates",
@@ -905,7 +927,7 @@
           "about-skill2-desc":  "It detects the gaps against your goal and generates a step-by-step certification path",
           "about-skill3-title": "3. Prove the skill",
           "about-skill3-desc":  "Take an AI-generated quiz or mini-project; if you don't pass, a human Verifier reviews your case",
-          "about-btn":          "Start my path",
+          "about-btn":          "Start my path in the app",
           "roles-title":            "Two roles, one verification system",
           "roles-subtitle":         "Each one takes part at a different point of the certification path",
           "rol-learner-title":      "Student",
@@ -950,6 +972,12 @@
           "app-chip1": "Native Android",
           "app-chip2": "Flutter (Android)",
           "app-chip3": "Synced path",
+          "app-android-title":  "Android",
+          "app-android-desc":   "Available today by invitation through Firebase App Distribution: open the link on your Android phone and follow the steps to install it.",
+          "app-play-title":     "Google Play",
+          "app-play-desc":      "It is not yet published on Google Play; for now it is installed through the invitation link.",
+          "app-requirement":    "To sign up you need an institutional email with a .edu.pe domain.",
+          "app-download-btn":   "Download for Android",
 
           /* Pitch */
           "pitch-title":        "Why SkillSwap and not another platform?",
@@ -958,7 +986,7 @@
           "pitch-item2":        "Assessments (quiz or mini-project) generated dynamically for each step of your path",
           "pitch-item3":        "AI review first; a human Verifier only if the attempt doesn't prove the skill",
           "pitch-item4":        "SkillCredits: internal recognition for those who verify cases as peer reviewers",
-          "pitch-btn":          "Start your path — takes 2 minutes",
+          "pitch-btn":          "Start your path from the app",
           "pitch-quote":        '"I uploaded my certificates and in minutes I had a clear path of what I was missing for the role I wanted."',
           "pitch-quote-author": "— Engineering student, UPC",
 
@@ -1012,7 +1040,7 @@
           "ss-validacion-m":        "SkillCredits mobile",
           "ss-validacion-m-desc":   "Check your SkillCredits balance earned as a Verifier and redeem it for benefits.",
           "screenshots-cta-txt": "Ready to try it yourself?",
-          "screenshots-cta-btn": "Create my free account",
+          "screenshots-cta-btn": "Download the app and create your account",
 
           /* AI review */
           "iot-title":          "AI reviews your path, not just generates it",
