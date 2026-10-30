@@ -594,7 +594,7 @@
         <div class="descarga-texto">
           <p class="descarga-eyebrow" data-i18n="dl-eyebrow">Descarga la app</p>
           <h2 class="descarga-titulo" id="descarga-titulo" data-i18n="dl-title">Lleva tu ruta de certificación en el bolsillo</h2>
-          <p class="descarga-desc" data-i18n="dl-desc">SkillSwap es una app para Android. Estamos preparando su lanzamiento en Google Play: escríbenos y te avisamos el día en que puedas descargarla.</p>
+          <p class="descarga-desc" data-i18n="dl-desc">SkillSwap es una app para Android. Hoy puedes instalarla por invitación a través de Firebase App Distribution; todavía no está publicada en Google Play.</p>
 
           <ul class="descarga-lista">
             <li><span class="descarga-check" aria-hidden="true">✓</span><span data-i18n="dl-f1">Sube tus certificados con la cámara del celular</span></li>
@@ -607,15 +607,17 @@
             <div class="badge-proximamente">
               <svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><rect x="6" y="2" width="12" height="20" rx="3" stroke="currentColor" stroke-width="1.8"/><path d="M11 18h2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
               <span class="badge-proximamente-txt">
-                <small data-i18n="dl-badge-small">Muy pronto en</small>
+                <small data-i18n="dl-badge-small">Todavía no disponible en</small>
                 <strong>Google Play</strong>
               </span>
             </div>
-            <a class="btn-app btn-app-primario" href="mailto:contacto@skillswap.pe?subject=Av%C3%ADsenme%20cuando%20SkillSwap%20est%C3%A9%20en%20Google%20Play">
+            <a class="btn-app btn-app-primario" href="https://appdistribution.firebase.dev/i/eb345a85ef8857fa" target="_blank" rel="noopener" data-i18n="dl-btn-download">Descargar para Android</a>
+            <a class="btn-app btn-app-secundario" href="mailto:contacto@skillswap.pe?subject=Av%C3%ADsenme%20cuando%20SkillSwap%20est%C3%A9%20en%20Google%20Play">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M6 8a6 6 0 1112 0c0 7 3 8 3 8H3s3-1 3-8zM10 20a2 2 0 004 0" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
               <span data-i18n="dl-btn-notify">Avísame del lanzamiento</span>
             </a>
           </div>
+          <p class="descarga-nota descarga-requisito" data-i18n="dl-requirement">Para registrarte necesitas un correo institucional con dominio .edu.pe.</p>
           <p class="descarga-nota">
             <span data-i18n="dl-note">¿Quieres ver los planes antes?</span>
             <a href="#seccion-planes" data-i18n="dl-note-link">Compara el plan gratuito y el mensual</a>
@@ -927,13 +929,15 @@
           /* Descarga la app */
           "dl-eyebrow":     "Descarga la app",
           "dl-title":       "Lleva tu ruta de certificación en el bolsillo",
-          "dl-desc":        "SkillSwap es una app para Android. Estamos preparando su lanzamiento en Google Play: escríbenos y te avisamos el día en que puedas descargarla.",
+          "dl-desc":        "SkillSwap es una app para Android. Hoy puedes instalarla por invitación a través de Firebase App Distribution; todavía no está publicada en Google Play.",
           "dl-f1":          "Sube tus certificados con la cámara del celular",
           "dl-f2":          "Rinde tus quizzes y sigue tu ruta desde donde estés",
           "dl-f3":          "Recibe avisos cuando un Verificador resuelva tu caso",
           "dl-f4":          "Empieza gratis con 1 ruta activa",
-          "dl-badge-small": "Muy pronto en",
+          "dl-badge-small": "Todavía no disponible en",
           "dl-btn-notify":  "Avísame del lanzamiento",
+          "dl-btn-download": "Descargar para Android",
+          "dl-requirement": "Para registrarte necesitas un correo institucional con dominio .edu.pe.",
           "dl-note":        "¿Quieres ver los planes antes?",
           "dl-note-link":   "Compara el plan gratuito y el mensual",
 
@@ -1144,13 +1148,15 @@
           /* Get the app */
           "dl-eyebrow":     "Get the app",
           "dl-title":       "Carry your certification path in your pocket",
-          "dl-desc":        "SkillSwap is an Android app. We're getting ready to launch it on Google Play: write to us and we'll let you know the day you can download it.",
+          "dl-desc":        "SkillSwap is an Android app. Today you can install it by invitation through Firebase App Distribution; it is not yet published on Google Play.",
           "dl-f1":          "Upload your certificates with your phone's camera",
           "dl-f2":          "Take your quizzes and follow your path wherever you are",
           "dl-f3":          "Get notified when a Verifier resolves your case",
           "dl-f4":          "Start for free with 1 active path",
-          "dl-badge-small": "Coming soon on",
+          "dl-badge-small": "Not yet available on",
           "dl-btn-notify":  "Notify me at launch",
+          "dl-btn-download": "Download for Android",
+          "dl-requirement": "To sign up you need an institutional email with a .edu.pe domain.",
           "dl-note":        "Want to see the plans first?",
           "dl-note-link":   "Compare the free and monthly plans",
 
