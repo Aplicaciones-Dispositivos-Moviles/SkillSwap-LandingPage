@@ -679,7 +679,16 @@
       <div class="contenido-atp-grid">
 
         <div class="div-video-atp">
-          <video src="assets/videos/video-atp.mp4" controls muted></video>
+          <div class="video-embed">
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/-XpgJySK29A"
+              title="Video de presentación de SkillSwap"
+              data-i18n-title="atp-video-title"
+              loading="lazy"
+              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen></iframe>
+          </div>
         </div>
 
         <div class="div-info-atp">
@@ -1016,6 +1025,7 @@
 
           /* Video y Comunidad */
           "atp-title":       "Conoce más y Conecta",
+          "atp-video-title": "Video de presentación de SkillSwap",
           "atp-chat-title":  "Coordinación Directa",
           "atp-chat-desc":   "¿Tienes dudas sobre tu ruta o un caso escalado? Coordínalo directamente por nuestro chat interno con tu Verificador o el equipo de soporte.",
           "atp-social-title": "Síguenos en nuestras redes",
@@ -1236,6 +1246,7 @@
 
           /* Video y Comunidad */
           "atp-title":       "Learn more and Connect",
+          "atp-video-title": "SkillSwap presentation video",
           "atp-chat-title":  "Direct Coordination",
           "atp-chat-desc":   "Questions about your path or an escalated case? Coordinate directly with your Verifier or the support team through our internal chat.",
           "atp-social-title": "Follow us on our networks",
@@ -1271,6 +1282,11 @@
         document.querySelectorAll('[data-i18n]').forEach(el => {
           const key = el.getAttribute('data-i18n');
           if (t[key] !== undefined) el.textContent = t[key];
+        });
+
+        document.querySelectorAll('[data-i18n-title]').forEach(el => {
+          const key = el.getAttribute('data-i18n-title');
+          if (t[key] !== undefined) el.setAttribute('title', t[key]);
         });
 
         document.querySelectorAll('.lang-btn').forEach(btn => {
