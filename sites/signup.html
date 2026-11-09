@@ -133,7 +133,7 @@
             />
           </div>
           <div class="formulario-registro-elemento">
-            <input type="submit" data-i18n="sign-btn" value="Registrarse" />
+            <input type="submit" data-i18n="signup-btn" value="Registrarse" />
           </div>
           <div class="formulario-registro-elemento">
             <label>
@@ -187,7 +187,12 @@
     <script>
       const translations = {
         es: {
+          /* Página */
+          "page-title": "SkillSwap | Registro",
+          "meta-description": "Regístrate en SkillSwap, sube tus certificados y deja que la IA arme tu ruta de certificación.",
+
           /* Navbar */
+          "nav-plataforma": "Plataforma",
           "nav-alianzas": "Alianzas",
           "nav-alianzas-beneficios": "Beneficios",
           "nav-alianzas-universidades": "Universidades Afiliadas",
@@ -199,7 +204,7 @@
             "app-notice-btn": "Descarga la app",
 
           /* Register Form */
-          "sign-title": "Registrarse",
+          "signup-title": "Registrarse",
           "name-label": "Nombres*",
           "name-placeholder": "Ariana Marcela",
           "lastname-label": "Apellidos*",
@@ -210,7 +215,7 @@
           "password-placeholder": "La contraseña debe tener un mínimo de 8 caracteres",
           "confirm-password-label": "Confirmar Contraseña*",
           "confirm-password-placeholder": "Repite tu contraseña",
-          "sign-btn": "Registrarse",
+          "signup-btn": "Registrarse",
           "login-label": "¿Ya tienes cuenta?",
           "login-text": "Entra Aquí",
 
@@ -221,7 +226,12 @@
         },
 
         en: {
+          /* Page */
+          "page-title": "SkillSwap | Sign Up",
+          "meta-description": "Sign up for SkillSwap, upload your certificates, and let AI build your certification path.",
+
           /* Navbar */
+          "nav-plataforma": "Platform",
           "nav-alianzas": "Alliances",
           "nav-alianzas-beneficios": "Benefits",
           "nav-alianzas-universidades": "Affiliated Universities",
@@ -260,6 +270,10 @@
         const t = translations[lang];
 
         document.documentElement.lang = lang;
+        document.title = t["page-title"];
+
+        const metaDesc = document.querySelector('meta[name="description"]');
+        if (metaDesc) metaDesc.setAttribute('content', t["meta-description"]);
 
         document.querySelectorAll('[data-i18n]').forEach(el => {
           const key = el.getAttribute('data-i18n');
