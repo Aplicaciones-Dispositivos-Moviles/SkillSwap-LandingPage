@@ -5,7 +5,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
       <!-- ── SEO Meta Tags ── -->
-      <meta name="description" content="Inicia sesión en SkillSwap y sigue tu ruta de certificación de habilidades generada por IA." />
+      <meta name="description" content="Log in to SkillSwap and follow your AI-generated skill certification path." />
 
       <!-- ── SEO Bilingüe: hreflang (US35) ── -->
       <!--
@@ -20,7 +20,7 @@
 
       <link rel="stylesheet" href="../assets/styles/login_stylesheet.css"/>
       <link rel="icon" href="favicon.ico" type="image/x-icon" />
-      <title>SkillSwap | Verificación de Habilidades con IA</title>
+      <title>SkillSwap | Peru's Largest Inter-University Network</title>
 
     </head>
 
@@ -61,9 +61,9 @@
             <!-- ── Selector de Idioma (US35) ── -->
             <li class="lang-switcher-item">
               <div class="lang-switcher" role="group" aria-label="Seleccionar idioma">
-                <button class="lang-btn active" data-lang="es" onclick="applyLanguage('es')" aria-label="Español">ES</button>
+                <button class="lang-btn"        data-lang="es" onclick="applyLanguage('es')" aria-label="Español">ES</button>
                 <span class="lang-divider">|</span>
-                <button class="lang-btn"        data-lang="en" onclick="applyLanguage('en')" aria-label="English">EN</button>
+                <button class="lang-btn active" data-lang="en" onclick="applyLanguage('en')" aria-label="English">EN</button>
               </div>
             </li>
 
@@ -262,10 +262,10 @@
 
         /* ────────────────────────────────────────────────
           Inicialización al cargar la página
-          Lee la preferencia guardada o usa 'es' por defecto
+          Lee la preferencia guardada o usa 'en' por defecto
         ──────────────────────────────────────────────── */
         (function init() {
-          const savedLang = localStorage.getItem('skillswap-lang') || 'es';
+          const savedLang = localStorage.getItem('skillswap-lang') || 'en';
           applyLanguage(savedLang);
         })();
       </script>

@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- ── SEO Meta Tags ── -->
-    <meta name="description" content="SkillSwap es la app para Android que certifica tus habilidades: declara tu meta, sube tus certificados, sigue tu ruta y rinde quizzes generados por IA. Muy pronto en Google Play." />
+    <meta name="description" content="SkillSwap is the Android app that certifies your skills: state your goal, upload your certificates, follow your path, and take AI-generated quizzes. Coming soon on Google Play." />
     <meta name="keywords" content="verificación de habilidades, inteligencia artificial, certificaciones, ruta de aprendizaje, estudiantes universitarios, SkillSwap, Perú, empleabilidad" />
     <meta name="author" content="Innovify" />
 
@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="assets/styles/screenshots_stylesheet.css" />
     <link rel="stylesheet" href="assets/styles/app_landing_stylesheet.css" />
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
-    <title>SkillSwap | Verificación de Habilidades con IA</title>
+    <title>SkillSwap | AI-Powered Skill Verification</title>
   </head>
   <body>
 
@@ -58,9 +58,9 @@
           <!-- ── Selector de Idioma (US35) ── -->
           <li class="lang-switcher-item">
             <div class="lang-switcher" role="group" aria-label="Seleccionar idioma">
-              <button class="lang-btn active" data-lang="es" onclick="applyLanguage('es')" aria-label="Español">ES</button>
+              <button class="lang-btn"        data-lang="es" onclick="applyLanguage('es')" aria-label="Español">ES</button>
               <span class="lang-divider">|</span>
-              <button class="lang-btn"        data-lang="en" onclick="applyLanguage('en')" aria-label="English">EN</button>
+              <button class="lang-btn active" data-lang="en" onclick="applyLanguage('en')" aria-label="English">EN</button>
             </div>
           </li>
 
@@ -1297,7 +1297,7 @@
       }
 
       (function init() {
-        const savedLang = localStorage.getItem('skillswap-lang') || 'es';
+        const savedLang = localStorage.getItem('skillswap-lang') || 'en';
         applyLanguage(savedLang);
       })();
     </script>

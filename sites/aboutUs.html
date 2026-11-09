@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <meta name="description" content="Conoce a Innovify, el equipo detrás de SkillSwap, nuestra misión, visión y las personas que hacen posible la red interuniversitaria más grande del Perú." />
+    <meta name="description" content="Meet Innovify, the team behind SkillSwap, our mission, vision, and the people who make Peru's largest inter-university network possible." />
 
     <link rel="alternate" hreflang="es" href="aboutUs.html" />
     <link rel="alternate" hreflang="en" href="aboutUs.html" />
@@ -12,7 +12,7 @@
 
     <link rel="stylesheet" href="../assets/styles/aboutus_stylesheet.css" />
     <link rel="icon" href="../favicon.ico" type="image/x-icon" />
-    <title>SkillSwap | Sobre Nosotros</title>
+    <title>SkillSwap | About Us</title>
   </head>
 
   <body>
@@ -47,9 +47,9 @@
 
           <li class="lang-switcher-item">
             <div class="lang-switcher" role="group" aria-label="Seleccionar idioma">
-              <button class="lang-btn active" data-lang="es" onclick="applyLanguage('es')" aria-label="Español">ES</button>
+              <button class="lang-btn"        data-lang="es" onclick="applyLanguage('es')" aria-label="Español">ES</button>
               <span class="lang-divider">|</span>
-              <button class="lang-btn"        data-lang="en" onclick="applyLanguage('en')" aria-label="English">EN</button>
+              <button class="lang-btn active" data-lang="en" onclick="applyLanguage('en')" aria-label="English">EN</button>
             </div>
           </li>
 
@@ -328,7 +328,7 @@
       }
 
       (function init() {
-        const savedLang = localStorage.getItem('skillswap-lang') || 'es';
+        const savedLang = localStorage.getItem('skillswap-lang') || 'en';
         applyLanguage(savedLang);
       })();
     </script>
