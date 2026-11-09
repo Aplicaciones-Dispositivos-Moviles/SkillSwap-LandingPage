@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- ── SEO Meta Tags ── -->
-    <meta name="description" content="SkillSwap es la app para Android que certifica tus habilidades: declara tu meta, sube tus certificados, sigue tu ruta y rinde quizzes generados por IA. Muy pronto en Google Play." />
+    <meta name="description" content="SkillSwap is the Android app that certifies your skills: state your goal, upload your certificates, follow your path, and take AI-generated quizzes. Coming soon on Google Play." />
     <meta name="keywords" content="verificación de habilidades, inteligencia artificial, certificaciones, ruta de aprendizaje, estudiantes universitarios, SkillSwap, Perú, empleabilidad" />
     <meta name="author" content="Innovify" />
 
@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="assets/styles/screenshots_stylesheet.css" />
     <link rel="stylesheet" href="assets/styles/app_landing_stylesheet.css" />
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
-    <title>SkillSwap | Verificación de Habilidades con IA</title>
+    <title>SkillSwap | AI-Powered Skill Verification</title>
   </head>
   <body>
 
@@ -58,9 +58,9 @@
           <!-- ── Selector de Idioma (US35) ── -->
           <li class="lang-switcher-item">
             <div class="lang-switcher" role="group" aria-label="Seleccionar idioma">
-              <button class="lang-btn active" data-lang="es" onclick="applyLanguage('es')" aria-label="Español">ES</button>
+              <button class="lang-btn"        data-lang="es" onclick="applyLanguage('es')" aria-label="Español">ES</button>
               <span class="lang-divider">|</span>
-              <button class="lang-btn"        data-lang="en" onclick="applyLanguage('en')" aria-label="English">EN</button>
+              <button class="lang-btn active" data-lang="en" onclick="applyLanguage('en')" aria-label="English">EN</button>
             </div>
           </li>
 
@@ -156,7 +156,7 @@
                 <svg width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="M12 2l2.4 1.8 3-.2.9 2.9 2.5 1.7-1 2.8 1 2.8-2.5 1.7-.9 2.9-3-.2L12 22l-2.4-1.8-3 .2-.9-2.9-2.5-1.7 1-2.8-1-2.8 2.5-1.7.9-2.9 3 .2L12 2z" fill="#1f8a4c"/><path d="M8.5 12.2l2.3 2.3 4.7-4.7" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </span>
               <span class="credencial-etiqueta" data-i18n="flow5-card-label">Habilidad certificada</span>
-              <strong class="credencial-nombre">Python para Data Science</strong>
+              <strong class="credencial-nombre" data-i18n="route-goal">Python para Data Science</strong>
               <span class="credencial-detalle" data-i18n="flow5-card-detail">5 de 5 nodos · Quiz 5/5</span>
               <span class="credencial-chip" data-i18n="flow5-card-chip">Visible en tu perfil</span>
             </div>
@@ -227,7 +227,7 @@
         <div class="ruta-card" role="group" aria-label="Ejemplo de ruta: Python para Data Science">
           <div class="ruta-resumen">
             <small data-i18n="route-active">TU RUTA ACTIVA</small>
-            <strong>Python para Data Science</strong>
+            <strong data-i18n="route-goal">Python para Data Science</strong>
             <div class="ruta-progreso-txt"><span data-i18n="route-progress">2 de 5 nodos completados</span><b>40%</b></div>
             <div class="ruta-barra"><span></span></div>
           </div>
@@ -885,6 +885,7 @@
           "route-legend-done":    "Completado",
           "route-legend-current": "Siguiente paso",
           "route-legend-locked":  "Bloqueado",
+          "route-goal":     "Python para Data Science",
           "route-active":   "TU RUTA ACTIVA",
           "route-progress": "2 de 5 nodos completados",
           "route-next":     "Siguiente paso",
@@ -1105,6 +1106,7 @@
           "route-legend-done":    "Completed",
           "route-legend-current": "Next step",
           "route-legend-locked":  "Locked",
+          "route-goal":     "Python for Data Science",
           "route-active":   "YOUR ACTIVE PATH",
           "route-progress": "2 of 5 nodes completed",
           "route-next":     "Next step",
@@ -1297,7 +1299,7 @@
       }
 
       (function init() {
-        const savedLang = localStorage.getItem('skillswap-lang') || 'es';
+        const savedLang = localStorage.getItem('skillswap-lang') || 'en';
         applyLanguage(savedLang);
       })();
     </script>
