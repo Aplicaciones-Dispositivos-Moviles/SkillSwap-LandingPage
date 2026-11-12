@@ -414,50 +414,6 @@ body {
   border: none;
 }
 
-/* Placeholder mientras no hay video */
-.video-placeholder {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(135deg, #0f2540 0%, #193b69 100%);
-}
-
-.video-placeholder-inner {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 16px;
-  text-align: center;
-  padding: 24px;
-}
-
-.video-play-icon {
-  width: 72px;
-  height: 72px;
-  border-radius: 50%;
-  background: rgba(255, 193, 7, 0.15);
-  border: 2px solid rgba(255, 193, 7, 0.5);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 28px;
-  color: #FFC107;
-}
-
-.video-placeholder-inner p {
-  font-size: 18px;
-  font-weight: 700;
-  color: #ffffff;
-  margin: 0;
-}
-
-.video-placeholder-inner span {
-  font-size: 14px;
-  color: rgba(255, 255, 255, 0.65);
-}
-
 /* ═══════════════════════════════════════════════════════════════
    SECCIÓN: CTA FINAL
 ═══════════════════════════════════════════════════════════════ */
