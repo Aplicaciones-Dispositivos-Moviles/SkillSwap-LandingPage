@@ -1,0 +1,48 @@
+/* ═══════════════════════════════════════════════════════════════
+   ACCESIBILIDAD — enlace «saltar al contenido» y foco visible
+   Compartido por todas las páginas.
+═══════════════════════════════════════════════════════════════ */
+.skip-link {
+  position: absolute;
+  left: 16px;
+  top: -100px;
+  z-index: 2000;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background-color: var(--secondary-color, #FFC107);
+  color: var(--primary-dark, #0f2540);
+  font-weight: 700;
+  font-size: 14px;
+  text-decoration: none;
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+  top: 12px;
+  outline: 3px solid var(--primary-dark, #0f2540);
+  outline-offset: 2px;
+}
+
+/* El destino del enlace recibe el foco sin mostrar un recuadro */
+#contenido-principal:focus {
+  outline: none;
+}
+
+/* Foco visible para quien navega con teclado (WCAG 2.4.7) */
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible {
+  outline: 3px solid var(--primary-light, #1e4d8a);
+  outline-offset: 3px;
+}
+
+/* Sobre fondos oscuros el foco usa el amarillo de la marca */
+footer a:focus-visible,
+.seccion-footer a:focus-visible {
+  outline-color: var(--secondary-color, #FFC107);
+}

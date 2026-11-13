@@ -1,22 +1,27 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en-US">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <meta name="description" content="Afilia tu universidad a SkillSwap y ofrece a tus estudiantes verificación de habilidades con IA y certificaciones confiables." />
+  <meta name="description" content="Affiliate your university with SkillSwap and offer your students AI-powered skill verification and reliable certification." />
+    <meta name="keywords" content="alianzas universitarias, university partnerships, afiliación, affiliation, SkillSwap, universidades, Perú" />
+    <meta name="author" content="Innovify" />
 
-  <link rel="alternate" hreflang="es" href="alliances.html" />
-  <link rel="alternate" hreflang="en" href="alliances.html" />
-  <link rel="alternate" hreflang="x-default" href="alliances.html" />
+  <link rel="alternate" hreflang="es-419" href="partnerships.html" />
+  <link rel="alternate" hreflang="en-US" href="partnerships.html" />
+  <link rel="alternate" hreflang="x-default" href="partnerships.html" />
 
   <link rel="stylesheet" href="../assets/styles/partnerships_stylesheet.css">
   <link rel="icon" href="../favicon.ico" type="image/x-icon" />
 
-  <title>SkillSwap | Alianzas Institucionales</title>
+  <title>SkillSwap | Institutional Partnerships</title>
+  <link rel="stylesheet" href="../assets/styles/a11y.css" />
+  <script src="../assets/scripts/i18n-init.js"></script>
 </head>
 
 <body>
+    <a class="skip-link" href="#contenido-principal" data-i18n="skip-link">Skip to content</a>
 
 <!-- ═══ NAV ═══ -->
 <nav class="barra-navegacion">
@@ -43,14 +48,16 @@
       </li>
       <li class="lang-switcher-item">
         <div class="lang-switcher">
-          <button class="lang-btn active" data-lang="es" onclick="applyLanguage('es')">ES</button>
+          <button class="lang-btn" data-lang="es" onclick="applyLanguage('es')">ES</button>
           <span class="lang-divider">|</span>
-          <button class="lang-btn" data-lang="en" onclick="applyLanguage('en')">EN</button>
+          <button class="lang-btn active" data-lang="en" onclick="applyLanguage('en')">EN</button>
         </div>
       </li>
     </ul>
   </div>
 </nav>
+
+    <div id="contenido-principal" tabindex="-1"></div>
 
 <!-- ═══ HERO ═══ -->
 <header class="hero-alianzas">
@@ -210,7 +217,7 @@
   <div class="seccion-footer">
     <p>
       <span data-i18n="footer-text">2026 SkillSwap. Todos los derechos reservados.</span>
-      <a href="../archivos/TerminosCondiciones.pdf" data-i18n="footer-terms">Términos y Condiciones</a>
+      <a href="terms.html" data-i18n="footer-terms">Términos y Condiciones</a>
       <a href="../archivos/PoliticaPrivacidad.pdf" class="terminos-condiciones" data-i18n="footer-privacy">
             Política de Privacidad
           </a>
@@ -237,6 +244,7 @@ const translations = {
     "page-title":        "SkillSwap | Alianzas Institucionales",
     "meta-description":  "Afilia tu universidad a SkillSwap y ofrece a tus estudiantes verificación de habilidades con IA y certificaciones confiables.",
 
+    "nav-plataforma":     "Plataforma",
     "nav-alianzas":       "Alianzas",
     "nav-sobre-nosotros": "Sobre nosotros",
     "nav-login":          "Iniciar Sesión",
@@ -282,7 +290,8 @@ const translations = {
     "form-success-msg":      "¡Solicitud enviada! Nos pondremos en contacto contigo pronto.",
 
     "footer-text":  "2026 SkillSwap. Todos los derechos reservados.",
-    "footer-terms": "Términos y Condiciones",
+    "skip-link": "Saltar al contenido",
+          "footer-terms": "Términos y Condiciones",
     "footer-privacy": "Política de Privacidad",
   },
 
@@ -290,6 +299,7 @@ const translations = {
     "page-title":        "SkillSwap | Institutional Partnerships",
     "meta-description":  "Affiliate your university with SkillSwap and offer your students AI-powered skill verification and reliable certification.",
 
+    "nav-plataforma":     "Platform",
     "nav-alianzas":       "Alliances",
     "nav-sobre-nosotros": "About us",
     "nav-login":          "Log In",
@@ -335,7 +345,8 @@ const translations = {
     "form-success-msg":      "Request submitted! We will be in touch soon.",
 
     "footer-text":  "2026 SkillSwap. All rights reserved.",
-    "footer-terms": "Terms and Conditions",
+    "skip-link": "Skip to content",
+          "footer-terms": "Terms and Conditions",
     "footer-privacy": "Privacy Policy",
   }
 };
@@ -344,7 +355,7 @@ function applyLanguage(lang) {
   const t = translations[lang];
   if (!t) return;
 
-  document.documentElement.lang = lang;
+  document.documentElement.lang = skillswapHtmlLang(lang);
   document.title = t["page-title"];
 
   const meta = document.querySelector('meta[name="description"]');
@@ -372,7 +383,7 @@ function applyLanguage(lang) {
 }
 
 (function () {
-  applyLanguage(localStorage.getItem("skillswap-lang") || "es");
+  applyLanguage(skillswapInitialLang());
 })();
 </script>
 

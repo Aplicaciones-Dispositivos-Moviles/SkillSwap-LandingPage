@@ -1,26 +1,30 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en-US">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- ── SEO Meta Tags ── -->
-    <meta name="description" content="SkillSwap es la app para Android que certifica tus habilidades: declara tu meta, sube tus certificados, sigue tu ruta y rinde quizzes generados por IA. Muy pronto en Google Play." />
+    <meta name="description" content="SkillSwap is the Android app that certifies your skills: state your goal, upload your certificates, follow your path, and take AI-generated quizzes. Free to start on Android." />
     <meta name="keywords" content="verificación de habilidades, inteligencia artificial, certificaciones, ruta de aprendizaje, estudiantes universitarios, SkillSwap, Perú, empleabilidad" />
     <meta name="author" content="Innovify" />
 
     <!-- ── SEO Bilingüe: hreflang (US35) ── -->
-    <link rel="alternate" hreflang="es" href="index.html" />
-    <link rel="alternate" hreflang="en" href="index.html" />
+    <link rel="alternate" hreflang="es-419" href="index.html" />
+    <link rel="alternate" hreflang="en-US" href="index.html" />
     <link rel="alternate" hreflang="x-default" href="index.html" />
 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&display=swap" />
     <link rel="stylesheet" href="assets/styles/index_stylesheet.css" />
     <link rel="stylesheet" href="assets/styles/screenshots_stylesheet.css" />
+    <link rel="stylesheet" href="assets/styles/a11y.css" />
     <link rel="stylesheet" href="assets/styles/app_landing_stylesheet.css" />
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
-    <title>SkillSwap | Verificación de Habilidades con IA</title>
+    <script src="assets/scripts/i18n-init.js"></script>
+    <title>SkillSwap | AI-Powered Skill Verification</title>
   </head>
   <body>
+    <a class="skip-link" href="#contenido-principal" data-i18n="skip-link">Skip to content</a>
 
     <!-- ═══════════════════════════════════════ NAV ═══════════════════════════════════════ -->
     <nav class="barra-navegacion">
@@ -58,9 +62,9 @@
           <!-- ── Selector de Idioma (US35) ── -->
           <li class="lang-switcher-item">
             <div class="lang-switcher" role="group" aria-label="Seleccionar idioma">
-              <button class="lang-btn active" data-lang="es" onclick="applyLanguage('es')" aria-label="Español">ES</button>
+              <button class="lang-btn"        data-lang="es" onclick="applyLanguage('es')" aria-label="Español">ES</button>
               <span class="lang-divider">|</span>
-              <button class="lang-btn"        data-lang="en" onclick="applyLanguage('en')" aria-label="English">EN</button>
+              <button class="lang-btn active" data-lang="en" onclick="applyLanguage('en')" aria-label="English">EN</button>
             </div>
           </li>
 
@@ -68,41 +72,65 @@
       </div>
     </nav>
 
+    <div id="contenido-principal" tabindex="-1"></div>
+
     <!-- ═══════════════════════════════════════ SECCIÓN 1 — HERO ═══════════════════════════════════════ -->
     <section class="hero-app" aria-labelledby="hero-titulo">
       <div class="hero-app-contenido">
 
-        <div class="hero-app-texto">
-          <p class="hero-app-badge">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><rect x="6" y="2" width="12" height="20" rx="3" stroke="currentColor" stroke-width="2"/><path d="M11 18h2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-            <span data-i18n="hero-badge">App para Android · Muy pronto en Google Play</span>
-          </p>
-          <h1 class="hero-app-titulo" id="hero-titulo" data-i18n="hero-title">Demuestra lo que sabes, no solo lo que estudiaste.</h1>
-          <p class="hero-app-subtitulo" data-i18n="hero-subtitle">Declara tu meta profesional, sube tus certificados y SkillSwap arma tu ruta con las habilidades que te faltan. Demuestra cada una con quizzes generados por IA y, si no apruebas o no estás de acuerdo con el resultado, un Verificador humano revisa tu caso.</p>
+        <a class="hero-app-badge" href="#descarga">
+          <span data-i18n="hero-badge">App para Android · Gratis para empezar</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <h1 class="hero-app-titulo" id="hero-titulo">
+          <span data-i18n="hero-title-a">Demuestra lo que sabes,</span>
+          <em data-i18n="hero-title-b">no solo lo que estudiaste.</em>
+        </h1>
+        <p class="hero-app-subtitulo" data-i18n="hero-subtitle">Declara tu meta profesional, sube tus certificados y SkillSwap arma tu ruta con las habilidades que te faltan. Demuestra cada una con quizzes generados por IA y, si no apruebas o no estás de acuerdo con el resultado, un Verificador humano revisa tu caso.</p>
 
-          <div class="hero-app-ctas">
-            <a href="#descarga" class="btn-app btn-app-primario">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M12 3v12m0 0l-5-5m5 5l5-5M5 21h14" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              <span data-i18n="hero-btn">Descarga la app</span>
-            </a>
-            <a href="#como-funciona" class="btn-app btn-app-secundario" data-i18n="hero-btn-sec">Ver cómo funciona</a>
-          </div>
-          <p class="hero-app-nota" data-i18n="hero-note">Gratis para empezar · Lanzamiento muy pronto en Google Play</p>
-
-          <ul class="hero-app-datos">
-            <li><strong data-i18n="stat1-num">5 preguntas</strong><span data-i18n="stat1-label">por quiz; apruebas con 4</span></li>
-            <li><strong data-i18n="stat2-num">48 h</strong><span data-i18n="stat2-label">revisión humana con el plan mensual</span></li>
-            <li><strong data-i18n="stat3-num">S/ 0</strong><span data-i18n="stat3-label">para empezar tu primera ruta</span></li>
-          </ul>
+        <div class="hero-app-ctas">
+          <a href="#descarga" class="btn-hero" aria-label="Ir a la descarga: elige la app de estudiante o la de verificador" data-i18n-aria="hero-btn-aria">
+            <svg class="btn-hero-icono" width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M17.6 9.48l1.84-3.18a.38.38 0 00-.66-.38l-1.87 3.23a11.4 11.4 0 00-9.82 0L5.22 5.92a.38.38 0 00-.66.38L6.4 9.48A10.8 10.8 0 001 18h22a10.8 10.8 0 00-5.4-8.52zM7 15.25a1.25 1.25 0 110-2.5 1.25 1.25 0 010 2.5zm10 0a1.25 1.25 0 110-2.5 1.25 1.25 0 010 2.5z"/></svg>
+            <span class="btn-hero-textos">
+              <small data-i18n="hero-note">Elige tu app: Estudiante o Verificador</small>
+              <span data-i18n="hero-btn">Descargar para Android</span>
+            </span>
+          </a>
+          <a href="#como-funciona" class="hero-app-enlace">
+            <span data-i18n="hero-btn-sec">Ver cómo funciona</span>
+            <span aria-hidden="true">→</span>
+          </a>
         </div>
+        <p class="hero-app-verificador">
+          <a href="#descarga" data-app-link="verifier-apk" download data-i18n="hero-verifier-link">¿Eres verificador? Descarga la app del Verificador</a>
+        </p>
 
-        <div class="hero-app-visual">
-          <figure class="telefono telefono-atras">
-            <img src="assets/images/app/app-certificado.webp" width="560" height="1246" alt="Pantalla de la app: verificando un certificado de Coursera con ML Kit, datos extraídos y sin duplicados" />
-          </figure>
-          <figure class="telefono telefono-frente">
+        <div class="hero-app-escena">
+          <div class="hero-flotantes hero-flotantes-izq" aria-hidden="true">
+            <div class="hero-flotante">
+              <small data-i18n="route-active">TU RUTA ACTIVA</small>
+              <strong data-i18n="route-goal">Python para Data Science</strong>
+              <span class="hero-flotante-barra"><span style="width: 40%"></span></span>
+              <span class="hero-flotante-pie"><span data-i18n="route-progress">2 de 5 nodos completados</span><b>40%</b></span>
+            </div>
+            <div class="hero-flotante">
+              <span class="hero-flotante-fila">
+                <strong>SK-2057</strong>
+                <span class="hero-chip" data-i18n="hero-case-status">En revisión</span>
+              </span>
+              <span data-i18n="hero-case-desc">Un Verificador revisa tu intento con rúbrica</span>
+            </div>
+          </div>
+
+          <figure class="telefono hero-telefono">
             <img src="assets/images/app/app-ruta.webp" width="560" height="1246" alt="Pantalla de la app: ruta activa Python para Data Science con 2 de 5 nodos completados" fetchpriority="high" />
           </figure>
+
+          <ul class="hero-flotantes hero-flotantes-der">
+            <li class="hero-flotante hero-dato"><strong data-i18n="stat1-num">5 preguntas</strong><span data-i18n="stat1-label">por quiz; apruebas con 4</span></li>
+            <li class="hero-flotante hero-dato"><strong data-i18n="stat2-num">48 h</strong><span data-i18n="stat2-label">revisión humana con el plan mensual</span></li>
+            <li class="hero-flotante hero-dato"><strong data-i18n="stat3-num">S/ 0</strong><span data-i18n="stat3-label">para empezar tu primera ruta</span></li>
+          </ul>
         </div>
 
       </div>
@@ -156,7 +184,7 @@
                 <svg width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="M12 2l2.4 1.8 3-.2.9 2.9 2.5 1.7-1 2.8 1 2.8-2.5 1.7-.9 2.9-3-.2L12 22l-2.4-1.8-3 .2-.9-2.9-2.5-1.7 1-2.8-1-2.8 2.5-1.7.9-2.9 3 .2L12 2z" fill="#1f8a4c"/><path d="M8.5 12.2l2.3 2.3 4.7-4.7" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </span>
               <span class="credencial-etiqueta" data-i18n="flow5-card-label">Habilidad certificada</span>
-              <strong class="credencial-nombre">Python para Data Science</strong>
+              <strong class="credencial-nombre" data-i18n="route-goal">Python para Data Science</strong>
               <span class="credencial-detalle" data-i18n="flow5-card-detail">5 de 5 nodos · Quiz 5/5</span>
               <span class="credencial-chip" data-i18n="flow5-card-chip">Visible en tu perfil</span>
             </div>
@@ -227,7 +255,7 @@
         <div class="ruta-card" role="group" aria-label="Ejemplo de ruta: Python para Data Science">
           <div class="ruta-resumen">
             <small data-i18n="route-active">TU RUTA ACTIVA</small>
-            <strong>Python para Data Science</strong>
+            <strong data-i18n="route-goal">Python para Data Science</strong>
             <div class="ruta-progreso-txt"><span data-i18n="route-progress">2 de 5 nodos completados</span><b>40%</b></div>
             <div class="ruta-barra"><span></span></div>
           </div>
@@ -582,7 +610,7 @@
         </details>
         <details class="faq-item">
           <summary data-i18n="faq-q6">¿Cuándo puedo descargar SkillSwap?</summary>
-          <p data-i18n="faq-a6">Muy pronto. Estamos preparando el lanzamiento en Google Play. Escríbenos a contacto@skillswap.pe y te avisamos apenas puedas descargarla.</p>
+          <p data-i18n="faq-a6">Ya puedes, desde la sección Descarga la app: estudiantes y verificadores descargan el APK directo, o te unes a la prueba por Firebase App Distribution si prefieres. No necesitas Google Play.</p>
         </details>
       </div>
     </section>
@@ -594,29 +622,52 @@
         <div class="descarga-texto">
           <p class="descarga-eyebrow" data-i18n="dl-eyebrow">Descarga la app</p>
           <h2 class="descarga-titulo" id="descarga-titulo" data-i18n="dl-title">Lleva tu ruta de certificación en el bolsillo</h2>
-          <p class="descarga-desc" data-i18n="dl-desc">SkillSwap es una app para Android. Hoy puedes instalarla por invitación a través de Firebase App Distribution; todavía no está publicada en Google Play.</p>
+          <p class="descarga-desc" data-i18n="dl-desc">SkillSwap tiene una app para cada rol. Elige la tuya e instálala en tu celular Android; no necesitas Google Play.</p>
 
-          <ul class="descarga-lista">
-            <li><span class="descarga-check" aria-hidden="true">✓</span><span data-i18n="dl-f1">Sube tus certificados con la cámara del celular</span></li>
-            <li><span class="descarga-check" aria-hidden="true">✓</span><span data-i18n="dl-f2">Rinde tus quizzes y sigue tu ruta desde donde estés</span></li>
-            <li><span class="descarga-check" aria-hidden="true">✓</span><span data-i18n="dl-f3">Recibe avisos cuando un Verificador resuelva tu caso</span></li>
-            <li><span class="descarga-check" aria-hidden="true">✓</span><span data-i18n="dl-f4">Empieza gratis con 1 ruta activa</span></li>
-          </ul>
-
-          <div class="descarga-acciones">
-            <div class="badge-proximamente">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><rect x="6" y="2" width="12" height="20" rx="3" stroke="currentColor" stroke-width="1.8"/><path d="M11 18h2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-              <span class="badge-proximamente-txt">
-                <small data-i18n="dl-badge-small">Todavía no disponible en</small>
-                <strong>Google Play</strong>
-              </span>
-            </div>
-            <a class="btn-app btn-app-primario" href="https://appdistribution.firebase.dev/i/eb345a85ef8857fa" target="_blank" rel="noopener" data-i18n="dl-btn-download">Descargar para Android</a>
-            <a class="btn-app btn-app-secundario" href="mailto:contacto@skillswap.pe?subject=Av%C3%ADsenme%20cuando%20SkillSwap%20est%C3%A9%20en%20Google%20Play">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M6 8a6 6 0 1112 0c0 7 3 8 3 8H3s3-1 3-8zM10 20a2 2 0 004 0" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              <span data-i18n="dl-btn-notify">Avísame del lanzamiento</span>
-            </a>
+          <div class="descarga-selector" role="tablist" aria-label="Elige tu app" data-i18n-aria="dl-tab-label">
+            <button type="button" class="descarga-tab" role="tab" id="tab-estudiante" aria-controls="panel-estudiante" aria-selected="true" data-i18n="dl-tab-student">Soy estudiante</button>
+            <button type="button" class="descarga-tab" role="tab" id="tab-verificador" aria-controls="panel-verificador" aria-selected="false" tabindex="-1" data-i18n="dl-tab-verifier">Soy verificador</button>
           </div>
+
+          <div class="descarga-panel" role="tabpanel" id="panel-estudiante" aria-labelledby="tab-estudiante">
+            <ul class="descarga-lista">
+              <li><span class="descarga-check" aria-hidden="true">✓</span><span data-i18n="dl-f1">Sube tus certificados con la cámara del celular</span></li>
+              <li><span class="descarga-check" aria-hidden="true">✓</span><span data-i18n="dl-f2">Rinde tus quizzes y sigue tu ruta desde donde estés</span></li>
+              <li><span class="descarga-check" aria-hidden="true">✓</span><span data-i18n="dl-f3">Recibe avisos cuando un Verificador resuelva tu caso</span></li>
+              <li><span class="descarga-check" aria-hidden="true">✓</span><span data-i18n="dl-f4">Empieza gratis con 1 ruta activa</span></li>
+            </ul>
+            <div class="descarga-acciones">
+              <a class="btn-app btn-app-primario" href="#descarga" data-app-link="student-apk" download>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M12 3v12m0 0l-5-5m5 5l5-5M5 21h14" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <span data-i18n="dl-student-btn">Descargar APK</span>
+              </a>
+              <a class="btn-app btn-app-secundario" href="#descarga" data-app-link="student-firebase" target="_blank" rel="noopener" hidden>
+                <span data-i18n="dl-firebase-btn">Probar vía Firebase</span>
+              </a>
+              <span class="descarga-meta" data-i18n="dl-student-meta">APK · Android 10+ · v1.3 · 84 MB</span>
+            </div>
+          </div>
+
+          <div class="descarga-panel" role="tabpanel" id="panel-verificador" aria-labelledby="tab-verificador" hidden>
+            <ul class="descarga-lista">
+              <li><span class="descarga-check" aria-hidden="true">✓</span><span data-i18n="dl-v1">Recibe casos según tus habilidades verificadas</span></li>
+              <li><span class="descarga-check" aria-hidden="true">✓</span><span data-i18n="dl-v2">Aprueba o rechaza con una rúbrica clara</span></li>
+              <li><span class="descarga-check" aria-hidden="true">✓</span><span data-i18n="dl-v3">Gana SkillCredits por cada caso resuelto</span></li>
+              <li><span class="descarga-check" aria-hidden="true">✓</span><span data-i18n="dl-v4">Canjea tus SkillCredits por beneficios</span></li>
+            </ul>
+            <div class="descarga-acciones">
+              <a class="btn-app btn-app-primario" href="#descarga" data-app-link="verifier-apk" download>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M12 3v12m0 0l-5-5m5 5l5-5M5 21h14" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <span data-i18n="dl-verifier-btn">Descargar APK</span>
+              </a>
+              <a class="btn-app btn-app-secundario" href="#descarga" data-app-link="verifier-firebase" target="_blank" rel="noopener" hidden>
+                <span data-i18n="dl-firebase-btn">Probar vía Firebase</span>
+              </a>
+              <span class="descarga-meta" data-i18n="dl-verifier-meta">APK · Android 7+ · v1.0.1 · 54 MB</span>
+            </div>
+          </div>
+
+          <p class="descarga-nota descarga-aviso" role="note" data-i18n="dl-install-notice">En Android debes permitir «instalar apps desconocidas» para tu navegador, y Play Protect puede mostrar una advertencia: es normal fuera de Play Store. El APK se guarda en la carpeta Descargas del celular.</p>
           <p class="descarga-nota descarga-requisito" data-i18n="dl-requirement">Para registrarte necesitas un correo institucional con dominio .edu.pe.</p>
           <p class="descarga-nota">
             <span data-i18n="dl-note">¿Quieres ver los planes antes?</span>
@@ -757,13 +808,13 @@
     <!-- ═══════════════════════════════════════ FOOTER ═══════════════════════════════════════ -->
     <footer>
       <div class="footer-descarga">
-        <p data-i18n="footer-dl-text">SkillSwap llega muy pronto a Google Play.</p>
+        <p data-i18n="footer-dl-text">SkillSwap ya está disponible para Android.</p>
         <a href="#descarga" class="btn-app btn-app-primario btn-app-sm" data-i18n="footer-dl-btn">Descarga la app</a>
       </div>
       <div class="seccion-footer">
         <p>
           <span data-i18n="footer-text">2026 SkillSwap — Innovify. Todos los derechos reservados.</span>
-          <a href="archivos/TerminosCondiciones.pdf" class="terminos-condiciones" data-i18n="footer-terms">
+          <a href="sites/terms.html" class="terminos-condiciones" data-i18n="footer-terms">
             Términos y Condiciones
           </a>
           <a href="archivos/PoliticaPrivacidad.pdf" class="terminos-condiciones" data-i18n="footer-privacy">
@@ -824,13 +875,69 @@
       });
     </script>
 
+    <!-- Script CTA del navbar: aparece cuando el CTA del hero sale de la pantalla -->
+    <script>
+      (function () {
+        const heroCta = document.querySelector('.hero-app-ctas');
+        const nav = document.querySelector('.barra-navegacion');
+        if (!heroCta || !nav || !('IntersectionObserver' in window)) return;
+        new IntersectionObserver(([entry]) => {
+          nav.classList.toggle('nav-cta-oculto', entry.isIntersecting);
+        }, { rootMargin: '-72px 0px 0px 0px' }).observe(heroCta);
+      })();
+    </script>
+
+    <!-- Enlaces de descarga: se cambian SOLO aquí.
+         El nombre del .apk debe coincidir EXACTO con el archivo del release de GitHub.
+         Si un enlace queda como <LINK_...>, ese botón se oculta solo. -->
+    <script>
+      const APP_LINKS = {
+        'student-apk':       'https://github.com/Aplicaciones-Dispositivos-Moviles/SkillSwap-MobileApp/releases/latest/download/skillswap-student.apk',
+        'student-firebase':  'https://appdistribution.firebase.dev/i/eb345a85ef8857fa',
+        'verifier-apk':      'https://github.com/Aplicaciones-Dispositivos-Moviles/SkillSwap-MobileApp-Flutter/releases/latest/download/skillswap-verificador.apk',
+        'verifier-firebase': '<LINK_FIREBASE_VERIFICADOR>'
+      };
+      document.querySelectorAll('[data-app-link]').forEach(a => {
+        const url = APP_LINKS[a.dataset.appLink];
+        if (!url || /^<.*>$/.test(url)) { a.hidden = true; return; }
+        a.href = url;
+        a.hidden = false;
+      });
+    </script>
+
+    <!-- Script selector Estudiante / Verificador -->
+    <script>
+      (function () {
+        const tabs = Array.from(document.querySelectorAll('.descarga-tab'));
+        const select = (tab) => {
+          tabs.forEach(t => {
+            const active = t === tab;
+            t.setAttribute('aria-selected', String(active));
+            t.tabIndex = active ? 0 : -1;
+            document.getElementById(t.getAttribute('aria-controls')).hidden = !active;
+          });
+        };
+        tabs.forEach((tab, i) => {
+          tab.addEventListener('click', () => select(tab));
+          tab.addEventListener('keydown', (e) => {
+            const next = { ArrowRight: i + 1, ArrowLeft: i - 1, Home: 0, End: tabs.length - 1 }[e.key];
+            if (next === undefined) return;
+            e.preventDefault();
+            const target = tabs[(next + tabs.length) % tabs.length];
+            select(target);
+            target.focus();
+          });
+        });
+      })();
+    </script>
+
     <!-- ── Script i18n — US35 ── -->
     <script>
       const translations = {
         es: {
           /* Página */
           "page-title":       "SkillSwap | Verificación de Habilidades con IA",
-          "meta-description": "SkillSwap es la app para Android que certifica tus habilidades: declara tu meta, sube tus certificados, sigue tu ruta y rinde quizzes generados por IA. Muy pronto en Google Play.",
+          "meta-description": "SkillSwap es la app para Android que certifica tus habilidades: declara tu meta, sube tus certificados, sigue tu ruta y rinde quizzes generados por IA. Gratis para empezar.",
 
           /* Navbar */
           "nav-como-funciona":  "Cómo funciona",
@@ -841,12 +948,17 @@
           "nav-download-short": "Descargar",
 
           /* Hero */
-          "hero-badge":    "App para Android · Muy pronto en Google Play",
-          "hero-title":    "Demuestra lo que sabes, no solo lo que estudiaste.",
+          "hero-badge":    "App para Android · Gratis para empezar",
+          "hero-title-a": "Demuestra lo que sabes,",
+          "hero-title-b": "no solo lo que estudiaste.",
           "hero-subtitle": "Declara tu meta profesional, sube tus certificados y SkillSwap arma tu ruta con las habilidades que te faltan. Demuestra cada una con quizzes generados por IA y, si no apruebas o no estás de acuerdo con el resultado, un Verificador humano revisa tu caso.",
-          "hero-btn":      "Descarga la app",
+          "hero-btn":      "Descargar para Android",
           "hero-btn-sec":  "Ver cómo funciona",
-          "hero-note":     "Gratis para empezar · Lanzamiento muy pronto en Google Play",
+          "hero-note":     "Elige tu app: Estudiante o Verificador",
+          "hero-btn-aria": "Ir a la descarga: elige la app de estudiante o la de verificador",
+          "hero-verifier-link": "¿Eres verificador? Descarga la app del Verificador",
+          "hero-case-status": "En revisión",
+          "hero-case-desc": "Un Verificador revisa tu intento con rúbrica",
           "stat1-num":     "5 preguntas",
           "stat1-label":   "por quiz; apruebas con 4",
           "stat2-num":     "48 h",
@@ -885,6 +997,7 @@
           "route-legend-done":    "Completado",
           "route-legend-current": "Siguiente paso",
           "route-legend-locked":  "Bloqueado",
+          "route-goal":     "Python para Data Science",
           "route-active":   "TU RUTA ACTIVA",
           "route-progress": "2 de 5 nodos completados",
           "route-next":     "Siguiente paso",
@@ -933,19 +1046,29 @@
           "faq-q5": "¿En qué dispositivos funciona SkillSwap?",
           "faq-a5": "SkillSwap es una app móvil pensada para Android. Esta página informativa funciona en celular, tablet y escritorio.",
           "faq-q6": "¿Cuándo puedo descargar SkillSwap?",
-          "faq-a6": "Muy pronto. Estamos preparando el lanzamiento en Google Play. Escríbenos a contacto@skillswap.pe y te avisamos apenas puedas descargarla.",
+          "faq-a6": "Ya puedes, desde la sección Descarga la app: estudiantes y verificadores descargan el APK directo, o te unes a la prueba por Firebase App Distribution si prefieres. No necesitas Google Play.",
 
           /* Descarga la app */
           "dl-eyebrow":     "Descarga la app",
           "dl-title":       "Lleva tu ruta de certificación en el bolsillo",
-          "dl-desc":        "SkillSwap es una app para Android. Hoy puedes instalarla por invitación a través de Firebase App Distribution; todavía no está publicada en Google Play.",
+          "dl-desc":        "SkillSwap tiene una app para cada rol. Elige la tuya e instálala en tu celular Android; no necesitas Google Play.",
+          "dl-tab-label": "Elige tu app",
+          "dl-tab-student": "Soy estudiante",
+          "dl-tab-verifier": "Soy verificador",
           "dl-f1":          "Sube tus certificados con la cámara del celular",
-          "dl-f2":          "Rinde tus quizzes y sigue tu ruta desde donde estés",
+          "dl-f2": "Rinde tus quizzes y sigue tu ruta desde donde estés",
           "dl-f3":          "Recibe avisos cuando un Verificador resuelva tu caso",
           "dl-f4":          "Empieza gratis con 1 ruta activa",
-          "dl-badge-small": "Todavía no disponible en",
-          "dl-btn-notify":  "Avísame del lanzamiento",
-          "dl-btn-download": "Descargar para Android",
+          "dl-student-btn": "Descargar APK",
+          "dl-student-meta": "APK · Android 10+ · v1.3 · 84 MB",
+          "dl-v1": "Recibe casos según tus habilidades verificadas",
+          "dl-v2": "Aprueba o rechaza con una rúbrica clara",
+          "dl-v3": "Gana SkillCredits por cada caso resuelto",
+          "dl-v4": "Canjea tus SkillCredits por beneficios",
+          "dl-verifier-btn": "Descargar APK",
+          "dl-firebase-btn": "Probar vía Firebase",
+          "dl-verifier-meta": "APK · Android 7+ · v1.0.1 · 54 MB",
+          "dl-install-notice": "En Android debes permitir «instalar apps desconocidas» para tu navegador, y Play Protect puede mostrar una advertencia: es normal fuera de Play Store. El APK se guarda en la carpeta Descargas del celular.",
           "dl-requirement": "Para registrarte necesitas un correo institucional con dominio .edu.pe.",
           "dl-note":        "¿Quieres ver los planes antes?",
           "dl-note-link":   "Compara el plan gratuito y el mensual",
@@ -1039,9 +1162,10 @@
           "contact-email-link":"Enviar email",
 
           /* Footer */
-          "footer-dl-text": "SkillSwap llega muy pronto a Google Play.",
+          "footer-dl-text": "SkillSwap ya está disponible para Android.",
           "footer-dl-btn":  "Descarga la app",
           "footer-text":    "2026 SkillSwap — Innovify. Todos los derechos reservados.",
+          "skip-link": "Saltar al contenido",
           "footer-terms":   "Términos y Condiciones",
           "footer-privacy": "Política de Privacidad",
           "footer-contact": "Contacto",
@@ -1050,7 +1174,7 @@
         en: {
           /* Page */
           "page-title":       "SkillSwap | AI-Powered Skill Verification",
-          "meta-description": "SkillSwap is the Android app that certifies your skills: state your goal, upload your certificates, follow your path, and take AI-generated quizzes. Coming soon on Google Play.",
+          "meta-description": "SkillSwap is the Android app that certifies your skills: state your goal, upload your certificates, follow your path, and take AI-generated quizzes. Free to start.",
 
           /* Navbar */
           "nav-como-funciona":  "How it works",
@@ -1061,12 +1185,17 @@
           "nav-download-short": "Get app",
 
           /* Hero */
-          "hero-badge":    "Android app · Coming soon on Google Play",
-          "hero-title":    "Prove what you know, not just what you studied.",
+          "hero-badge":    "Android app · Free to start",
+          "hero-title-a": "Prove what you know,",
+          "hero-title-b": "not just what you studied.",
           "hero-subtitle": "State your career goal, upload your certificates, and SkillSwap builds a path with the skills you're missing. Prove each one with AI-generated quizzes and, if you don't pass or disagree with the result, a human Verifier reviews your case.",
-          "hero-btn":      "Get the app",
+          "hero-btn":      "Download for Android",
           "hero-btn-sec":  "See how it works",
-          "hero-note":     "Free to start · Launching soon on Google Play",
+          "hero-note":     "Pick your app: Student or Verifier",
+          "hero-btn-aria": "Go to the download section: choose the student or the verifier app",
+          "hero-verifier-link": "Are you a verifier? Download the Verifier app",
+          "hero-case-status": "In review",
+          "hero-case-desc": "A Verifier reviews your attempt with a rubric",
           "stat1-num":     "5 questions",
           "stat1-label":   "per quiz; pass with 4",
           "stat2-num":     "48 h",
@@ -1105,6 +1234,7 @@
           "route-legend-done":    "Completed",
           "route-legend-current": "Next step",
           "route-legend-locked":  "Locked",
+          "route-goal":     "Python for Data Science",
           "route-active":   "YOUR ACTIVE PATH",
           "route-progress": "2 of 5 nodes completed",
           "route-next":     "Next step",
@@ -1153,19 +1283,29 @@
           "faq-q5": "Which devices does SkillSwap work on?",
           "faq-a5": "SkillSwap is a mobile app designed for Android. This informational page works on phones, tablets, and desktop.",
           "faq-q6": "When can I download SkillSwap?",
-          "faq-a6": "Very soon. We're getting ready to launch on Google Play. Email us at contacto@skillswap.pe and we'll let you know as soon as you can download it.",
+          "faq-a6": "Right now, from the Get the app section: students and verifiers download the APK directly, or you can join the test on Firebase App Distribution if you prefer. You don't need Google Play.",
 
           /* Get the app */
           "dl-eyebrow":     "Get the app",
           "dl-title":       "Carry your certification path in your pocket",
-          "dl-desc":        "SkillSwap is an Android app. Today you can install it by invitation through Firebase App Distribution; it is not yet published on Google Play.",
+          "dl-desc":        "SkillSwap has one app for each role. Pick yours and install it on your Android phone; you don't need Google Play.",
+          "dl-tab-label": "Choose your app",
+          "dl-tab-student": "I'm a student",
+          "dl-tab-verifier": "I'm a verifier",
           "dl-f1":          "Upload your certificates with your phone's camera",
-          "dl-f2":          "Take your quizzes and follow your path wherever you are",
+          "dl-f2": "Take your quizzes and follow your path wherever you are",
           "dl-f3":          "Get notified when a Verifier resolves your case",
           "dl-f4":          "Start for free with 1 active path",
-          "dl-badge-small": "Not yet available on",
-          "dl-btn-notify":  "Notify me at launch",
-          "dl-btn-download": "Download for Android",
+          "dl-student-btn": "Download APK",
+          "dl-student-meta": "APK · Android 10+ · v1.3 · 84 MB",
+          "dl-v1": "Get cases that match your verified skills",
+          "dl-v2": "Approve or reject with a clear rubric",
+          "dl-v3": "Earn SkillCredits for every case you resolve",
+          "dl-v4": "Redeem your SkillCredits for benefits",
+          "dl-verifier-btn": "Download APK",
+          "dl-firebase-btn": "Join the Firebase beta",
+          "dl-verifier-meta": "APK · Android 7+ · v1.0.1 · 54 MB",
+          "dl-install-notice": "On Android you need to allow “install unknown apps” for your browser, and Play Protect may show a warning: this is normal outside the Play Store. The APK is saved in your phone's Downloads folder.",
           "dl-requirement": "To sign up you need an institutional email with a .edu.pe domain.",
           "dl-note":        "Want to see the plans first?",
           "dl-note-link":   "Compare the free and monthly plans",
@@ -1260,9 +1400,10 @@
           "contact-email-link":"Send email",
 
           /* Footer */
-          "footer-dl-text": "SkillSwap is coming soon to Google Play.",
+          "footer-dl-text": "SkillSwap is now available for Android.",
           "footer-dl-btn":  "Get the app",
           "footer-text":    "2026 SkillSwap — Innovify. All rights reserved.",
+          "skip-link": "Skip to content",
           "footer-terms":   "Terms and Conditions",
           "footer-privacy": "Privacy Policy",
           "footer-contact": "Contact",
@@ -1273,7 +1414,7 @@
         if (!translations[lang]) return;
         const t = translations[lang];
 
-        document.documentElement.lang = lang;
+        document.documentElement.lang = skillswapHtmlLang(lang);
         document.title = t["page-title"];
 
         const metaDesc = document.querySelector('meta[name="description"]');
@@ -1282,6 +1423,11 @@
         document.querySelectorAll('[data-i18n]').forEach(el => {
           const key = el.getAttribute('data-i18n');
           if (t[key] !== undefined) el.textContent = t[key];
+        });
+
+        document.querySelectorAll('[data-i18n-aria]').forEach(el => {
+          const key = el.getAttribute('data-i18n-aria');
+          if (t[key] !== undefined) el.setAttribute('aria-label', t[key]);
         });
 
         document.querySelectorAll('[data-i18n-title]').forEach(el => {
@@ -1297,7 +1443,7 @@
       }
 
       (function init() {
-        const savedLang = localStorage.getItem('skillswap-lang') || 'es';
+        const savedLang = skillswapInitialLang();
         applyLanguage(savedLang);
       })();
     </script>
