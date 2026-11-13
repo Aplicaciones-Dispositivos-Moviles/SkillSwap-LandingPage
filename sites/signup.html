@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- ── SEO Meta Tags ── -->
     <meta name="description" content="Sign up for SkillSwap, upload your certificates, and let AI build your certification path." />
+    <meta name="keywords" content="registro, sign up, SkillSwap, correo institucional .edu.pe, certificados, certificates" />
+    <meta name="author" content="Innovify" />
     
     <!-- ── SEO Bilingüe: hreflang (US35) ── -->
     <!--
@@ -14,16 +16,19 @@
       lang="es" + hreflang="es/en/x-default" apuntando a la misma URL
       (una SPA no tiene rutas distintas, así que href apunta al mismo index.html)
     -->
-    <link rel="alternate" hreflang="es" href="signup.html" />
-    <link rel="alternate" hreflang="en" href="signup.html" />
+    <link rel="alternate" hreflang="es-419" href="signup.html" />
+    <link rel="alternate" hreflang="en-US" href="signup.html" />
     <link rel="alternate" hreflang="x-default" href="signup.html" />
 
     <link rel="stylesheet" href="../assets/styles/signup_stylesheet.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <title>SkillSwap | Sign Up</title>
+    <link rel="stylesheet" href="../assets/styles/a11y.css" />
+    <script src="../assets/scripts/i18n-init.js"></script>
   </head>
 
   <body>
+    <a class="skip-link" href="#contenido-principal" data-i18n="skip-link">Skip to content</a>
     
     <!-- ═══════════════════════════════════════ NAV ═══════════════════════════════════════ -->
     <nav class="barra-navegacion">
@@ -68,6 +73,8 @@
         </ul>
       </div>
     </nav>
+
+    <div id="contenido-principal" tabindex="-1"></div>
 
     <!-- ═══════════════════════════════════════ SECCIÓN SIGNUP ═══════════════════════════════════════ -->
 
@@ -149,7 +156,7 @@
       <div class="seccion-footer">
         <p>
           <span data-i18n="footer-text">2026 SkillSwap. Todos los derechos reservados.</span>
-          <a href="../archivos/TerminosCondiciones.pdf" class="terminos-condiciones" data-i18n="footer-terms">Términos y Condiciones</a> 
+          <a href="terms.html" class="terminos-condiciones" data-i18n="footer-terms">Términos y Condiciones</a> 
           <a href="../archivos/PoliticaPrivacidad.pdf" class="terminos-condiciones" data-i18n="footer-privacy">
             Política de Privacidad
           </a>
@@ -221,6 +228,7 @@
 
           /* Footer */
           "footer-text": "2026 SkillSwap. Todos los derechos reservados.",
+          "skip-link": "Saltar al contenido",
           "footer-terms": "Términos y Condiciones",
           "footer-privacy": "Política de Privacidad",
         },
@@ -260,6 +268,7 @@
 
           /* Footer */
           "footer-text": "2026 SkillSwap. All rights reserved.",
+          "skip-link": "Skip to content",
           "footer-terms": "Terms and Conditions",
           "footer-privacy": "Privacy Policy",
         }
@@ -269,7 +278,7 @@
         if (!translations[lang]) return;
         const t = translations[lang];
 
-        document.documentElement.lang = lang;
+        document.documentElement.lang = skillswapHtmlLang(lang);
         document.title = t["page-title"];
 
         const metaDesc = document.querySelector('meta[name="description"]');
@@ -304,7 +313,7 @@
 
       /* Inicialización al cargar la página */
       (function init() {
-        const savedLang = localStorage.getItem('skillswap-lang') || 'en';
+        const savedLang = skillswapInitialLang();
         applyLanguage(savedLang);
       })();
     </script>

@@ -939,3 +939,8 @@ summary:focus-visible,
   color: var(--white-color);
   font-weight: 600;
 }
+
+/* Botones ocultos (p. ej. enlace de Firebase aún sin definir) */
+.btn-app[hidden] {
+  display: none;
+}
