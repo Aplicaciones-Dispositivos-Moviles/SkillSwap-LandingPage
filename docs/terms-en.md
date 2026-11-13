@@ -1,7 +1,5 @@
 # SkillSwap Terms and Conditions of Use
 
-> **Draft subject to team review.** This text is not final yet and may change. Last updated: November 2026.
-
 ## 1. Acceptance of the terms
 
 By creating an account or using SkillSwap (the Android mobile app and this website) you accept these Terms and Conditions. If you disagree with any part, you must not use the service. SkillSwap is developed by the Innovify team.
