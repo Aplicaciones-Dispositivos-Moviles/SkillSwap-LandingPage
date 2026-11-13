@@ -1,11 +1,13 @@
   <!DOCTYPE html>
-  <html lang="en">
+  <html lang="en-US">
     <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
       <!-- ── SEO Meta Tags ── -->
       <meta name="description" content="Log in to SkillSwap and follow your AI-generated skill certification path." />
+    <meta name="keywords" content="iniciar sesión, log in, SkillSwap, cuenta, account, correo institucional" />
+    <meta name="author" content="Innovify" />
 
       <!-- ── SEO Bilingüe: hreflang (US35) ── -->
       <!--
@@ -14,17 +16,22 @@
         lang="es" + hreflang="es/en/x-default" apuntando a la misma URL
         (una SPA no tiene rutas distintas, así que href apunta al mismo index.html)
       -->
-      <link rel="alternate" hreflang="es" href="login.html" />
-      <link rel="alternate" hreflang="en" href="login.html" />
+      <link rel="alternate" hreflang="es-419" href="login.html" />
+      <link rel="alternate" hreflang="en-US" href="login.html" />
       <link rel="alternate" hreflang="x-default" href="login.html" />
 
       <link rel="stylesheet" href="../assets/styles/login_stylesheet.css"/>
       <link rel="icon" href="favicon.ico" type="image/x-icon" />
       <title>SkillSwap | Peru's Largest Inter-University Network</title>
 
+      <link rel="stylesheet" href="../assets/styles/a11y.css" />
+
+      <script src="../assets/scripts/i18n-init.js"></script>
+
     </head>
 
     <body>
+    <a class="skip-link" href="#contenido-principal" data-i18n="skip-link">Skip to content</a>
 
       <!-- ═══════════════════════════════════════ NAV ═══════════════════════════════════════ -->
       <nav class="barra-navegacion">
@@ -70,6 +77,8 @@
           </ul>
         </div>
       </nav>
+
+    <div id="contenido-principal" tabindex="-1"></div>
 
   <!-- ═══════════════════════════════════════ SECCIÓN LOGIN ═══════════════════════════════════════ -->
     
@@ -120,7 +129,7 @@
         <div class="seccion-footer">
           <p>
             <span data-i18n="footer-text">2026 SkillSwap. Todos los derechos reservados.</span>
-            <a href="archivos/TerminosCondiciones.pdf" class="terminos-condiciones" data-i18n="footer-terms">
+            <a href="terms.html" class="terminos-condiciones" data-i18n="footer-terms">
               Términos y Condiciones
             </a>
             <a href="../archivos/PoliticaPrivacidad.pdf" class="terminos-condiciones" data-i18n="footer-privacy">
@@ -176,7 +185,8 @@
           
             /* Footer */
             "footer-text":  "2026 SkillSwap. Todos los derechos reservados.",
-            "footer-terms": "Términos y Condiciones",
+            "skip-link": "Saltar al contenido",
+          "footer-terms": "Términos y Condiciones",
             "footer-privacy": "Política de Privacidad",
           },
 
@@ -206,7 +216,8 @@
 
             /* Footer */
             "footer-text":  "2026 SkillSwap. All rights reserved.",
-            "footer-terms": "Terms and Conditions",
+            "skip-link": "Skip to content",
+          "footer-terms": "Terms and Conditions",
             "footer-privacy": "Privacy Policy",
           }
         };
@@ -225,7 +236,7 @@
           const t = translations[lang];
 
           /* 1. Atributo lang del HTML (SEO bilingüe) */
-          document.documentElement.lang = lang;
+          document.documentElement.lang = skillswapHtmlLang(lang);
 
           /* 2. <title> */
           document.title = t["page-title"];
@@ -267,7 +278,7 @@
           Lee la preferencia guardada o usa 'en' por defecto
         ──────────────────────────────────────────────── */
         (function init() {
-          const savedLang = localStorage.getItem('skillswap-lang') || 'en';
+          const savedLang = skillswapInitialLang();
           applyLanguage(savedLang);
         })();
       </script>

@@ -1,21 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <meta name="description" content="Meet Innovify, the team behind SkillSwap, our mission, vision, and the people who make Peru's largest inter-university network possible." />
+    <meta name="keywords" content="SkillSwap, Innovify, sobre nosotros, about us, equipo, team, misión, visión, mission, vision" />
+    <meta name="author" content="Innovify" />
 
-    <link rel="alternate" hreflang="es" href="aboutUs.html" />
-    <link rel="alternate" hreflang="en" href="aboutUs.html" />
+    <link rel="alternate" hreflang="es-419" href="aboutUs.html" />
+    <link rel="alternate" hreflang="en-US" href="aboutUs.html" />
     <link rel="alternate" hreflang="x-default" href="aboutUs.html" />
 
     <link rel="stylesheet" href="../assets/styles/aboutus_stylesheet.css" />
     <link rel="icon" href="../favicon.ico" type="image/x-icon" />
     <title>SkillSwap | About Us</title>
+    <link rel="stylesheet" href="../assets/styles/a11y.css" />
+    <script src="../assets/scripts/i18n-init.js"></script>
   </head>
 
   <body>
+    <a class="skip-link" href="#contenido-principal" data-i18n="skip-link">Skip to content</a>
 
     <!-- ═══ NAV ═══ -->
     <nav class="barra-navegacion">
@@ -56,6 +61,8 @@
         </ul>
       </div>
     </nav>
+
+    <div id="contenido-principal" tabindex="-1"></div>
 
     <!-- ═══ SECCIÓN: SOBRE NOSOTROS ═══ -->
     <section class="seccion-about">
@@ -202,7 +209,7 @@
       <div class="seccion-footer">
         <p>
           <span data-i18n="footer-text">2026 SkillSwap. Todos los derechos reservados.</span>
-          <a href="../archivos/TerminosCondiciones.pdf" class="terminos-condiciones" data-i18n="footer-terms">
+          <a href="terms.html" class="terminos-condiciones" data-i18n="footer-terms">
             Términos y Condiciones
           </a>
           <a href="../archivos/PoliticaPrivacidad.pdf" class="terminos-condiciones" data-i18n="footer-privacy">
@@ -262,6 +269,7 @@
           "cta-btn-alliance":    "Soy representante universitario",
 
           "footer-text":  "2026 SkillSwap. Todos los derechos reservados.",
+          "skip-link": "Saltar al contenido",
           "footer-terms": "Términos y Condiciones",
           "footer-privacy": "Política de Privacidad",
         },
@@ -303,6 +311,7 @@
           "cta-btn-alliance":    "I'm a university representative",
 
           "footer-text":  "2026 SkillSwap. All rights reserved.",
+          "skip-link": "Skip to content",
           "footer-terms": "Terms and Conditions",
           "footer-privacy": "Privacy Policy",
         }
@@ -311,7 +320,7 @@
       function applyLanguage(lang) {
         if (!translations[lang]) return;
         const t = translations[lang];
-        document.documentElement.lang = lang;
+        document.documentElement.lang = skillswapHtmlLang(lang);
         document.title = t["page-title"];
         const metaDesc = document.querySelector('meta[name="description"]');
         if (metaDesc) metaDesc.setAttribute('content', t["meta-description"]);
@@ -326,7 +335,7 @@
       }
 
       (function init() {
-        const savedLang = localStorage.getItem('skillswap-lang') || 'en';
+        const savedLang = skillswapInitialLang();
         applyLanguage(savedLang);
       })();
     </script>
